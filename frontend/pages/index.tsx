@@ -1,11 +1,14 @@
 import type { NextPage } from 'next';
 import styled from '@emotion/styled';
+import Contact from '../components/Contact';
 
 const Home: NextPage = () => {
   return (
     <div>
       <MainContainer>Main Page</MainContainer>
-      <Footer />
+      <ContactWrapper>
+        <Contact />
+      </ContactWrapper>
     </div>
   );
 };
@@ -16,7 +19,6 @@ const MainContainer = styled.div`
   height: calc(100vh - 70px);
 `;
 
-const Footer = styled.footer`
-  background-color: tomato;
+const ContactWrapper = styled.footer`
   height: 500px;
 `;

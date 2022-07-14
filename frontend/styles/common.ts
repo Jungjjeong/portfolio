@@ -37,7 +37,8 @@ const Common = {
     c1: "1.1rem",
     c2: "1.2rem",
 
-    n1: "0.8rem",
+    n1: "0.9rem",
+    n2: "0.8rem",
   },
 };
 

@@ -4,7 +4,7 @@ import CustomButton from './Button.style';
 
 interface Props {
   width: number | string;
-  height: number;
+  height: number | string;
   backgroundColor: string;
   fontColor: string;
   fontSize: number;
@@ -13,8 +13,8 @@ interface Props {
 }
 
 const defaultProps = {
-  width: 'auto',
-  height: 50,
+  width: '130px',
+  height: '50px',
   backgroundColor: Common.colors.gray04,
   fontColor: Common.colors.white,
   fontSize: Common.fontSize.n1,

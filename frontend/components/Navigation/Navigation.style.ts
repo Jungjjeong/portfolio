@@ -17,7 +17,7 @@ const Logo = styled.div`
 `
 
 const LinkA = styled.a`
-	letter-spacing: 5px;
+	letter-spacing: 3px;
 	font-weight: bold;
 `
 
