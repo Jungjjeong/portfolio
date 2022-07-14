@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import styled from '@emotion/styled';
-import Contact from '../components/Contact';
+import { Contact } from '../components';
 
 const Home: NextPage = () => {
   return (
