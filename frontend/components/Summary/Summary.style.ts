@@ -12,6 +12,7 @@ const SummaryWrapper = styled.div`
 
 const DescriptionWrapper = styled.div`
 	width: fit-content;
+	margin: 3px 0;
 `
 
 const StrongDescription = styled.p`
@@ -21,6 +22,7 @@ const StrongDescription = styled.p`
 
 const Description = styled.p`
 	color: ${Common.colors.gray03};
+	margin: 5px 0;
 `
 
 const DashedLine = styled.hr`
