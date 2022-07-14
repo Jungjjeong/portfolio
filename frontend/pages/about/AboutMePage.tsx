@@ -1,5 +1,5 @@
 import S from './AboutMePage.style';
-import { HeaderSection } from './components';
+import { HeaderSection, EducationSection } from './components';
 
 const AboutMePage = () => {
   return (
@@ -13,6 +13,7 @@ const AboutMePage = () => {
         </S.TechStackWrapper>
         <S.EducationWrapper>
           <S.SubHeader>EDUCATION</S.SubHeader>
+          <EducationSection />
         </S.EducationWrapper>
         <S.AwardsWrapper>
           <S.SubHeader>AWARDS</S.SubHeader>
