@@ -3,9 +3,9 @@ import Common from '../../styles/common';
 
 const PageWrapper = styled.div`
   width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 `;
 
 const HeaderWrapper = styled.div`
@@ -33,7 +33,10 @@ const AwardsWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const ExperienceWrapper = styled.div``;
+const ExperienceWrapper = styled.div`
+  width: fit-content;
+  margin: 0 auto 100px auto;
+`;
 
 const S = {
   PageWrapper,

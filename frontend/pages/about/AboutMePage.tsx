@@ -1,5 +1,10 @@
 import S from './AboutMePage.style';
-import { HeaderSection, EducationSection, AwardsSection } from './components';
+import {
+  HeaderSection,
+  EducationSection,
+  AwardsSection,
+  ExperienceSection,
+} from './components';
 
 const AboutMePage = () => {
   return (
@@ -21,6 +26,7 @@ const AboutMePage = () => {
         </S.AwardsWrapper>
         <S.ExperienceWrapper>
           <S.SubHeader>EXPERIENCE</S.SubHeader>
+          <ExperienceSection />
         </S.ExperienceWrapper>
       </S.PageWrapper>
     </>
