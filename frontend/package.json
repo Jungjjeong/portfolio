@@ -16,9 +16,11 @@
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "next": "12.2.2",
+    "next-transpile-modules": "^9.0.0",
     "qs": "^6.11.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "reaviz": "^13.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

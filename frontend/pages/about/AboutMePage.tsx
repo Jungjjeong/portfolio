@@ -1,3 +1,5 @@
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 import S from './AboutMePage.style';
 import {
   HeaderSection,
@@ -5,6 +7,11 @@ import {
   AwardsSection,
   ExperienceSection,
 } from './components';
+
+const DynamicTechStack = dynamic(() => import('./components/TechStack'), {
+  ssr: false,
+  suspense: true,
+});
 
 const AboutMePage = () => {
   return (
@@ -15,6 +22,9 @@ const AboutMePage = () => {
         </S.HeaderWrapper>
         <S.TechStackWrapper>
           <S.SubHeader>TECH STACK</S.SubHeader>
+          <Suspense fallback={`Loading...`}>
+            <DynamicTechStack />
+          </Suspense>
         </S.TechStackWrapper>
         <S.EducationWrapper>
           <S.SubHeader>EDUCATION</S.SubHeader>
