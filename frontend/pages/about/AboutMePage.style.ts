@@ -21,7 +21,10 @@ const SubHeader = styled.h2`
   margin: 0 auto;
 `;
 
-const TechStackWrapper = styled.div``;
+const TechStackWrapper = styled.div`
+  width: fit-content;
+  margin: 0 auto;
+`;
 
 const EducationWrapper = styled.div`
   width: fit-content;
