@@ -9,26 +9,28 @@ const ImageWrapper = styled.div`
 const Header = styled.h1`
   letter-spacing: 5px;
   width: fit-content;
-  margin: 20px auto;
+  margin: 10px auto;
   font-family: 'Nanum Pen Script';
   font-size: ${Common.fontSize.h1};
 `;
 
 const StrongText = styled.p`
   width: fit-content;
-  margin: 20px auto 60px auto;
+  margin: 20px auto 40px auto;
   font-family: 'Nanum Pen Script';
   font-size: ${Common.fontSize.b1};
 `;
 
 const MainText = styled.p`
   color: ${Common.colors.main01};
+  font-weight: bold;
+  line-height: 1.7;
 `;
 
 const DescriptionWrapper = styled.div`
   width: fit-content;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.5;
   text-align: center;
 `;
 

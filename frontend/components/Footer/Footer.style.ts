@@ -13,7 +13,7 @@ const TextWrapper = styled.div`
 	width: fit-content;
 	letter-spacing: 3px;
 	font-weight: bold;
-	font-size: ${Common.fontSize.n1};
+	font-size: ${Common.fontSize.n2};
 	margin: 0 auto;
 `
 

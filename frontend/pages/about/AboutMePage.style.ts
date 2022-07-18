@@ -11,7 +11,7 @@ const PageWrapper = styled.div`
 const HeaderWrapper = styled.div`
   width: 100%;
   height: auto;
-  padding: 100px 0;
+  padding: 50px 0;
 `;
 
 const SubHeader = styled.h2`

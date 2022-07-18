@@ -5,7 +5,11 @@ const HeaderSection = () => {
   return (
     <>
       <S.ImageWrapper>
-        <Image src='https://user-images.githubusercontent.com/72294509/179054552-f408f898-0072-499d-b592-96d3afb2808f.png' />
+        <Image
+          src='https://user-images.githubusercontent.com/72294509/179054552-f408f898-0072-499d-b592-96d3afb2808f.png'
+          width={250}
+          height={250}
+        />
       </S.ImageWrapper>
       <S.Header>JungJiYoung</S.Header>
       <S.StrongText>
