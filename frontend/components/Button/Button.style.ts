@@ -11,8 +11,8 @@ interface Props {
 
 const CustomButton = styled.button`
   box-sizing: border-box;
-  width: ${({ width }: Props) => width};
-  height: ${({ height }: Props) => height};
+	width: ${({ width }: Props) => typeof width === "number" ? `${width}px` : width};
+  height: ${({ height }: Props) => typeof height === "number" ? `${height}px` : height};
   background-color: ${({ backgroundColor }: Props) => backgroundColor};
   color: ${({ fontColor }: Props) => fontColor};
   font-size: ${({ fontSize }: Props) => fontSize};
