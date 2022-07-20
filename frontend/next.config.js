@@ -6,6 +6,9 @@ const nextConfig = {
     loader: 'default',
     domains: ['localhost'],
   },
+  experimental: {
+    forceSwcTransforms: true,
+  },
 };
 
 module.exports = nextConfig;
