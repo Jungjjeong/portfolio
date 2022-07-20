@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import Common from '../../styles/common';
 
 const PageWrapper = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 100px;
+  width: 100%;
 `;
 
 const HeaderWrapper = styled.div`
@@ -15,10 +15,10 @@ const HeaderWrapper = styled.div`
 `;
 
 const SubHeader = styled.h2`
-  color: ${Common.colors.main01};
-  letter-spacing: 5px;
   width: fit-content;
   margin: 0 auto;
+  color: ${Common.colors.main01};
+  letter-spacing: 5px;
 `;
 
 const TechStackWrapper = styled.div`

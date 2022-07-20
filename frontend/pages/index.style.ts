@@ -10,37 +10,26 @@ const MainWrapper = styled.div`
 `;
 
 const TypingWrapper = styled.div`
-  place-items: center;
-	font-size: ${Common.fontSize.title};
+  position: absolute;
+  top: 150px;
+  left: 70px;
+  z-index: 10;
+  color: ${Common.colors.white};
+  font-size: ${Common.fontSize.title};
   font-family: 'Nanum Pen Script';
-	color: ${Common.colors.white};
-	position: absolute;
-	top: 150px;
-	left: 70px;
-	z-index: 10;
-	line-height: 1.4;
+  line-height: 1.4;
   letter-spacing: 3px;
+  place-items: center;
 `;
-
-// const Blink = styled.span`
-// 	animation: blink 0.5s infinite;
-// 	font-size: ${Common.fontSize.h1};
-
-// 	@keyframes blink {
-// 		to {
-// 			opacity: 0;
-// 		}
-// 	}
-// `
 
 const Dim = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 9;
   width: 100%;
   height: calc(100vh - 70px);
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 9;
 `;
 
 const ContactWrapper = styled.footer`

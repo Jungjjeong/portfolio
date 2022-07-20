@@ -2,47 +2,47 @@ import styled from '@emotion/styled';
 import Common from '../../styles/common';
 
 const SummaryWrapper = styled.div`
-	height: auto;
-	display: flex;
-	align-items: center;
-	width: 650px;
-	gap: 20px;
-	padding: 5px 0;
-`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 650px;
+  height: auto;
+  padding: 5px 0;
+`;
 
 const DescriptionWrapper = styled.div`
-	width: fit-content;
-	margin: 3px 0;
-`
+  width: fit-content;
+  margin: 3px 0;
+`;
 
 const StrongDescription = styled.p`
+  margin-bottom: 5px;
   font-weight: bold;
-	margin-bottom: 5px;
 `;
 
 const Description = styled.p`
-	color: ${Common.colors.gray03};
-	margin: 5px 0;
-`
+  margin: 5px 0;
+  color: ${Common.colors.gray03};
+`;
 
 const DashedLine = styled.hr`
-	height: 1px;
-	flex-grow: 1;
-	border: 0px;
-	border-top: 1px dashed ;
-	color: ${Common.colors.gray03};
-`
+  flex-grow: 1;
+  height: 1px;
+  color: ${Common.colors.gray03};
+  border: 0px;
+  border-top: 1px dashed;
+`;
 
 const DateText = styled.p`
   color: ${Common.colors.gray03};
 `;
 
 const S = {
-	SummaryWrapper,
-	DescriptionWrapper,
+  SummaryWrapper,
+  DescriptionWrapper,
   StrongDescription,
-	Description,
-	DashedLine,
+  Description,
+  DashedLine,
   DateText,
 };
 
