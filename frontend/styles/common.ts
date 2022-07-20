@@ -24,7 +24,7 @@ const Common = {
   },
 
   fontSize: {
-    title: "3.5rem",
+    title: "6.0rem",
 
     h1: "2.4rem",
     h2: "2.1rem",
