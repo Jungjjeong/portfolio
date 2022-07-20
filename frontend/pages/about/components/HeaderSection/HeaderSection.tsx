@@ -2,6 +2,14 @@ import S from './HeaderSection.style';
 import { Button, Image } from '../../../../components';
 
 const HeaderSection = () => {
+  const onClickGithubButton = () => {
+    window.open('https://github.com/Jungjjeong');
+  };
+
+  const onClickBlogButton = () => {
+    window.open('https://jungjjeong.github.io/');
+  };
+
   return (
     <>
       <S.ImageWrapper>
@@ -63,8 +71,8 @@ const HeaderSection = () => {
         </p>
       </S.DescriptionWrapper>
       <S.ButtonWrapper>
-        <Button text='GITHUB' />
-        <Button text='BLOG' />
+        <Button text='GITHUB' onClick={onClickGithubButton} />
+        <Button text='BLOG' onClick={onClickBlogButton} />
       </S.ButtonWrapper>
     </>
   );

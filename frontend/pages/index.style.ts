@@ -12,12 +12,14 @@ const MainWrapper = styled.div`
 const TypingWrapper = styled.div`
   place-items: center;
 	font-size: ${Common.fontSize.title};
+  font-family: 'Nanum Pen Script';
 	color: ${Common.colors.white};
 	position: absolute;
 	top: 150px;
-	left: 50px;
+	left: 70px;
 	z-index: 10;
 	line-height: 1.4;
+  letter-spacing: 3px;
 `;
 
 // const Blink = styled.span`
@@ -37,7 +39,7 @@ const Dim = styled.div`
   left: 0;
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 9;
 `;
 
