@@ -26,13 +26,18 @@ const CustomButton = styled.button`
 
 	&:hover {
 		background-image: ${({ backgroundColor }: Props) =>
-      `linear-gradient(90deg, ${backgroundColor} 0px, rgba(255, 255, 255, 0.3) 80px, ${backgroundColor} 160px)`};
+      `linear-gradient(90deg, ${backgroundColor} 0px, rgba(255, 255, 255, 0.4) 80px, ${backgroundColor} 160px)`};
     background-size: 200% 100%;
     background-position: 0 center;
     transition: all 0.2s ease-out;
-    animation: gradation 2s infinite linear;
+    animation: gradation 1500ms infinite linear;    
+	}
 
-    @keyframes gradation {
+  &:active {
+    border: 1px solid ${Common.colors.gray03};
+  }
+
+  @keyframes gradation {
       0% {
         background-position-x: 100%;
       }
@@ -43,7 +48,6 @@ const CustomButton = styled.button`
         background-position-x: -100%;
       }
     }
-	}
 `;
 
 export default CustomButton;
