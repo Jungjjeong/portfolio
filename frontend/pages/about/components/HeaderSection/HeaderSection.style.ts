@@ -2,23 +2,23 @@ import styled from '@emotion/styled';
 import Common from '../../../../styles/common';
 
 const ImageWrapper = styled.div`
-	width: fit-content;
-	margin: 0 auto;
-`
+  width: fit-content;
+  margin: 0 auto;
+`;
 
 const Header = styled.h1`
-  letter-spacing: 5px;
   width: fit-content;
   margin: 10px auto;
-  font-family: 'Nanum Pen Script';
   font-size: ${Common.fontSize.h1};
+  font-family: 'Nanum Pen Script';
+  letter-spacing: 5px;
 `;
 
 const StrongText = styled.p`
   width: fit-content;
   margin: 20px auto 40px auto;
-  font-family: 'Nanum Pen Script';
   font-size: ${Common.fontSize.b1};
+  font-family: 'Nanum Pen Script';
 `;
 
 const MainText = styled.p`
@@ -35,14 +35,14 @@ const DescriptionWrapper = styled.div`
 `;
 
 const ButtonWrapper = styled.div`
-  width: fit-content;
-  margin: 80px auto;
   display: flex;
   gap: 25px;
+  width: fit-content;
+  margin: 80px auto;
 `;
 
 const S = {
-	ImageWrapper,
+  ImageWrapper,
   Header,
   StrongText,
   MainText,

@@ -2,13 +2,13 @@ import styled from '@emotion/styled';
 import Common from '../../styles/common';
 
 const ContactWrapper = styled.div`
-	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
-	padding: 180px 0;
-	display: flex;
-	flex-direction: column;
-	gap: 25px;
+  padding: 180px 0;
 `;
 
 const HeaderText = styled.h1`
@@ -20,16 +20,16 @@ const HeaderText = styled.h1`
 const DescriptionText = styled.p`
   width: fit-content;
   margin: 0 auto;
-	font-weight: bold;
-	color: ${Common.colors.gray03};
+  color: ${Common.colors.gray03};
+  font-weight: bold;
   letter-spacing: 3px;
 `;
 
 const ButtonWrapper = styled.div`
-	width: fit-content;
-	margin: 25px auto;
   display: flex;
   gap: 30px;
+  width: fit-content;
+  margin: 25px auto;
 `;
 
 const S = {
