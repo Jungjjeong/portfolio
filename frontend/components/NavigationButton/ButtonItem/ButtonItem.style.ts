@@ -14,12 +14,20 @@ const Label = styled.p`
 
 const Button = styled.button`
   box-sizing: border-box;
-  background-color: ${({ backgroundColor }: Props) => backgroundColor};
-  width: ${({ width }: Props) =>
-    typeof width === 'number' ? `${width}px` : width};
-  height: ${({ height }: Props) =>
-    typeof height === 'number' ? `${height}px` : height};
-  border: none;
+  width: 0;
+  height: 0;
+  border-bottom: ${({ height, backgroundColor }: Props) =>
+    typeof height === 'number'
+      ? `${height}px solid ${backgroundColor}`
+      : `${height} solid ${backgroundColor}`};
+  border-left: ${({ width }: Props) =>
+    typeof width === 'number'
+      ? `${width}px solid transparent`
+      : `${width} solid transparent`};
+  border-right: ${({ width }: Props) =>
+    typeof width === 'number'
+      ? `${width}px solid transparent`
+      : `${width} solid transparent`};
 
   &:hover {
     background-image: ${({ backgroundColor }: Props) =>

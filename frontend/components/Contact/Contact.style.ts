@@ -6,7 +6,6 @@ const ContactWrapper = styled.div`
   width: 100%;
   height: auto;
 	padding: 180px 0;
-	letter-spacing: 4px;
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
@@ -15,6 +14,7 @@ const ContactWrapper = styled.div`
 const HeaderText = styled.h1`
   width: fit-content;
   margin: 0 auto;
+  letter-spacing: 4px;
 `;
 
 const DescriptionText = styled.p`
@@ -22,6 +22,7 @@ const DescriptionText = styled.p`
   margin: 0 auto;
 	font-weight: bold;
 	color: ${Common.colors.gray03};
+  letter-spacing: 3px;
 `;
 
 const ButtonWrapper = styled.div`

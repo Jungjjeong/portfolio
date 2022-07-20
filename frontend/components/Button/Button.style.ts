@@ -25,7 +25,24 @@ const CustomButton = styled.button`
   cursor: pointer;
 
 	&:hover {
-		background-color: ${Common.colors.gray03};
+		background-image: ${({ backgroundColor }: Props) =>
+      `linear-gradient(90deg, ${backgroundColor} 0px, rgba(255, 255, 255, 0.3) 80px, ${backgroundColor} 160px)`};
+    background-size: 200% 100%;
+    background-position: 0 center;
+    transition: all 0.2s ease-out;
+    animation: gradation 2s infinite linear;
+
+    @keyframes gradation {
+      0% {
+        background-position-x: 100%;
+      }
+      50% {
+        background-position-x: -100%;
+      }
+      100% {
+        background-position-x: -100%;
+      }
+    }
 	}
 `;
 
