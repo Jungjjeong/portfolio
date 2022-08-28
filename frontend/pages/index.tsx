@@ -14,9 +14,8 @@ const Home: NextPage = () => {
       <S.TypingWrapper ref={ref} style={style}>
         {[...typingText].map((char: string, index: number) => {
           const { ref, style } = useFadeIn(500, index * 100);
-          if (char === '\n') {
-            return <br key={index} />;
-          }
+          if (char === '\n') return <br key={index} />;
+
           return (
             <span ref={ref} style={style} key={index}>
               {char}
