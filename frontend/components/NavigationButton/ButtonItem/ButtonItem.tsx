@@ -25,7 +25,7 @@ const ButtonItem = ({
   height,
 }: Props) => {
   return (
-    <S.ButtonWrapper backgroundColor={backgroundColor}>
+    <S.ButtonWrapper>
       <S.Label>{labelText}</S.Label>
       <S.Button
         backgroundColor={backgroundColor}

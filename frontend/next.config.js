@@ -9,6 +9,15 @@ const nextConfig = {
   experimental: {
     forceSwcTransforms: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:page/components/:file*',
+        destination: '/:page',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

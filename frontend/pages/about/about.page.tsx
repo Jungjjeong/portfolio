@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
-import S from './AboutMePage.style';
+import S from './about.style';
 import {
   HeaderSection,
   EducationSection,
