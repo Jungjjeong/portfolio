@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 import Image from '../Image';
+import Common from '../../styles/common';
 
 interface ICardProps {
   id: number;
@@ -34,8 +35,12 @@ const Card = ({
               {period.start} ~ {period.end}
             </StyledTextWrapper>
             <StyledStackListWrapper>
-              {devStackList.map((stack) => {
-                return <div>{stack}</div>;
+              {devStackList.map((stack, index) => {
+                return (
+                  <StyledStackTag key={index} idx={index}>
+                    {stack}
+                  </StyledStackTag>
+                );
               })}
             </StyledStackListWrapper>
           </StyledContentWrapper>
@@ -74,6 +79,7 @@ const StyledInner = styled.div`
 const StyledContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 5px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -100,4 +106,23 @@ const StyledTextWrapper = styled.div`
 const StyledStackListWrapper = styled.div`
   display: flex;
   min-width: 0px;
+`;
+
+const StyledStackTag = styled.div<{ idx: number }>`
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 0px;
+  height: 15px;
+  border-radius: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: 12px;
+  line-height: 120%;
+  color: rgb(24, 51, 71);
+  background: ${({ idx }) =>
+    idx % 2 === 0
+      ? Common.colors.main01_lighter
+      : Common.colors.main02_lighter};
+  margin: 0px 6px 0px 0px;
 `;

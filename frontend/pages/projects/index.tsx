@@ -7,7 +7,7 @@ const ProjectListPage = () => {
     <StyledPageWrapper>
       {/* NOTE : Side Project Section */}
       <SideProjectSection>
-        <StyledTitle>PROJECT LIST</StyledTitle>
+        <StyledTitle>SIDE PROJECT</StyledTitle>
         <StyledCardWrapper>
           <Card
             id={1}
