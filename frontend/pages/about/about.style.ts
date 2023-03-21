@@ -4,7 +4,7 @@ import Common from '../../styles/common';
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
   width: 100%;
 `;
 
