@@ -50,7 +50,7 @@ const AboutMePage = () => {
           </S.SectionContentWrapper>
         </S.SectionWrapper>
         <S.SectionWrapper>
-          <S.SubHeader>EXPERIENCE</S.SubHeader>
+          <S.SubTitle>EXPERIENCE</S.SubTitle>
           <S.SectionContentWrapper>
             {experienceData.map((experience, idx) => {
               const { title, date } = experience;
