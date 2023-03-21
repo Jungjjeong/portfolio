@@ -7,12 +7,12 @@ interface ICardProps {
   id: number;
   imageSrc: string;
   title: string;
-  description: string;
+  description?: string;
   period: {
     start: string;
     end: string;
   };
-  devStackList: string[];
+  devStackList?: string[];
 }
 
 const Card = ({
@@ -30,19 +30,23 @@ const Card = ({
           <Image src={imageSrc} />
           <StyledContentWrapper>
             <StyledTitleWrapper>{title}</StyledTitleWrapper>
-            <StyledTextWrapper>{description}</StyledTextWrapper>
+            {description && (
+              <StyledTextWrapper>{description}</StyledTextWrapper>
+            )}
             <StyledTextWrapper>
               {period.start} ~ {period.end}
             </StyledTextWrapper>
-            <StyledStackListWrapper>
-              {devStackList.map((stack, index) => {
-                return (
-                  <StyledStackTag key={index} idx={index}>
-                    {stack}
-                  </StyledStackTag>
-                );
-              })}
-            </StyledStackListWrapper>
+            {!!devStackList?.length && (
+              <StyledStackListWrapper>
+                {devStackList.map((stack, index) => {
+                  return (
+                    <StyledStackTag key={index} idx={index}>
+                      {stack}
+                    </StyledStackTag>
+                  );
+                })}
+              </StyledStackListWrapper>
+            )}
           </StyledContentWrapper>
         </StyledInner>
       </Link>
@@ -64,6 +68,11 @@ const StyledWrapper = styled.div`
   transition: background 100ms ease-out 0s;
   position: static;
   height: 100%;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 `;
 
 const StyledInner = styled.div`
