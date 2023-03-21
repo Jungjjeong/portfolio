@@ -25,7 +25,7 @@ const Card = ({
 }: ICardProps) => {
   return (
     <StyledWrapper>
-      <Link href="/projects/1" passHref>
+      <Link href={`/projects/${id}`} passHref>
         <StyledInner>
           <Image src={imageSrc} />
           <StyledContentWrapper>

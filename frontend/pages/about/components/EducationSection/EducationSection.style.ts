@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 const SectionWrapper = styled.div`
-	margin: 50px;
-`
+  margin: 16px 50px;
+`;
 
 export default SectionWrapper;
