@@ -13,15 +13,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "jsxImportSource": "@emotion/react",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "lib/api.js",
-    "lib/media.js"
+    "app/lib/api.js",
+    "app/lib/media.js",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }

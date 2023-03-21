@@ -1,33 +1,30 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Common from '../../styles/common';
 
-interface Props {
+const CustomButton = styled.button<{
   width: number | string;
   height: number | string;
   backgroundColor: string;
   fontColor: string;
   fontSize: number;
-}
-
-const CustomButton = styled.button`
+}>`
   box-sizing: border-box;
-  width: ${({ width }: Props) =>
-    typeof width === 'number' ? `${width}px` : width};
-  height: ${({ height }: Props) =>
+  width: ${({ width }) => (typeof width === 'number' ? `${width}px` : width)};
+  height: ${({ height }) =>
     typeof height === 'number' ? `${height}px` : height};
   padding: 10px;
-  color: ${({ fontColor }: Props) => fontColor};
+  color: ${({ fontColor }) => fontColor};
   font-weight: bold;
-  font-size: ${({ fontSize }: Props) => fontSize};
+  font-size: ${({ fontSize }) => fontSize};
   font-family: 'Inter', sans-serif;
   letter-spacing: 3px;
-  background-color: ${({ backgroundColor }: Props) => backgroundColor};
+  background-color: ${({ backgroundColor }) => backgroundColor};
   border: none;
   border-radius: 10px;
   cursor: pointer;
 
   &:hover {
-    background-image: ${({ backgroundColor }: Props) =>
+    background-image: ${({ backgroundColor }) =>
       `linear-gradient(90deg, ${backgroundColor} 0px, rgba(255, 255, 255, 0.4) 80px, ${backgroundColor} 160px)`};
     background-position: 0 center;
     background-size: 200% 100%;

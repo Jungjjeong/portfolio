@@ -1,10 +1,4 @@
-import styled from '@emotion/styled';
-
-interface Props {
-  backgroundColor: string;
-  width: string | number;
-  height: string | number;
-}
+import styled from 'styled-components';
 
 const Label = styled.p`
   width: fit-content;
@@ -12,25 +6,29 @@ const Label = styled.p`
   margin: 0 auto;
 `;
 
-const Button = styled.button`
+const Button = styled.button<{
+  backgroundColor: string;
+  width: string | number;
+  height: string | number;
+}>`
   box-sizing: border-box;
   width: 0;
   height: 0;
-  border-bottom: ${({ height, backgroundColor }: Props) =>
+  border-bottom: ${({ height, backgroundColor }) =>
     typeof height === 'number'
       ? `${height}px solid ${backgroundColor}`
       : `${height} solid ${backgroundColor}`};
-  border-left: ${({ width }: Props) =>
+  border-left: ${({ width }) =>
     typeof width === 'number'
       ? `${width}px solid transparent`
       : `${width} solid transparent`};
-  border-right: ${({ width }: Props) =>
+  border-right: ${({ width }) =>
     typeof width === 'number'
       ? `${width}px solid transparent`
       : `${width} solid transparent`};
 
   &:hover {
-    background-image: ${({ backgroundColor }: Props) =>
+    background-image: ${({ backgroundColor }) =>
       `linear-gradient(90deg, ${backgroundColor} 0px, rgba(255, 255, 255, 0.3) 80px, ${backgroundColor} 160px)`};
     background-size: 200% 100%;
     background-position: 0 center;

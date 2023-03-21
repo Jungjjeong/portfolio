@@ -4,10 +4,11 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: 'default',
-    domains: ['localhost'],
+    domains: ['localhost', 'user-images.githubusercontent.com'],
   },
   experimental: {
     forceSwcTransforms: true,
+    appDir: true,
   },
   async redirects() {
     return [

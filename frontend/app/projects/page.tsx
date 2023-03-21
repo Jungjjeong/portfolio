@@ -1,4 +1,6 @@
-import styled from '@emotion/styled';
+'use client';
+
+import styled from 'styled-components';
 import Card from '../../components/Card/Card';
 import Common from '../../styles/common';
 import { sideProjectData } from '../../data/project';
@@ -45,8 +47,7 @@ const StyledPageWrapper = styled.div`
 
 const SideProjectSection = styled.div`
   width: 100%;
-  padding: 0 16px;
-  border: 1px solid;
+  padding: 50px 16px;
 `;
 
 const StyledTitle = styled.h2`

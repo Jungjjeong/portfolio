@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Link from 'next/link';
-import Image from '../Image';
+import Image from 'next/image';
 import Common from '../../styles/common';
 
 interface ICardProps {
@@ -27,7 +27,7 @@ const Card = ({
     <StyledWrapper>
       <Link href={`/projects/${id}`} passHref>
         <StyledInner>
-          <Image src={imageSrc} />
+          <Image src={imageSrc} alt="project thumbnail" fill />
           <StyledContentWrapper>
             <StyledTitleWrapper>{title}</StyledTitleWrapper>
             {description && (
@@ -103,7 +103,7 @@ const StyledTitleWrapper = styled.div`
   font-size: 14px;
   line-height: 1.5;
   min-height: 21px;
-  font-weight: 500;
+  font-weight: bolder;
   pointer-events: none;
 `;
 

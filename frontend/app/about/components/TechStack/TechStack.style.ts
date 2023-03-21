@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const SectionWrapper = styled.div`
   margin: 50px;

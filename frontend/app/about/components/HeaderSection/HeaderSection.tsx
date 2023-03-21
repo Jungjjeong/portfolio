@@ -1,20 +1,14 @@
 import S from './HeaderSection.style';
-import { Button, Image } from '../../../../components';
+import { Button } from '../../../../components';
+import Image from 'next/image';
 
 const HeaderSection = () => {
-  const onClickGithubButton = () => {
-    window.open('https://github.com/Jungjjeong');
-  };
-
-  const onClickBlogButton = () => {
-    window.open('https://jungjjeong.github.io/');
-  };
-
   return (
     <>
       <S.ImageWrapper>
         <Image
           src="https://user-images.githubusercontent.com/72294509/179054552-f408f898-0072-499d-b592-96d3afb2808f.png"
+          alt="header Image"
           width={250}
           height={250}
         />
@@ -34,8 +28,20 @@ const HeaderSection = () => {
         디자인에도 관심이 많습니다.
       </S.DescriptionWrapper>
       <S.ButtonWrapper>
-        <Button text="GITHUB" onClick={onClickGithubButton} />
-        <Button text="BLOG" onClick={onClickBlogButton} />
+        <a
+          target="_blank"
+          href="https://github.com/Jungjjeong"
+          rel="noopener noreferrer"
+        >
+          <Button text="GITHUB" />
+        </a>
+        <a
+          target="_blank"
+          href="https://jungjjeong.github.io/"
+          rel="noopener noreferrer"
+        >
+          <Button text="BLOG" />
+        </a>
       </S.ButtonWrapper>
     </>
   );

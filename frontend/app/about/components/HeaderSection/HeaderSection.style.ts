@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import Common from '../../../../styles/common';
 
 const ImageWrapper = styled.div`
