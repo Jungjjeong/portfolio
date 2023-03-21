@@ -16,41 +16,28 @@ const HeaderWrapper = styled.div`
   padding: 50px 0;
 `;
 
-const SubHeader = styled.h2`
+const SubTitle = styled.h2`
   width: fit-content;
   margin: 0 auto;
   color: ${Common.colors.main01};
   letter-spacing: 5px;
 `;
 
-const TechStackWrapper = styled.div`
+const SectionWrapper = styled.div`
   width: fit-content;
   margin: 0 auto;
 `;
 
-const EducationWrapper = styled.div`
-  width: fit-content;
-  margin: 0 auto;
-`;
-
-const AwardsWrapper = styled.div`
-  width: fit-content;
-  margin: 0 auto;
-`;
-
-const ExperienceWrapper = styled.div`
-  width: fit-content;
-  margin: 0 auto 100px auto;
+const SectionContentWrapper = styled.div`
+  margin: 16px 50px;
 `;
 
 const S = {
   PageWrapper,
   HeaderWrapper,
-  SubHeader,
-  TechStackWrapper,
-  EducationWrapper,
-  AwardsWrapper,
-  ExperienceWrapper,
+  SubTitle,
+  SectionWrapper,
+  SectionContentWrapper,
 };
 
 export default S;
