@@ -27,11 +27,18 @@ const Card = ({
       <Link href="/projects/1" passHref>
         <StyledInner>
           <Image src={imageSrc} />
-          <div>{title}</div>
-          <div>{description}</div>
-          <div>
-            {period.start} ~ {period.end}
-          </div>
+          <StyledContentWrapper>
+            <StyledTitleWrapper>{title}</StyledTitleWrapper>
+            <StyledTextWrapper>{description}</StyledTextWrapper>
+            <StyledTextWrapper>
+              {period.start} ~ {period.end}
+            </StyledTextWrapper>
+            <StyledStackListWrapper>
+              {devStackList.map((stack) => {
+                return <div>{stack}</div>;
+              })}
+            </StyledStackListWrapper>
+          </StyledContentWrapper>
         </StyledInner>
       </Link>
     </StyledWrapper>
@@ -62,4 +69,35 @@ const StyledInner = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+`;
+
+const StyledContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+`;
+
+const StyledTitleWrapper = styled.div`
+  max-width: 100%;
+  width: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 21px;
+  font-weight: 500;
+  pointer-events: none;
+`;
+
+const StyledTextWrapper = styled.div`
+  font-size: 12px;
+  line-height: 1.2;
+`;
+
+const StyledStackListWrapper = styled.div`
+  display: flex;
+  min-width: 0px;
 `;

@@ -6,6 +6,8 @@ const PageWrapper = styled.div`
   flex-direction: column;
   gap: 50px;
   width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
 `;
 
 const HeaderWrapper = styled.div`
