@@ -20,7 +20,8 @@
     "qs": "^6.11.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "reaviz": "^13.1.4"
+    "reaviz": "^13.1.4",
+    "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

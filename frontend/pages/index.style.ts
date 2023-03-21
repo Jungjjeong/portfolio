@@ -13,6 +13,7 @@ const TypingWrapper = styled.div`
   position: absolute;
   top: 150px;
   left: 70px;
+  max-width: 750px;
   z-index: 10;
   color: ${Common.colors.white};
   font-size: ${Common.fontSize.title};
