@@ -1,7 +1,6 @@
 'use client';
 
 import { Suspense } from 'react';
-import S from './about.style';
 import { HeaderSection } from './components';
 import { Summary } from '../../components';
 import { awardData, educationData, experienceData } from '../../data/about';

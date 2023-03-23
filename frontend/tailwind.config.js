@@ -41,32 +41,16 @@ module.exports = {
         },
       },
       fontSize: {
-        t: {
-          DEFAULT: '6.5rem',
-          1: '6.5rem',
-        },
-        h: {
-          DEFAULT: '2.4rem',
-          1: '2.4rem',
-          2: '2.1rem',
-          3: '1.9rem',
-        },
-        b: {
-          DEFAULT: '1.8rem',
-          1: '1.8rem',
-          2: '1.4rem',
-          3: '1.3rem',
-        },
-        c: {
-          DEFAULT: '1.1rem',
-          1: '1.1rem',
-          2: '1.2rem',
-        },
-        n: {
-          DEFAULT: '0.9rem',
-          1: '0.9rem',
-          2: '0.8rem',
-        },
+        sm: '0.8rem',
+        base: '1rem',
+        xl: '1.25rem',
+        '2xl': '1.563rem',
+        '3xl': '1.953rem',
+        '4xl': '2.441rem',
+        '5xl': '3.052rem',
+      },
+      gridTemplateColumns: {
+        project: 'repeat(auto-fill, minmax(320px, 1fr))',
       },
     },
   },
