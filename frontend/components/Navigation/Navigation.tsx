@@ -1,23 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
-import S from './Navigation.style';
 
 const Navigation = () => {
   return (
     <>
-      <S.Nav>
-        <S.Logo>
-          <Link href='/' passHref>
-            <S.LinkA>JIYOUNG&apos;S PORTFOLIO</S.LinkA>
+      <nav className="sticky top-0 z-100 flex gap-[50px] items-center justify-center box-border w-full h-[70px] px-[50px] bg-gray">
+        <div className="grow">
+          <Link href="/" passHref>
+            <span className="font-bold tracking-[3px]">
+              JIYOUNG&apos;S PORTFOLIO
+            </span>
           </Link>
-        </S.Logo>
-        <Link href='/about' passHref>
-          <S.LinkA>ABOUTME</S.LinkA>
+        </div>
+        <Link href="/about" passHref>
+          <span className="font-bold tracking-[3px]">ABOUTME</span>
         </Link>
-        <Link href='/projects' passHref>
-          <S.LinkA>PROJECT</S.LinkA>
+        <Link href="/projects" passHref>
+          <span className="font-bold tracking-[3px]">PROJECT</span>
         </Link>
-      </S.Nav>
+      </nav>
     </>
   );
 };
