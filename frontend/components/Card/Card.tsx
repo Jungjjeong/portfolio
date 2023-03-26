@@ -1,7 +1,5 @@
-import styled from 'styled-components';
 import Link from 'next/link';
 import Image from 'next/image';
-import Common from '../../styles/common';
 
 interface ICardProps {
   id: number;
@@ -24,114 +22,39 @@ const Card = ({
   devStackList,
 }: ICardProps) => {
   return (
-    <StyledWrapper>
+    <div
+      className="block shadow-[rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+      rgba(15, 15, 15, 0.1) 0px 2px 4px] rounded-[8px] bg-white overflow-hidden transition duration-[300] static h-full hover:translate-y-[-3px]"
+    >
       <Link href={`/projects/${id}`} passHref>
-        <StyledInner>
+        <div className="cursor-pointer w-full flex flex-col h-full">
           <Image src={imageSrc} alt="project thumbnail" fill />
-          <StyledContentWrapper>
-            <StyledTitleWrapper>{title}</StyledTitleWrapper>
-            {description && (
-              <StyledTextWrapper>{description}</StyledTextWrapper>
-            )}
-            <StyledTextWrapper>
+          <div className="flex flex-col gap-[5px] w-full h-full box-border p-[10px]">
+            <h1 className="font-bold text-[0.9em]">{title}</h1>
+            {description && <p className="text-sm">{description}</p>}
+            <p className="text-sm">
               {period.start} ~ {period.end}
-            </StyledTextWrapper>
+            </p>
             {!!devStackList?.length && (
-              <StyledStackListWrapper>
+              <div className="flex min-w-0 gap-[4px]">
                 {devStackList.map((stack, index) => {
+                  const bgColor = index % 2 === 0 ? 'bg-main-5' : 'bg-main-6';
                   return (
-                    <StyledStackTag key={index} idx={index}>
+                    <div
+                      key={index}
+                      className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sm ${bgColor} m-0`}
+                    >
                       {stack}
-                    </StyledStackTag>
+                    </div>
                   );
                 })}
-              </StyledStackListWrapper>
+              </div>
             )}
-          </StyledContentWrapper>
-        </StyledInner>
+          </div>
+        </div>
       </Link>
-    </StyledWrapper>
+    </div>
   );
 };
 
 export default Card;
-
-const StyledWrapper = styled.div`
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
-    rgba(15, 15, 15, 0.1) 0px 2px 4px;
-  border-radius: 8px;
-  background: white;
-  overflow: hidden;
-  transition: background 100ms ease-out 0s;
-  position: static;
-  height: 100%;
-  transition: all 0.3s;
-
-  &:hover {
-    transform: translateY(-3px);
-  }
-`;
-
-const StyledInner = styled.div`
-  user-select: none;
-  transition: background 120ms ease-in 0s;
-  cursor: pointer;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
-const StyledContentWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-`;
-
-const StyledTitleWrapper = styled.div`
-  max-width: 100%;
-  width: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-  font-size: 14px;
-  line-height: 1.5;
-  min-height: 21px;
-  font-weight: bolder;
-  pointer-events: none;
-`;
-
-const StyledTextWrapper = styled.div`
-  font-size: 12px;
-  line-height: 1.2;
-`;
-
-const StyledStackListWrapper = styled.div`
-  display: flex;
-  min-width: 0px;
-`;
-
-const StyledStackTag = styled.div<{ idx: number }>`
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  min-width: 0px;
-  height: 15px;
-  border-radius: 3px;
-  padding-left: 6px;
-  padding-right: 6px;
-  font-size: 12px;
-  line-height: 120%;
-  color: rgb(24, 51, 71);
-  background: ${({ idx }) =>
-    idx % 2 === 0
-      ? Common.colors.main01_lighter
-      : Common.colors.main02_lighter};
-  margin: 0px 6px 0px 0px;
-`;
