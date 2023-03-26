@@ -2,15 +2,10 @@ import { HeaderSection } from './components';
 import { Summary } from '../../components';
 import { awardData, educationData, experienceData } from '../../data/about';
 
-// const DynamicTechStack = dynamic(() => import('./components/TechStack'), {
-//   ssr: false,
-//   suspense: true,
-// });
-
 const AboutMePage = () => {
   return (
     <>
-      <div className="flex flex-col w-full pb-12">
+      <div className="flex flex-col w-full max-w-[750px] mx-auto pb-12 gap-[30px]">
         <div className="w-full h-auto py-[50px]">
           <HeaderSection />
         </div>
