@@ -68,6 +68,9 @@ module.exports = {
       animation: {
         button: 'gradation 1500ms infinite linear',
       },
+      fontFamily: {
+        pen: ['Nanum Pen Script'],
+      },
     },
   },
   plugins: [],
