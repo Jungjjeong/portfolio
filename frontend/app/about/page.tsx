@@ -1,6 +1,3 @@
-'use client';
-
-import { Suspense } from 'react';
 import { HeaderSection } from './components';
 import { Summary } from '../../components';
 import { awardData, educationData, experienceData } from '../../data/about';
@@ -21,9 +18,6 @@ const AboutMePage = () => {
           <h2 className="mx-auto w-fit tracking-[3px] text-main font-bold">
             TECH STACK
           </h2>
-          <Suspense fallback={`Loading...`}>
-            {/* <DynamicTechStack /> */}
-          </Suspense>
         </section>
         <section className="mx-auto w-fit">
           <h2 className="mx-auto w-fit tracking-[3px] text-main font-bold">

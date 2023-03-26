@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { NextPageContext } from 'next';
 
 const getServerSideProps = (context: NextPageContext) => {
@@ -8,12 +7,7 @@ const getServerSideProps = (context: NextPageContext) => {
 };
 
 const ProjectDetailPage = () => {
-  return <StyledWrapper>Project Detail</StyledWrapper>;
+  return <div className="max-w-[750px] mx-auto">Project Detail</div>;
 };
 
 export default ProjectDetailPage;
-
-const StyledWrapper = styled.div`
-  max-width: 750px;
-  margin: 0 auto;
-`;

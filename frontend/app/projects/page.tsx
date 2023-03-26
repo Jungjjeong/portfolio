@@ -1,5 +1,3 @@
-'use client';
-
 import Card from '../../components/Card/Card';
 import { sideProjectData } from '../../data/project';
 
