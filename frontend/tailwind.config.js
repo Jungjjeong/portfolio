@@ -52,6 +52,22 @@ module.exports = {
       gridTemplateColumns: {
         project: 'repeat(auto-fill, minmax(320px, 1fr))',
       },
+      keyframes: {
+        gradation: {
+          '0%': {
+            'background-position-x': '100%',
+          },
+          '50%': {
+            'background-position-x': '-100%',
+          },
+          '100%': {
+            'background-position-x': '-100%',
+          },
+        },
+      },
+      animation: {
+        button: 'gradation 1500ms infinite linear',
+      },
     },
   },
   plugins: [],

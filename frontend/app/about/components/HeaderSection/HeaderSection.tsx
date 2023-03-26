@@ -33,14 +33,14 @@ const HeaderSection = () => {
           href="https://github.com/Jungjjeong"
           rel="noopener noreferrer"
         >
-          <Button text="GITHUB" />
+          <Button text="GITHUB" type="dark" />
         </a>
         <a
           target="_blank"
           href="https://jungjjeong.github.io/"
           rel="noopener noreferrer"
         >
-          <Button text="BLOG" />
+          <Button text="BLOG" type="dark" />
         </a>
       </S.ButtonWrapper>
     </>

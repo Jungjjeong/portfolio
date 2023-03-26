@@ -15,21 +15,21 @@ const Contact = () => {
           href="https://github.com/Jungjjeong"
           rel="noopener noreferrer"
         >
-          <Button text="GITHUB" />
+          <Button text="GITHUB" type="dark" />
         </a>
         <a
           target="_blank"
           href="https://jungjjeong.github.io/"
           rel="noopener noreferrer"
         >
-          <Button text="BLOG" />
+          <Button text="BLOG" type="dark" />
         </a>
         <a
           target="_blank"
           href="mailto:sky990106@naver.com"
           rel="noopener noreferrer"
         >
-          <Button text="EMAIL" />
+          <Button text="EMAIL" type="dark" />
         </a>
       </div>
     </div>
