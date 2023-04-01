@@ -15,7 +15,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <div className="relative">
-        <div className="absolute top-[130px] left-[70px] max-w-[750px] z-20 text-gray text-extra tracking-[3px] font-pen">
+        <div className="absolute top-[130px] left-[70px] max-w-[750px] h-[500px] z-20 text-gray text-extra tracking-[3px] font-pen">
           <Typewriter
             options={{ loop: true }}
             onInit={(typewriter) => {
