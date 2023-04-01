@@ -5,13 +5,13 @@ import Image from 'next/image';
 const HeaderSection = () => {
   return (
     <>
-      <div className="w-fit mx-auto rounded-full overflow-hidden">
+      <div className="w-fit mx-auto rounded-full overflow-hidden my-[30px]">
         <Image src={profile} alt="header Image" width={250} height={250} />
       </div>
-      <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-3xl font-pen">
+      {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-bold">
         JungJiYoung
-      </h1>
-      <p className="w-fit mb-[30px] mx-auto font-pen text-3xl">
+      </h1> */}
+      <p className="w-fit my-[20px] mx-auto text-2xl font-bold">
         안녕하세요. 주니어 프론트엔드 개발자 정지영입니다.
       </p>
       <div className="w-fit mx-auto text-center text-sm">

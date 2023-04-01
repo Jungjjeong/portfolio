@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nanum+Gothic+Coding&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', 'Nanum Gothic', sans-serif, 'Nanum Pen Script', cursive;
+  font-family: 'Montserrat', sans-serif, 'Nanum Gothic', sans-serif,
+    'Nanum Pen Script', cursive;
   background-color: #f9f9f9;
 }
 

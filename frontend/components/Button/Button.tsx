@@ -7,14 +7,16 @@ interface Props {
 }
 
 const Button = ({ type, text, onClick }: Props) => {
-  const mainButtonStyle =
-    'text-white bg-main-3 hover:bg-main-5 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none tracking-[2px]';
-  const darkButtonStyle =
-    'text-white bg-gray-1 hover:bg-gray-2 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 tracking-[2px]';
+  const commonStyle =
+    'text-white font-bold text-sm px-5 py-2.5 mr-2 mb-2 tracking-[2px] cursor-pointer';
+  const mainButtonStyle = 'bg-main-3 hover:bg-main-5 rounded-lg';
+  const darkButtonStyle = 'bg-gray-1 hover:bg-gray-2 rounded-lg';
 
   return (
     <button
-      className={type === 'main' ? mainButtonStyle : darkButtonStyle}
+      className={`${commonStyle} ${
+        type === 'main' ? mainButtonStyle : darkButtonStyle
+      }`}
       onClick={onClick && onClick}
     >
       {text}
