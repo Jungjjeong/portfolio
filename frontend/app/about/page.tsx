@@ -5,6 +5,7 @@ import {
   certificateData,
   educationData,
   experienceData,
+  publishingData,
   techStackData,
   workExperienceData,
 } from '../../data/about';
@@ -115,6 +116,27 @@ const AboutMePage = () => {
             {experienceData.map((experience, idx) => {
               const { title, date } = experience;
               return <Summary key={idx} title={title} date={date} />;
+            })}
+          </div>
+        </section>
+
+        {/* 출판 기록 */}
+        <section className="mx-auto w-fit">
+          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
+            PUBLISHING
+          </h1>
+          <div className="my-[16px] mx-[50px]">
+            {publishingData.map((published, idx) => {
+              const { title, description, award: uID, date } = published;
+              return (
+                <Summary
+                  key={idx}
+                  title={title}
+                  description={description}
+                  award={uID}
+                  date={date}
+                />
+              );
             })}
           </div>
         </section>

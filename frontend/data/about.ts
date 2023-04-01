@@ -112,19 +112,26 @@ export const experienceData = [
     date: '2021.09 ~ 2021.12',
   },
   {
-    title: '컴퓨터 알고리즘 강의 교안 제작',
-    date: '2021.07 ~ 2021.09',
-  },
-  {
-    title: '소프트웨어 공학 강의 교안 제작',
-    date: '2021.01 ~ 2021.02',
-  },
-  {
     title: '모바일 소프트웨어 수업 튜터링 진행',
     date: '2020.09 ~ 2020.12',
   },
   {
     title: '모바일 소프트웨어 강의 교안 제작',
     date: '2020.07 ~ 2020.09',
+  },
+];
+
+export const publishingData = [
+  {
+    title: 'Software Engineering(Python, Flask, Heroku)',
+    description: '동국대학교 정보통신공학과 소프트웨어 공학 강의 교안 제작',
+    award: '고유번호 ― 979-11-91057-47-8',
+    date: '2021.04',
+  },
+  {
+    title: 'Mobile Software(HTML, JavaScript, React)',
+    description: '동국대학교 정보통신공학과 모바일 소프트웨어 강의 교안 제작',
+    award: '고유번호 ― 979-11-91057-00-3',
+    date: '2020.08',
   },
 ];

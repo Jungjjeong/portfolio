@@ -1,6 +1,7 @@
 import { gabatshu, jungstion, linkbook, movie_search } from '../assets';
+import { IProject } from '../types/project';
 
-export const sideProjectData = [
+export const sideProjectData: IProject[] = [
   {
     id: 1,
     imageSrc: linkbook,
