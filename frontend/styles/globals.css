@@ -10,8 +10,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif, 'Nanum Gothic', sans-serif,
-    'Nanum Pen Script', cursive;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: #f9f9f9;
 }
 
