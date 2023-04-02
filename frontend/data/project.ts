@@ -161,12 +161,92 @@ export const sideProjectData: IProject[] = [
     ],
     linkList: [
       {
-        title: 'link title',
-        link: 'link',
+        title: '가봤슈 서비스 링크',
+        link: 'https://www.gabatshu.xyz/',
       },
       {
-        title: 'link title',
-        link: 'link',
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/FEDC2_GBS_Hwarang',
+      },
+    ],
+    contentList: [
+      {
+        title: '🚩 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '1️⃣ 여행 장소 추천 서비스',
+            contentDescription:
+              '여행 계획 짜기 힘드시죠? <br>해당 지역에 먼저 방문해본 여러 가봤슈 사용자들에게 물어보세요!',
+          },
+          {
+            contentTitle: ' 2️⃣ 여행 일정 공유 서비스',
+            contentDescription:
+              '여행 장소와 더불어 여행지 방문 순서를 여러 사용자에게 공유합니다. <br>처음 방문하는 지역도 마치 가 본 것처럼, 자신에게 적합한 일정을 손쉽게 계획해 보세요!',
+          },
+        ],
+      },
+      {
+        title: '📚 사용 기술',
+        content: [
+          {
+            contentTitle: '1️⃣ Web',
+            contentDescription: [
+              '<div>▪️ JavaScript, React.js</div>',
+              '<div>▪️ Recoil, ContextAPI, React-hook-form, React-router-dom, Axios</div>',
+              '<div>▪️ Storybook, Emotion</div>',
+              '<div>▪️ Docker, Nginx, Jenkins</div>',
+              '<div>▪️ Eslint, Prettier, Git, Github, Figma</div>',
+            ],
+          },
+        ],
+      },
+      {
+        title: '👍 Convention',
+        content: [
+          {
+            contentTitle: '1️⃣ Code Convention',
+            contentDescription: '<strong>Airbnb Eslint</strong>를 따릅니다.',
+          },
+          {
+            contentTitle: '2️⃣ Commit Convention',
+            contentDescription: [
+              '<a href="https://udacity.github.io/git-styleguide/">유다시티의 커밋 메세지 스타일 가이드</a><p>- Commit Type만 영어로 작성합니다.</p><br>',
+              '▪️ Feat: 새로운 기능 추가',
+              '▪️ Fix: 버그 수정',
+              '▪️ Docs: 문서 수정',
+              '▪️ Style: 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우',
+              '▪️ Refactor: 코드 리팩토링',
+              '▪️ Test: 테스트 코드, 리팩토링 테스트 코드 추가',
+              '▪️ Chore: 빌드 업무 수정',
+              '▪️ Design: 스타일(CSS) 수정',
+            ],
+          },
+          {
+            contentTitle: '3️⃣ Issue / Branch',
+            contentDescription: [
+              '<strong>▪️  Dev</strong><ul><li>- 작업한 내용들이 최종적으로 합쳐지는 Branch</li><li>- Feature Branch 기능 완성 시, "rebase" 및 "PR"</li></ul>',
+              '<strong>▪️  main</strong><p>- 배포를 위한 Branch</p>',
+              '<strong>▪️  Branch Flow</strong><img src="https://user-images.githubusercontent.com/72294509/175350390-7bdfff86-f5d5-4eec-97f3-d291c8021389.png" alt="branch flow" />',
+            ],
+          },
+          {
+            contentTitle: '4️⃣ Code Review',
+            contentDescription: [
+              '- 우선적으로 <strong>기능의 정상 동작 검사</strong>',
+              '- 가독성 / 컨벤션',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '개발 화라리',
+            contentDescription:
+              '<ul><li>▪️ 진연주</li><li>▪️ 신승연</li><li>▪️ 유승범</li><li>▪️ 유용상</li><li>▪️ 정지영</li></ul>',
+          },
+        ],
       },
     ],
   },

@@ -38,7 +38,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
   } = project;
 
   return (
-    <div className="max-w-[750px] mx-auto my-[50px] flex flex-col gap-[60px]">
+    <div className="max-w-[750px] mx-auto my-[50px] flex flex-col gap-[70px]">
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px]">
         <p className="text-gray-3 text-sm">
@@ -66,6 +66,36 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
         </div>
       </section>
 
+      {/* NOTE: Service Image */}
+      <section>
+        <h1 className="text-2xl font-bold mb-[30px]">
+          서비스 사진
+          <hr />
+        </h1>
+        <div className="w-full overflow-x-scroll">
+          <div className="flex items-center gap-[20px]">
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+            <div className="w-[525px] h-[300px] shrink-0">
+              <Image src={imageSrc} alt="service photo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* NOTE: Content */}
       <section className="flex flex-col gap-[50px]">
         {/* intro */}
@@ -83,12 +113,13 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
                       <h2 className="text-xl font-bold">{contentTitle}</h2>
                       {typeof contentDescription === 'string' ? (
                         <div
+                          className="mb-[5px]"
                           dangerouslySetInnerHTML={{
                             __html: contentDescription,
                           }}
                         />
                       ) : (
-                        <div>
+                        <div className="mb-[5px]">
                           {contentDescription.map((c, idx) => (
                             <div
                               key={idx}
