@@ -10,4 +10,20 @@ export interface IProject {
     end: string;
   };
   devStackList: string[];
+  linkList: {
+    title: string;
+    link: string;
+  }[];
+  contentList?: IContent[];
+  preview?: string;
+}
+
+export interface IContent {
+  title: string;
+  content: IContentItem[];
+}
+
+export interface IContentItem {
+  contentTitle: string;
+  contentDescription: string | string[];
 }
