@@ -32,6 +32,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
     description,
     period,
     devStackList,
+    imageList,
     linkList,
     preview,
     contentList,
@@ -67,34 +68,27 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
       </section>
 
       {/* NOTE: Service Image */}
-      <section>
-        <h1 className="text-2xl font-bold mb-[30px]">
-          서비스 사진
-          <hr />
-        </h1>
-        <div className="w-full overflow-x-scroll">
-          <div className="flex items-center gap-[20px]">
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
-            </div>
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
-            </div>
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
-            </div>
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
-            </div>
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
-            </div>
-            <div className="w-[525px] h-[300px] shrink-0">
-              <Image src={imageSrc} alt="service photo" />
+      {imageList && (
+        <section>
+          <h1 className="text-2xl font-bold mb-[30px]">
+            서비스 사진
+            <hr />
+          </h1>
+          <div className="w-full overflow-x-scroll scroll_none">
+            <div className="flex items-center gap-[20px]">
+              {imageList.map((image) => (
+                <div className="w-[525px] h-[300px] shrink-0">
+                  <Image
+                    src={image}
+                    alt="service photo"
+                    style={{ borderRadius: 10 }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* NOTE: Content */}
       <section className="flex flex-col gap-[50px]">

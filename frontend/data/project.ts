@@ -1,4 +1,20 @@
-import { gabatshu, jungstion, linkbook, movie_search } from '../assets';
+import {
+  gabatshu,
+  jungstion,
+  linkbook,
+  linkbook_1,
+  linkbook_10,
+  linkbook_11,
+  linkbook_2,
+  linkbook_3,
+  linkbook_4,
+  linkbook_5,
+  linkbook_6,
+  linkbook_7,
+  linkbook_8,
+  linkbook_9,
+  movie_search,
+} from '../assets';
 import { IProject } from '../types/project';
 
 export const sideProjectData: IProject[] = [
@@ -11,11 +27,28 @@ export const sideProjectData: IProject[] = [
       start: '2022-07',
       end: '2022-08',
     },
-    devStackList: ['TypeScript', 'React.js', 'Next.js', 'Emotion', 'Axios'],
+    devStackList: ['TypeScript', 'React.js', 'Next.js', 'Axios', 'Emotion'],
+    imageList: [
+      linkbook_1,
+      linkbook_2,
+      linkbook_3,
+      linkbook_4,
+      linkbook_5,
+      linkbook_6,
+      linkbook_7,
+      linkbook_8,
+      linkbook_9,
+      linkbook_10,
+      linkbook_11,
+    ],
     linkList: [
       {
         title: 'Linkbook 서비스 링크',
         link: 'https://linkbook.tk/',
+      },
+      {
+        title: 'Linkbook 프로젝트 회고록(개인 블로그)',
+        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/LinkBook/',
       },
       {
         title: 'Github',
@@ -156,8 +189,8 @@ export const sideProjectData: IProject[] = [
       'React.js',
       'Next.js',
       'Emotion',
-      'Axios',
       'Storybook',
+      'Axios',
     ],
     linkList: [
       {
@@ -264,6 +297,10 @@ export const sideProjectData: IProject[] = [
       {
         title: '지영화검색 서비스 링크',
         link: 'https://musical-stroopwafel-c0b8ad.netlify.app/',
+      },
+      {
+        title: '지영화검색 프로젝트 회고록 (개인 블로그 링크)',
+        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/movieSearch/',
       },
       {
         title: 'Github',
@@ -401,13 +438,31 @@ export const sideProjectData: IProject[] = [
         ],
       },
       {
+        title: '📁 프로젝트 구조',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '<img src="https://user-images.githubusercontent.com/72294509/154957567-acfb8f5b-e9da-4348-97fe-0d3c33b38e2f.png" alt="project architecture" />',
+          },
+        ],
+      },
+      {
         title: '👉🏻 구현 사항',
         content: [
           {
             contentTitle: '기능 구현',
             contentDescription: [
+              '- 용종 환자의 첫 병원 내원 시, 생활 식습관 및 기본 정보 조사 기능',
+              '- 1년 생활 식습관 기준 솔루션 제공 기능',
+              '- 용종 환자의 매 식단 추적 및 솔루션 제공 기능',
+              '- 환자별 생활 식습관 저장 및 엑셀 출력 기능',
+            ],
+          },
+          {
+            contentTitle: '추가 구현',
+            contentDescription: [
               '- 카카오톡 플러스 친구 + 챗봇 오픈빌더 기능 + Flask 서버 + MongoDB 연동',
-              '- 용종 환자를 위한 기본 생활 식습관 + 일간 식습관 솔루션 제공 기능 개발',
             ],
           },
         ],

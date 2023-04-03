@@ -38,13 +38,13 @@ const Card = ({
               {period.start} ~ {period.end}
             </p>
             {!!devStackList?.length && (
-              <div className="flex min-w-0 gap-[4px]">
+              <div className="flex min-w-0 flex-wrap gap-[4px] my-[3px]">
                 {devStackList.map((stack, index) => {
                   const bgColor = index % 2 === 0 ? 'bg-main-5' : 'bg-main-6';
                   return (
                     <div
                       key={index}
-                      className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sm ${bgColor} m-0`}
+                      className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sxm ${bgColor} m-0`}
                     >
                       {stack}
                     </div>

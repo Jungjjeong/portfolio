@@ -27,3 +27,12 @@ p {
 * {
   box-sizing: border-box;
 }
+
+/* 스크롤 기능 유지하되 스크롤은 보이지 않게 */
+.scroll_none {
+  -ms-overflow-style: none;
+}
+
+.scroll_none::-webkit-scrollbar {
+  display: none;
+}
