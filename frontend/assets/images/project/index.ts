@@ -24,3 +24,15 @@ export { default as gabatshu_9 } from './gabatshu/gabatshu_9.png';
 export { default as gabatshu_10 } from './gabatshu/gabatshu_10.png';
 export { default as gabatshu_11 } from './gabatshu/gabatshu_11.png';
 export { default as gabatshu_12 } from './gabatshu/gabatshu_12.png';
+
+// movie_search
+export { default as movie_search_1 } from './movie_search/movie_search_1.png';
+export { default as movie_search_2 } from './movie_search/movie_search_2.png';
+export { default as movie_search_3 } from './movie_search/movie_search_3.png';
+export { default as movie_search_4 } from './movie_search/movie_search_4.png';
+export { default as movie_search_5 } from './movie_search/movie_search_5.png';
+
+// jungstion
+export { default as jungstion_1 } from './jungstion/jungstion_1.png';
+export { default as jungstion_2 } from './jungstion/jungstion_2.png';
+export { default as jungstion_3 } from './jungstion/jungstion_3.png';

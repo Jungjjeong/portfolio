@@ -1,6 +1,5 @@
 import {
   jungstion,
-  movie_search,
   linkbook,
   linkbook_1,
   linkbook_10,
@@ -26,6 +25,15 @@ import {
   gabatshu_7,
   gabatshu_8,
   gabatshu_9,
+  movie_search,
+  movie_search_1,
+  movie_search_2,
+  movie_search_3,
+  movie_search_4,
+  movie_search_5,
+  jungstion_1,
+  jungstion_2,
+  jungstion_3,
 } from '../assets';
 import { IProject } from '../types/project';
 
@@ -319,6 +327,13 @@ export const sideProjectData: IProject[] = [
       end: '2022-05',
     },
     devStackList: ['JavaScript', 'Vue.js', 'SCSS'],
+    imageList: [
+      movie_search_1,
+      movie_search_2,
+      movie_search_3,
+      movie_search_4,
+      movie_search_5,
+    ],
     linkList: [
       {
         title: '지영화검색 서비스 링크',
@@ -378,6 +393,7 @@ export const sideProjectData: IProject[] = [
       end: '2022-04',
     },
     devStackList: ['JavaScript', 'HTML', 'CSS'],
+    imageList: [jungstion_1, jungstion_2, jungstion_3],
     linkList: [
       {
         title: '노션 클로닝 서비스 링크',
