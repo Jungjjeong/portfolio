@@ -77,7 +77,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
           <div className="w-full overflow-x-scroll scroll_none">
             <div className="flex items-center gap-[20px]">
               {imageList.map((image) => (
-                <div className="w-[525px] h-[300px] shrink-0">
+                <div className="w-[525px] h-auto shrink-0">
                   <Image
                     src={image}
                     alt="service photo"

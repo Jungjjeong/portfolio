@@ -1,6 +1,6 @@
 import {
-  gabatshu,
   jungstion,
+  movie_search,
   linkbook,
   linkbook_1,
   linkbook_10,
@@ -13,7 +13,19 @@ import {
   linkbook_7,
   linkbook_8,
   linkbook_9,
-  movie_search,
+  gabatshu,
+  gabatshu_1,
+  gabatshu_10,
+  gabatshu_11,
+  gabatshu_12,
+  gabatshu_2,
+  gabatshu_3,
+  gabatshu_4,
+  gabatshu_5,
+  gabatshu_6,
+  gabatshu_7,
+  gabatshu_8,
+  gabatshu_9,
 } from '../assets';
 import { IProject } from '../types/project';
 
@@ -191,6 +203,20 @@ export const sideProjectData: IProject[] = [
       'Emotion',
       'Storybook',
       'Axios',
+    ],
+    imageList: [
+      gabatshu_1,
+      gabatshu_2,
+      gabatshu_3,
+      gabatshu_4,
+      gabatshu_5,
+      gabatshu_6,
+      gabatshu_7,
+      gabatshu_8,
+      gabatshu_9,
+      gabatshu_10,
+      gabatshu_11,
+      gabatshu_12,
     ],
     linkList: [
       {
