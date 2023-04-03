@@ -262,12 +262,46 @@ export const sideProjectData: IProject[] = [
     devStackList: ['JavaScript', 'Vue.js', 'SCSS'],
     linkList: [
       {
-        title: 'link title',
-        link: 'link',
+        title: '지영화검색 서비스 링크',
+        link: 'https://musical-stroopwafel-c0b8ad.netlify.app/',
       },
       {
-        title: 'link title',
-        link: 'link',
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/Movie-search-site',
+      },
+    ],
+    contentList: [
+      {
+        title: '👉🏻 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              'OMDB 영화 검색 API를 사용하여 만든 영화 검색 사이트입니다.',
+          },
+        ],
+      },
+      {
+        title: '👉🏻 구현 사항',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription: [
+              '1. OMDB 영화 검색 API 활용',
+              '2. API 요청에 따른 로딩 처리',
+              '3. 페이지별로 최적화된 이미지를 렌더링하여 렌더링 성능 개선',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '개인 프로젝트',
+            contentDescription: '▪️ 정지영',
+          },
+        ],
       },
     ],
   },
@@ -283,12 +317,59 @@ export const sideProjectData: IProject[] = [
     devStackList: ['JavaScript', 'HTML', 'CSS'],
     linkList: [
       {
-        title: 'link title',
-        link: 'link',
+        title: '노션 클로닝 서비스 링크',
+        link: 'https://notion-cloning-5kqkc79gh-jungjjeong.vercel.app/',
       },
       {
-        title: 'link title',
-        link: 'link',
+        title: '노션 클로닝 프로젝트 회고록 (개인 블로그 링크)',
+        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/notionCloning/',
+      },
+      {
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/Notion-cloning-Jungsion',
+      },
+    ],
+    contentList: [
+      {
+        title: '👉🏻 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              'vanillaJS를 사용해 만든 노션 클론 사이트 입니다.',
+          },
+        ],
+      },
+      {
+        title: '👉🏻 구현 사항',
+        content: [
+          {
+            contentTitle: '기능 구현',
+            contentDescription: [
+              '- 디바운싱 사용한 Document 업데이트',
+              '- localStorage를 사용하여 임시 저장 기능 구현',
+              '- Markdown Preview 기능 구현',
+              '- HistoryAPI, FetchAPI 사용 라우팅 처리',
+            ],
+          },
+          {
+            contentTitle: '추가 구현',
+            contentDescription: [
+              '- 독립적인 컴포넌트 지향, 컴포넌트의 재사용성 고려하여 세분화',
+              '- 데이터 흐름 App -> 각 페이지 -> 페이지에서 사용하는 컴포넌트 (단방향)',
+              '- 각 컴포넌트의 데이터 타입과 new 키워드 Validation 체크',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '개인 프로젝트',
+            contentDescription: '▪️ 정지영',
+          },
+        ],
       },
     ],
   },
@@ -304,12 +385,46 @@ export const sideProjectData: IProject[] = [
     devStackList: ['Python', 'Flask', 'MongoDB', 'Kakao API'],
     linkList: [
       {
-        title: 'link title',
-        link: 'link',
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/2021-2-DietTherapyChatbot',
+      },
+    ],
+    contentList: [
+      {
+        title: '👉🏻 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '용종 환자 식이 치료를 위한 식단 입력 및 솔루션 제공 Chatbot 개발',
+          },
+        ],
       },
       {
-        title: 'link title',
-        link: 'link',
+        title: '👉🏻 구현 사항',
+        content: [
+          {
+            contentTitle: '기능 구현',
+            contentDescription: [
+              '- 카카오톡 플러스 친구 + 챗봇 오픈빌더 기능 + Flask 서버 + MongoDB 연동',
+              '- 용종 환자를 위한 기본 생활 식습관 + 일간 식습관 솔루션 제공 기능 개발',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle:
+              '동국대학교 소프트웨어 / 서울대학교 식품영양학 협업 프로젝트',
+            contentDescription: [
+              '- 동국대학교 소프트웨어 연구원 정지영',
+              '- 서울대학교 식품영양학 연구실',
+              '- 동국대학교(경주) 의과대학',
+            ],
+          },
+        ],
       },
     ],
   },
@@ -325,12 +440,53 @@ export const sideProjectData: IProject[] = [
     devStackList: ['JavaScript', 'WXML', 'WXSS', 'Node.js', 'MongoDB', 'Flask'],
     linkList: [
       {
-        title: 'link title',
-        link: 'link',
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/2020-2-ESCD-RUStudent',
+      },
+    ],
+    contentList: [
+      {
+        title: '👉🏻 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription: [
+              '- 유학생의 학내 식당, 카페에서의 간편 주문을 위한 Wechat Miniprogram 개발',
+              '- 자리에서 결제가 가능하도록 Wechat pay 연동',
+            ],
+          },
+        ],
       },
       {
-        title: 'link title',
-        link: 'link',
+        title: '👉🏻 구현 사항',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription: [
+              '- Wechat Miniprogram developer tools를 사용한 "동급식" 어플리케이션 프론트엔드 개발',
+            ],
+          },
+        ],
+      },
+      {
+        title: '📁 프로젝트 구조',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '<img src="https://user-images.githubusercontent.com/72294509/136492614-63b6548f-3370-4142-b461-c8c5e8f6e784.JPG" alt="project architecture" />',
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: 'RUStudent?',
+            contentDescription:
+              '<ul><li>▪️ 정지영</li><li>▪️ 우승제</li><li>▪️ 서예현</li><li>▪️ 황채환</li><li>▪️ 배성규</li></ul>',
+          },
+        ],
       },
     ],
   },
