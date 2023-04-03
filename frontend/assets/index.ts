@@ -4,6 +4,8 @@ export { default as linkbook } from './images/linkbook.png';
 export { default as gabatshu } from './images/gabatshu.png';
 export { default as jungstion } from './images/jungstion.png';
 export { default as movie_search } from './images/movie_search.png';
+export { default as chatbot } from './images/chatbot.png';
+export { default as baechihaebang } from './images/baechihaebang.png';
 
 // linkbook
 export { linkbook_1 } from './images/project';
@@ -43,3 +45,9 @@ export { movie_search_5 } from './images/project';
 export { jungstion_1 } from './images/project';
 export { jungstion_2 } from './images/project';
 export { jungstion_3 } from './images/project';
+
+// baechihaebang
+export { baechihaebang_1 } from './images/project';
+export { baechihaebang_2 } from './images/project';
+export { baechihaebang_3 } from './images/project';
+export { baechihaebang_4 } from './images/project';

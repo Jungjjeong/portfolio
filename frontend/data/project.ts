@@ -1,5 +1,4 @@
 import {
-  jungstion,
   linkbook,
   linkbook_1,
   linkbook_10,
@@ -31,9 +30,16 @@ import {
   movie_search_3,
   movie_search_4,
   movie_search_5,
+  jungstion,
   jungstion_1,
   jungstion_2,
   jungstion_3,
+  chatbot,
+  baechihaebang,
+  baechihaebang_1,
+  baechihaebang_2,
+  baechihaebang_3,
+  baechihaebang_4,
 } from '../assets';
 import { IProject } from '../types/project';
 
@@ -454,7 +460,7 @@ export const sideProjectData: IProject[] = [
   },
   {
     id: 5,
-    imageSrc: linkbook,
+    imageSrc: chatbot,
     title: '용종 환자 식이 치료 ChatBot 개발',
     description: '용종 환자를 위한 식습관 관리/치료 ChatBot 개발',
     period: {
@@ -582,6 +588,107 @@ export const sideProjectData: IProject[] = [
             contentTitle: 'RUStudent?',
             contentDescription:
               '<ul><li>▪️ 정지영</li><li>▪️ 우승제</li><li>▪️ 서예현</li><li>▪️ 황채환</li><li>▪️ 배성규</li></ul>',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// 수상 프로젝트
+export const awardProjectData: IProject[] = [
+  {
+    id: 7,
+    imageSrc: baechihaebang,
+    title: '배치해방',
+    description: '가구 3D 뷰어/AR 배치 어플리케이션',
+    period: {
+      start: '2021-06',
+      end: '2022-11',
+    },
+    devStackList: ['JavaScript', 'Three.js', 'ARKIT', 'ARCORE'],
+    imageList: [
+      baechihaebang_1,
+      baechihaebang_2,
+      baechihaebang_3,
+      baechihaebang_4,
+    ],
+    linkList: [
+      {
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/2021-XR-Challenge',
+      },
+    ],
+    contentList: [
+      {
+        title: '🏆 수상 내역',
+        content: [
+          {
+            contentTitle: '2021 전국 XR 첼린지 장려상',
+            contentDescription:
+              '(3rd place in National XR Challenge Competition, Ministry of Science & ICT, Korea)',
+          },
+        ],
+      },
+      {
+        title: '📱 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '3D Viewer',
+            contentDescription:
+              '가구의 색상, 재질 등을 3D 화면에서 자유롭게 확인 가능한 3D Viewer 제공',
+          },
+          {
+            contentTitle: 'AR Placement',
+            contentDescription:
+              '가구를 "실제 크기"대로 화면에 배치해볼 수 있는 AR 배치 기능 제공',
+          },
+          {
+            contentTitle: 'AR Ruler',
+            contentDescription:
+              '가구를 배치하기 위해 화면에 비치는 공간의 "실제 길이"를 측정해볼 수 있는 AR 줄자 기능 제공',
+          },
+        ],
+      },
+      {
+        title: '🐳 사용 기술',
+        content: [
+          {
+            contentTitle: '1️⃣ 3D Viewer',
+            contentDescription: ['▪️ JavaScript, Three.js'],
+          },
+          {
+            contentTitle: ' 2️⃣ AR Placement/AR Ruler',
+            contentDescription: [
+              '<div>▪️ JAVA, ARCORE, scnencore</div>',
+              '<div>▪️ Swift, ARKIT, scenekit</div>',
+            ],
+          },
+        ],
+      },
+      {
+        title: '📁 서비스 흐름',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '<img src="https://user-images.githubusercontent.com/72294509/142341707-3f56bd27-8b56-4255-a510-c8000791155a.png" alt="project architecture" />',
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '배치해방',
+            contentDescription:
+              '<ul><li>▪️ 정지영</li><li>▪️ 서예현</li><li>▪️ 정현성</li></ul>',
+          },
+          {
+            contentTitle: 'Acknowledgments',
+            contentDescription: [
+              '<a href="http://www.k-hackathon.com/"><strong>👉🏻 K-hackarthon</strong></a>',
+            ],
           },
         ],
       },

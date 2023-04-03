@@ -36,3 +36,9 @@ export { default as movie_search_5 } from './movie_search/movie_search_5.png';
 export { default as jungstion_1 } from './jungstion/jungstion_1.png';
 export { default as jungstion_2 } from './jungstion/jungstion_2.png';
 export { default as jungstion_3 } from './jungstion/jungstion_3.png';
+
+// baechihaebang
+export { default as baechihaebang_1 } from './baechihaebang/baechihaebang_1.png';
+export { default as baechihaebang_2 } from './baechihaebang/baechihaebang_2.png';
+export { default as baechihaebang_3 } from './baechihaebang/baechihaebang_3.png';
+export { default as baechihaebang_4 } from './baechihaebang/baechihaebang_4.png';

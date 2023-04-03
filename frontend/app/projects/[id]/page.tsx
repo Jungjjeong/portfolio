@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { sideProjectData } from '../../../data/project';
+import { awardProjectData, sideProjectData } from '../../../data/project';
 import { IProject } from '../../../types/project';
 import Image from 'next/image';
 import { Tag } from '../../../components';
@@ -13,11 +13,19 @@ interface IPageProps {
 const ProjectDetailPage = ({ params }: IPageProps) => {
   const [project, setProject] = useState<IProject>();
   const getProjectData = (id: number) => {
-    const findProject = sideProjectData.find(
+    if (id < 7) {
+      const findProject = sideProjectData.find(
+        ({ id: projectId }) => projectId === Number(id)
+      );
+
+      setProject(findProject);
+      return;
+    }
+
+    const findAwardProject = awardProjectData.find(
       ({ id: projectId }) => projectId === Number(id)
     );
-
-    setProject(findProject);
+    setProject(findAwardProject);
   };
 
   useEffect(() => {
