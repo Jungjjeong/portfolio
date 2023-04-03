@@ -1,7 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { awardProjectData, sideProjectData } from '../../../data/project';
+import {
+  awardProjectData,
+  presentationData,
+  sideProjectData,
+} from '../../../data/project';
 import { IProject } from '../../../types/project';
 import Image from 'next/image';
 import { Tag } from '../../../components';
@@ -17,15 +21,20 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
       const findProject = sideProjectData.find(
         ({ id: projectId }) => projectId === Number(id)
       );
-
       setProject(findProject);
+      return;
+    } else if (id >= 7 && id < 9) {
+      const findAwardProject = awardProjectData.find(
+        ({ id: projectId }) => projectId === Number(id)
+      );
+      setProject(findAwardProject);
       return;
     }
 
-    const findAwardProject = awardProjectData.find(
+    const findPresentationData = presentationData.find(
       ({ id: projectId }) => projectId === Number(id)
     );
-    setProject(findAwardProject);
+    setProject(findPresentationData);
   };
 
   useEffect(() => {
@@ -51,15 +60,18 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px]">
         <p className="text-gray-3 text-sm">
-          {period.start} ~ {period.end}
+          {period.start}
+          {!!period.end && ` ~ ${period.end}}`}
         </p>
         <h1 className="text-4xl font-bold">{title}</h1>
         <p>{description}</p>
-        <div className="w-full flex gap-[6px]">
-          {devStackList.map((stack) => (
-            <Tag tagName={stack} />
-          ))}
-        </div>
+        {!!devStackList && (
+          <div className="w-full flex gap-[6px]">
+            {devStackList.map((stack) => (
+              <Tag tagName={stack} />
+            ))}
+          </div>
+        )}
         <Image
           src={imageSrc}
           width={800}

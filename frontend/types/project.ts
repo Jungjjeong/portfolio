@@ -8,9 +8,9 @@ export interface IProject {
   description: string;
   period: {
     start: string;
-    end: string;
+    end?: string;
   };
-  devStackList: string[];
+  devStackList?: string[];
   linkList: {
     title: string;
     link: string;

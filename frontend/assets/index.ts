@@ -1,3 +1,4 @@
+// sideProject
 export { default as cover } from './images/cover.png';
 export { default as profile } from './images/profile.jpeg';
 export { default as linkbook } from './images/linkbook.png';
@@ -5,7 +6,14 @@ export { default as gabatshu } from './images/gabatshu.png';
 export { default as jungstion } from './images/jungstion.png';
 export { default as movie_search } from './images/movie_search.png';
 export { default as chatbot } from './images/chatbot.png';
+export { default as wechat } from './images/wechat.png';
+
+// awardData
 export { default as baechihaebang } from './images/baechihaebang.png';
+export { default as chung } from './images/chung.png';
+
+// presentData
+export { default as present_browser } from './images/present_browser.png';
 
 // linkbook
 export { linkbook_1 } from './images/project';

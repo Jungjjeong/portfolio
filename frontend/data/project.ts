@@ -40,6 +40,9 @@ import {
   baechihaebang_2,
   baechihaebang_3,
   baechihaebang_4,
+  chung,
+  wechat,
+  present_browser,
 } from '../assets';
 import { IProject } from '../types/project';
 
@@ -533,7 +536,7 @@ export const sideProjectData: IProject[] = [
   },
   {
     id: 6,
-    imageSrc: linkbook,
+    imageSrc: wechat,
     title: '동급식',
     description: '유학생을 위한 학내 식당/카페 Wechat 결제 미니프로그램',
     period: {
@@ -599,6 +602,120 @@ export const sideProjectData: IProject[] = [
 export const awardProjectData: IProject[] = [
   {
     id: 7,
+    imageSrc: chung,
+    title: '청정한 공기',
+    description: '실내 공기 상태 분석을 위한 자동화 냉난방 및 환풍 시스템',
+    period: {
+      start: '2022-01',
+      end: '2022-02',
+    },
+    devStackList: [
+      'JavaScript',
+      'Vue.js',
+      'Node.js',
+      'Bootstrap',
+      'Express',
+      'CORS',
+    ],
+    imageList: [chung, chung, chung, chung],
+    linkList: [
+      {
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/Testbed-airQuality-web',
+      },
+    ],
+    contentList: [
+      {
+        title: '🏆 수상 내역',
+        content: [
+          {
+            contentTitle: '동국대학교 융합교육원 원장상',
+            contentDescription: '서비스 구현분야 우수상',
+          },
+        ],
+      },
+      {
+        title: '📱 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '실시간 공기 질 데이터 수집',
+            contentDescription: [
+              '- 5초마다 공기질 통합 감지 센서로부터 데이터를 받아와 공기질 데이터 갱신',
+              '- 온도, 습도, 이산화탄소, 미세먼지, 초미세먼지 데이터 수집',
+            ],
+          },
+          {
+            contentTitle: '환기 필요 시점 알림',
+            contentDescription: [
+              '- 공기질 데이터의 값에 따라 좋음/보통/나쁨으로 분류하고 이를 각각 초록/노랑/빨강으로 사용자에게 랜딩',
+              '- 데이터 처리 기준에 따라 적절한 조치 실시간 알림',
+            ],
+          },
+          {
+            contentTitle: '데이터 시각화',
+            contentDescription: [
+              '- 공기질 데이터 하루 차트 확인',
+              '- 공기질 데이터 일주일 차트 확인',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🐳 사용 기술',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription: [
+              '▪️ JavaScript, Vue.js, Bootstrap',
+              '▪️ Node.js, CORS, Express, R/twitter anomaly detection',
+            ],
+          },
+        ],
+      },
+      {
+        title: '💻 시스템 구조',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '<img src="https://user-images.githubusercontent.com/72294509/153754184-2a95601f-294c-4f5b-82cf-b6a79856a19f.png" alt="project architecture" />',
+          },
+        ],
+      },
+      {
+        title: '👍 Convention',
+        content: [
+          {
+            contentTitle: 'Commit Convention',
+            contentDescription: [
+              '<a href="https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit?pli=1">Angular JS Git Commit Message Conventions Document</a><p>- Commit Type만 영어로 작성합니다.</p><br>',
+              '▪️ feat: 새로운 기능',
+              '▪️ fix: 버그 수정',
+              '▪️ build: 빌드 관련 파일 수정',
+              '▪️ chore: 그 외 자잘한 수정',
+              '▪️ ci: CI 관련 설정 수정',
+              '▪️ docs: 문서 수정',
+              '▪️ style: 코드 스타일 혹은 포맷 등 수정',
+              '▪️ refactor: 코드 리팩토링',
+              '▪️ test: 테스트 코드 수정',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '끼리끼리',
+            contentDescription:
+              '<ul><li>▪️ 정지영</li><li>▪️ 서예현</li><li>▪️ 우승제</li><li>▪️ 임효빈</li></ul>',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
     imageSrc: baechihaebang,
     title: '배치해방',
     description: '가구 3D 뷰어/AR 배치 어플리케이션',
@@ -688,6 +805,61 @@ export const awardProjectData: IProject[] = [
             contentTitle: 'Acknowledgments',
             contentDescription: [
               '<a href="http://www.k-hackathon.com/"><strong>👉🏻 K-hackarthon</strong></a>',
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
+// 발표 프로젝트
+export const presentationData: IProject[] = [
+  {
+    id: 9,
+    imageSrc: present_browser,
+    title: '브라우저의 동작 원리 기술 발표',
+    description: '프로그래머스 프론트엔드 데브코스 2기',
+    period: {
+      start: '2022-04-11',
+    },
+    linkList: [
+      {
+        title: '브라우저의 동작 원리 - present.do',
+        link: 'https://present.do/documents/62543b6a12168b359e2e6867',
+      },
+    ],
+    contentList: [
+      {
+        title: '기술 발표',
+        content: [
+          {
+            contentTitle: '발표 주제',
+            contentDescription: '브라우저의 동작 원리',
+          },
+          {
+            contentTitle: '발표 목차',
+            contentDescription: [
+              '01. 브라우저란?',
+              '02. 브라우저의 주요 기능',
+              '03. 브라우저 기본 구조',
+              '04. 렌더링 엔진',
+              '05. 정리',
+              '06. 출처',
+            ],
+          },
+        ],
+      },
+      {
+        title: '발표 후기',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription: [
+              '프로그래머스 프론트엔드 데브코스 과정에서 마음이 맞는 팀원들과 CS 스터디를 진행했습니다.',
+              '좋은 기회로 프로그래머스 데브코스 present.do 계정에 발표 영상을 업로드하게 되었습니다.',
+              '<br/>',
+              '이번 발표를 준비하며 웹 브라우저에 대한 기초를 탄탄히 할 수 있었고, 발표를 통해 남들에게 지식을 전달하는 과정에서 한번 더 반복 학습을 할 수 있었습니다.',
             ],
           },
         ],

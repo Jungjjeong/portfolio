@@ -8,7 +8,7 @@ interface ICardProps {
   description?: string;
   period: {
     start: string;
-    end: string;
+    end?: string;
   };
   devStackList?: string[];
 }
@@ -35,7 +35,8 @@ const Card = ({
             <h1 className="font-bold text-[0.9em]">{title}</h1>
             {description && <p className="text-sm">{description}</p>}
             <p className="text-sm">
-              {period.start} ~ {period.end}
+              {period.start}
+              {!!period.end && ` ~ ${period.end}`}
             </p>
             {!!devStackList?.length && (
               <div className="flex min-w-0 flex-wrap gap-[4px] my-[3px]">
