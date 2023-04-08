@@ -1,5 +1,5 @@
 import { HeaderSection } from './components';
-import { Summary, Tag } from '../../components';
+import { Summary, Tag, Title } from '../../components';
 import {
   awardData,
   certificateData,
@@ -19,9 +19,7 @@ const AboutMePage = () => {
         </div>
         {/* 기술 스택 */}
         <section className="mx-auto w-full">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            TECH STACK
-          </h1>
+          <Title text="TECH STACK" />
           <div className="my-[16px] mx-[50px] flex flex-col gap-[10px]">
             {techStackData.map((tech, idx) => {
               const { type, data } = tech;
@@ -42,9 +40,7 @@ const AboutMePage = () => {
 
         {/* 업무 경력 */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            WORK EXPERIENCE
-          </h1>
+          <Title text="WORK EXPERIENCE" />
           <div className="my-[16px] mx-[50px]">
             {workExperienceData.map((workEx, idx) => {
               const { title, description, date } = workEx;
@@ -62,9 +58,7 @@ const AboutMePage = () => {
 
         {/* 기타 교육 (+학력) */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            EDUCATION
-          </h1>
+          <Title text="EDUCATION" />
           <div className="my-[16px] mx-[50px]">
             {educationData.map((education, idx) => {
               const { title, date } = education;
@@ -75,9 +69,7 @@ const AboutMePage = () => {
 
         {/* 수상 기록 */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            AWARDS
-          </h1>
+          <Title text="AWARDS" />
           <div className="my-[16px] mx-[50px]">
             {awardData.map((award, idx) => {
               const { title, description, award: awardName, date } = award;
@@ -96,9 +88,7 @@ const AboutMePage = () => {
 
         {/* 자격증 */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            CERTIFICATE
-          </h1>
+          <Title text="CERTIFICATE" />
           <div className="my-[16px] mx-[50px]">
             {certificateData.map((certificate, idx) => {
               const { title, date } = certificate;
@@ -109,9 +99,7 @@ const AboutMePage = () => {
 
         {/* 기타 경험 */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            EXPERIENCE
-          </h1>
+          <Title text="EXPERIENCE" />
           <div className="my-[16px] mx-[50px]">
             {experienceData.map((experience, idx) => {
               const { title, date } = experience;
@@ -122,9 +110,7 @@ const AboutMePage = () => {
 
         {/* 출판 기록 */}
         <section className="mx-auto w-fit">
-          <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold">
-            PUBLISHING
-          </h1>
+          <Title text="PUBLISHING" />
           <div className="my-[16px] mx-[50px]">
             {publishingData.map((published, idx) => {
               const { title, description, award: uID, date } = published;
