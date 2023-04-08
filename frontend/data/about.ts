@@ -4,7 +4,7 @@ export const techStackData = [
     data: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Python'],
   },
   {
-    type: 'Frameworks/Libraries',
+    type: 'Frameworks / Libraries',
     data: [
       'React.js',
       'Next.js',

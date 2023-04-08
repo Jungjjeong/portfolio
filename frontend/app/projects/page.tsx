@@ -8,7 +8,7 @@ import {
 
 const ProjectListPage = () => {
   return (
-    <div className="flex flex-col w-full max-w-[750px] mx-auto my-[50px]">
+    <div className="flex flex-col w-full max-w-[720px] mx-auto py-[50px] px-[15px]">
       {/* NOTE : Side Project Section */}
       <section className="mx-auto w-full px=[16px] py-[50px]">
         <Title text="SIDE PROJECT" />

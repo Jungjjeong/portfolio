@@ -58,17 +58,17 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
   } = project;
 
   return (
-    <div className="max-w-[750px] mx-auto my-[50px] flex flex-col gap-[70px]">
+    <div className="max-w-[720px] mx-auto my-[50px] flex flex-col gap-[70px] px-[15px]">
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px] pt-[50px]">
         <p className="text-gray-3 text-sm">
           {period.start}
-          {!!period.end && ` ~ ${period.end}}`}
+          {!!period.end && ` ~ ${period.end}`}
         </p>
         <h1 className="text-4xl font-bold">{title}</h1>
         <p>{description}</p>
         {!!devStackList && (
-          <div className="w-full flex gap-[6px]">
+          <div className="w-full flex gap-[6px] flex-wrap">
             {devStackList.map((stack) => (
               <Tag tagName={stack} />
             ))}

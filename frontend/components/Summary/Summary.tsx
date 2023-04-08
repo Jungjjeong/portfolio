@@ -13,8 +13,8 @@ const defaultProps = {
 const Summary = ({ title, date, description, award }: Props) => {
   return (
     <>
-      <div className="flex gap-[20px] items-center w-[650px] h-auto py-[5px]">
-        <div className="w-fit my-[3px]">
+      <div className="flex gap-[20px] items-center max-w-[650px] w-full h-auto py-[5px]">
+        <div className="my-[3px]">
           <p className="mb-[5px] font-bold">{title}</p>
           {description && (
             <>
@@ -24,7 +24,7 @@ const Summary = ({ title, date, description, award }: Props) => {
           )}
         </div>
         <hr className="grow h-[1px] border-1 border-dashed border-gray-3" />
-        <p className="text-gray-3">{date}</p>
+        <p className="text-gray-3 w-fit">{date}</p>
       </div>
     </>
   );
