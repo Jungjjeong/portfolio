@@ -43,6 +43,7 @@ import {
   chung,
   wechat,
   present_browser,
+  panopticon,
 } from '../assets';
 import { IProject } from '../types/project';
 
@@ -724,6 +725,7 @@ export const awardProjectData: IProject[] = [
       end: '2022-11',
     },
     devStackList: ['JavaScript', 'Three.js', 'ARKIT', 'ARCORE'],
+    youtubeList: ['Uis2hisSzoY', 'b4Uxa4gWZ9M'],
     imageList: [
       baechihaebang_1,
       baechihaebang_2,
@@ -811,12 +813,113 @@ export const awardProjectData: IProject[] = [
       },
     ],
   },
+  {
+    id: 9,
+    imageSrc: panopticon,
+    title: '파놉티콘',
+    description: '부정행위 방지 비대면 시험 관리감독 플랫폼',
+    period: {
+      start: '2020-12',
+      end: '2021-02',
+    },
+    devStackList: [
+      'WebRTC',
+      'JavaScript',
+      'Graph.js',
+      'Node.js',
+      'Anyang.js',
+      'Tensorflow.js',
+      'Firebase',
+    ],
+    youtubeList: ['J4_1RKydsSU'],
+    imageList: [
+      baechihaebang_1,
+      baechihaebang_2,
+      baechihaebang_3,
+      baechihaebang_4,
+    ],
+    linkList: [
+      {
+        title: 'Github',
+        link: 'https://github.com/Jungjjeong/2021-XR-Challenge',
+      },
+    ],
+    contentList: [
+      {
+        title: '🏆 수상 내역',
+        content: [
+          {
+            contentTitle: '동국대학교 2020 겨울 캡스톤디자인 Value Up 장려상',
+            contentDescription: '',
+          },
+        ],
+      },
+      {
+        title: '📱 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '시험용 화상채팅 플랫폼',
+            contentDescription:
+              '부정행위 검출 알고리즘이 적용된 "화상채팅" 기능을 제공합니다.',
+          },
+          {
+            contentTitle: '시험 부정행위 관리 감독',
+            contentDescription: [
+              '2020년 코로나 19로 인해 비대면으로 전환된 많은 교육 환경에서 만연하게 발생중인 <strong>"부정행위" 문제</strong>를 검출합니다.',
+              '수험자 마다의 부정행위 점수를 실시간으로 보여주며, 점수가 높은 순으로 학생 순서를 배치합니다.',
+            ],
+          },
+          {
+            contentTitle: '데이터 시각화',
+            contentDescription:
+              '시험이 종료 후, 시험 시간 동안 누적된 학생 별 부정행위 점수를 시간별 그래프로 한 눈에 보여줍니다.',
+          },
+        ],
+      },
+      {
+        title: '🐳 사용 기술',
+        content: [
+          {
+            contentTitle: '1️⃣ 부정행위 검출 알고리즘',
+            contentDescription: ['▪️ Annyang.js, Tensorflow.js'],
+          },
+          {
+            contentTitle: ' 2️⃣ Video Chat Web',
+            contentDescription: [
+              '<div>▪️ JavaScript, Chart.js</div>',
+              '<div>▪️ Node.js, WebRTC</div>',
+            ],
+          },
+        ],
+      },
+      {
+        title: '📁 프로젝트 구조',
+        content: [
+          {
+            contentTitle: '',
+            contentDescription:
+              '<img src="https://github.com/Jungjjeong/2020-Winter-ValueUpProject/raw/master/img/flowchart.png" alt="project architecture" />',
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 팀 소개',
+        content: [
+          {
+            contentTitle: '동작그만',
+            contentDescription:
+              '<ul><li>▪️ 박정무</li><li>▪️ 우승제</li><li>▪️ 정지영</li><li>▪️ 서예현</li></ul>',
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // 발표 프로젝트
 export const presentationData: IProject[] = [
   {
-    id: 9,
+    id: 10,
     imageSrc: present_browser,
     title: '브라우저의 동작 원리 기술 발표',
     description: '프로그래머스 프론트엔드 데브코스 2기',

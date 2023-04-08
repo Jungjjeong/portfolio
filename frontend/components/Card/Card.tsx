@@ -34,18 +34,18 @@ const Card = ({
           <div className="flex flex-col gap-[5px] w-full h-full box-border p-[14px]">
             <h1 className="font-bold text-[0.9em]">{title}</h1>
             {description && <p className="text-sm">{description}</p>}
-            <p className="text-sm">
+            <p className="text-sm text-gray-3">
               {period.start}
               {!!period.end && ` ~ ${period.end}`}
             </p>
             {!!devStackList?.length && (
               <div className="flex min-w-0 flex-wrap gap-[4px] my-[3px]">
                 {devStackList.map((stack, index) => {
-                  const bgColor = index % 2 === 0 ? 'bg-main-5' : 'bg-main-6';
+                  // const bgColor = index % 2 === 0 ? 'bg-main-5' : 'bg-main-6';
                   return (
                     <div
                       key={index}
-                      className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sxm ${bgColor} m-0`}
+                      className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sxm bg-gray-6 m-0`}
                     >
                       {stack}
                     </div>

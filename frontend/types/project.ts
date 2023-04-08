@@ -4,6 +4,7 @@ export interface IProject {
   id: number;
   imageSrc: StaticImageData;
   imageList?: StaticImageData[];
+  youtubeList?: string[];
   title: string;
   description: string;
   period: {

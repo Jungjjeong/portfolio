@@ -7,8 +7,9 @@ import {
   sideProjectData,
 } from '../../../data/project';
 import { IProject } from '../../../types/project';
-import Image from 'next/image';
 import { Tag } from '../../../components';
+import Image from 'next/image';
+import YouTube from 'react-youtube';
 
 interface IPageProps {
   params: { id: number };
@@ -23,7 +24,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
       );
       setProject(findProject);
       return;
-    } else if (id >= 7 && id < 9) {
+    } else if (id >= 7 && id < 10) {
       const findAwardProject = awardProjectData.find(
         ({ id: projectId }) => projectId === Number(id)
       );
@@ -50,6 +51,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
     period,
     devStackList,
     imageList,
+    youtubeList,
     linkList,
     preview,
     contentList,
@@ -58,7 +60,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
   return (
     <div className="max-w-[750px] mx-auto my-[50px] flex flex-col gap-[70px]">
       {/* NOTE: Header */}
-      <section className="flex flex-col gap-[5px]">
+      <section className="flex flex-col gap-[5px] pt-[50px]">
         <p className="text-gray-3 text-sm">
           {period.start}
           {!!period.end && ` ~ ${period.end}}`}
@@ -87,7 +89,28 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
         </div>
       </section>
 
-      {/* NOTE: Service Image */}
+      {/* NOTE: Youtube section */}
+      {youtubeList && (
+        <section>
+          <h1 className="text-2xl font-bold mb-[30px]">
+            프로젝트 영상
+            <hr />
+          </h1>
+          <div className="w-full flex flex-col gap-[10px]">
+            {youtubeList.map((youtube, idx) => (
+              <YouTube
+                key={idx}
+                videoId={youtube}
+                opts={{
+                  width: '100%',
+                }}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* NOTE: Service ==Image */}
       {imageList && (
         <section>
           <h1 className="text-2xl font-bold mb-[30px]">
@@ -111,7 +134,7 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
       )}
 
       {/* NOTE: Content */}
-      <section className="flex flex-col gap-[50px]">
+      <section className="flex flex-col gap-[60px]">
         {/* intro */}
         {!!contentList && (
           <>

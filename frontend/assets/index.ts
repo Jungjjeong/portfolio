@@ -11,6 +11,7 @@ export { default as wechat } from './images/wechat.png';
 // awardData
 export { default as baechihaebang } from './images/baechihaebang.png';
 export { default as chung } from './images/chung.png';
+export { default as panopticon } from './images/panopticon.png';
 
 // presentData
 export { default as present_browser } from './images/present_browser.png';
