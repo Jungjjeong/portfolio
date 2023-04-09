@@ -1,12 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-import { useDevice } from '../../hooks';
-import { MouseEventHandler, useState } from 'react';
+import { MouseEventHandler, useLayoutEffect, useState } from 'react';
 
 const Navigation = () => {
-  const { isDesktop } = useDevice();
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
+
+  const onResize = () => {
+    const width = window.innerWidth;
+    width > 1024 ? setIsDesktop(true) : setIsDesktop(false);
+  };
+
+  useLayoutEffect(() => {
+    onResize();
+  }, []);
+
+  useLayoutEffect(() => {
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   const handleClickMenu: MouseEventHandler = (e) => {
     setIsOpenMenu(!isOpenMenu);
