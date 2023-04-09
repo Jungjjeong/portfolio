@@ -1,12 +1,11 @@
 'use client';
 
-import type { NextPage } from 'next';
 import { Contact } from '../components';
 import { cover } from '../assets';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 
-const Home: NextPage = () => {
+const Home = () => {
   const typingText = [
     "Hello! I'm Haeyum,<br />Front-end<br />developer!",
     '안녕하세요 해윰입니다.<br />프론트엔드 개발을<br/>하고 있어요!',

@@ -9,13 +9,15 @@ import {
 import { IProject } from '../../../types/project';
 import { Tag } from '../../../components';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import YouTube from 'react-youtube';
 
 interface IPageProps {
   params: { id: number };
 }
 
-const ProjectDetailPage = ({ params }: IPageProps) => {
+const ProjectDetailPage = (pagePrams: any) => {
+  const searchParams = useSearchParams();
   const [project, setProject] = useState<IProject>();
   const getProjectData = (id: number) => {
     if (id < 7) {
@@ -39,8 +41,9 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
   };
 
   useEffect(() => {
-    getProjectData(params.id);
-  }, [params.id]);
+    if (!pagePrams) return;
+    getProjectData(pagePrams.params.id);
+  }, [pagePrams]);
 
   if (!project) return <></>;
   const {
@@ -69,8 +72,8 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
         <p>{description}</p>
         {!!devStackList && (
           <div className="w-full flex gap-[6px] flex-wrap">
-            {devStackList.map((stack) => (
-              <Tag tagName={stack} />
+            {devStackList.map((stack, idx) => (
+              <Tag tagName={stack} key={idx} />
             ))}
           </div>
         )}
@@ -119,8 +122,8 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
           </h1>
           <div className="w-full overflow-x-scroll scroll_none">
             <div className="flex items-center gap-[20px]">
-              {imageList.map((image) => (
-                <div className="w-[525px] h-auto shrink-0">
+              {imageList.map((image, idx) => (
+                <div className="w-[525px] h-auto shrink-0" key={idx}>
                   <Image
                     src={image}
                     alt="service photo"
@@ -138,37 +141,39 @@ const ProjectDetailPage = ({ params }: IPageProps) => {
         {/* intro */}
         {!!contentList && (
           <>
-            {contentList.map(({ title, content }) => (
-              <div>
+            {contentList.map(({ title, content }, idx) => (
+              <div key={idx}>
                 <h1 className="text-2xl font-bold mb-[30px]">
                   {title}
                   <hr />
                 </h1>
                 <div className="flex flex-col gap-[25px]">
-                  {content.map(({ contentTitle, contentDescription }) => (
-                    <div className="mb-[10px]">
-                      <h2 className="text-xl font-bold">{contentTitle}</h2>
-                      {typeof contentDescription === 'string' ? (
-                        <div
-                          className="mb-[5px]"
-                          dangerouslySetInnerHTML={{
-                            __html: contentDescription,
-                          }}
-                        />
-                      ) : (
-                        <div className="mb-[5px]">
-                          {contentDescription.map((c, idx) => (
-                            <div
-                              key={idx}
-                              dangerouslySetInnerHTML={{
-                                __html: c,
-                              }}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                  {content.map(
+                    ({ contentTitle, contentDescription }, contentIdx) => (
+                      <div className="mb-[10px]" key={contentIdx}>
+                        <h2 className="text-xl font-bold">{contentTitle}</h2>
+                        {typeof contentDescription === 'string' ? (
+                          <div
+                            className="mb-[5px]"
+                            dangerouslySetInnerHTML={{
+                              __html: contentDescription,
+                            }}
+                          />
+                        ) : (
+                          <div className="mb-[5px]">
+                            {contentDescription.map((c, idx) => (
+                              <div
+                                key={idx}
+                                dangerouslySetInnerHTML={{
+                                  __html: c,
+                                }}
+                              />
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             ))}
