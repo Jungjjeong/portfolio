@@ -1,6 +1,10 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useEffect, useState, useCallback } from 'react';
 
 const useWindowResize = (fn: () => void, initial = false) => {
+  if (typeof window === undefined) {
+    return 0;
+  }
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const handleFn = useCallback(() => {

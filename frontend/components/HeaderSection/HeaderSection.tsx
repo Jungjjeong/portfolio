@@ -1,5 +1,5 @@
-import { profile } from '../../../../assets';
-import { Button } from '../../../../components';
+import { profile } from '../../assets';
+import { Button } from '..';
 import Image from 'next/image';
 
 const HeaderSection = () => {

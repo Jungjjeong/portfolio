@@ -1,5 +1,4 @@
-import { HeaderSection } from './components';
-import { Summary, Tag, Title } from '../../components';
+import { HeaderSection, Summary, Tag, Title } from '../../components';
 import {
   awardData,
   certificateData,
