@@ -9,7 +9,6 @@ const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
 
   const handleClickMenu: MouseEventHandler = (e) => {
-    e.preventDefault();
     setIsOpenMenu(!isOpenMenu);
   };
 
@@ -31,15 +30,28 @@ const Navigation = () => {
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
             <Link href="/" passHref>
-              <span className="font-bold tracking-[3px] text-sm">
+              <span
+                className="font-bold tracking-[3px] text-sm"
+                onClick={handleClickMenu}
+              >
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
             <Link href="/about" passHref>
-              <span className="font-bold tracking-[3px] text-sm">ABOUTME</span>
+              <span
+                className="font-bold tracking-[3px] text-sm"
+                onClick={handleClickMenu}
+              >
+                ABOUTME
+              </span>
             </Link>
             <Link href="/projects" passHref>
-              <span className="font-bold tracking-[3px] text-sm">PROJECT</span>
+              <span
+                className="font-bold tracking-[3px] text-sm"
+                onClick={handleClickMenu}
+              >
+                PROJECT
+              </span>
             </Link>
           </div>
         </div>
