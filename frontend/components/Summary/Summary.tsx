@@ -13,7 +13,7 @@ const defaultProps = {
 const Summary = ({ title, date, description, award }: Props) => {
   return (
     <>
-      <div className="flex gap-[20px] items-center max-w-[650px] w-full h-auto py-[5px]">
+      <div className="flex gap-[20px] items-center w-full h-auto py-[5px]">
         <div className="my-[3px]">
           <p className="mb-[5px] font-bold">{title}</p>
           {description && (
