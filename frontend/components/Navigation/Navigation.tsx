@@ -42,7 +42,7 @@ const Navigation = () => {
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
-            <Link href="/" passHref>
+            <Link href="/">
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
@@ -50,7 +50,7 @@ const Navigation = () => {
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
-            <Link href="/about" passHref>
+            <Link href="/about">
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
@@ -58,7 +58,7 @@ const Navigation = () => {
                 ABOUTME
               </span>
             </Link>
-            <Link href="/projects" passHref>
+            <Link href="/projects">
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
