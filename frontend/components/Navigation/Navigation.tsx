@@ -1,25 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { MouseEventHandler, useLayoutEffect, useState } from 'react';
+import { MouseEventHandler, useState } from 'react';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
-  const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-  const onResize = () => {
-    const width = window.innerWidth;
-    width > 1024 ? setIsDesktop(true) : setIsDesktop(false);
-  };
-
-  useLayoutEffect(() => {
-    onResize();
-  }, []);
-
-  useLayoutEffect(() => {
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
 
   const handleClickMenu: MouseEventHandler = (e) => {
     setIsOpenMenu(!isOpenMenu);
@@ -42,7 +27,7 @@ const Navigation = () => {
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
-            <Link href="/">
+            <Link href="/" prefetch={false}>
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
@@ -50,7 +35,7 @@ const Navigation = () => {
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
-            <Link href="/about">
+            <Link href="/about" prefetch={false}>
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
@@ -58,7 +43,7 @@ const Navigation = () => {
                 ABOUTME
               </span>
             </Link>
-            <Link href="/projects">
+            <Link href="/projects" prefetch={false}>
               <span
                 className="font-bold tracking-[3px] text-sm"
                 onClick={handleClickMenu}
@@ -72,32 +57,29 @@ const Navigation = () => {
 
       {/* NAVIGATION */}
       <nav className="sticky top-0 z-30 box-border w-full h-[70px] px-[30px] bg-gray border-b border-gray-6">
-        {!isDesktop ? (
-          <div className="flex items-center justify-end h-full">
-            <button
-              className="font-bold tracking-[3px] rounded-[5px] hover:bg-gray-6 px-[4px] py-[2px]"
-              onClick={handleClickMenu}
-            >
-              MENU
-            </button>
-          </div>
-        ) : (
-          <div className="flex gap-[50px] items-center justify-center h-full px-[20px]">
-            <div className="grow">
-              <Link href="/" passHref>
-                <span className="font-bold tracking-[3px]">
-                  JIYOUNG&apos;S PORTFOLIO
-                </span>
-              </Link>
-            </div>
-            <Link href="/about" passHref>
-              <span className="font-bold tracking-[3px]">ABOUTME</span>
-            </Link>
-            <Link href="/projects" passHref>
-              <span className="font-bold tracking-[3px]">PROJECT</span>
+        <div className="flex items-center justify-end lg:hidden h-full">
+          <button
+            className="font-bold tracking-[3px] rounded-[5px] hover:bg-gray-6 px-[4px] py-[2px]"
+            onClick={handleClickMenu}
+          >
+            MENU
+          </button>
+        </div>
+        <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px]">
+          <div className="grow">
+            <Link href="/" passHref>
+              <span className="font-bold tracking-[3px]">
+                JIYOUNG&apos;S PORTFOLIO
+              </span>
             </Link>
           </div>
-        )}
+          <Link href="/about" passHref>
+            <span className="font-bold tracking-[3px]">ABOUTME</span>
+          </Link>
+          <Link href="/projects" passHref>
+            <span className="font-bold tracking-[3px]">PROJECT</span>
+          </Link>
+        </div>
       </nav>
     </>
   );
