@@ -91,10 +91,16 @@ const ProjectDetailPage = (pagePrams: any) => {
           height={500}
           alt="project Thumbnail"
         />
-        <div>
+        <div className="flex flex-col gap-[5px] mt-[10px]">
           {linkList.map(({ link, title }, idx) => (
-            <a key={idx} target="_blank" href={link} rel="noopener noreferrer">
-              <h1 className="text-xl font-bold w-fit underline">👉🏻 {title}</h1>
+            <a
+              key={idx}
+              target="_blank"
+              href={link}
+              rel="noopener noreferrer"
+              className="text-base font-bold underline w-fit"
+            >
+              👉🏻 {title}
             </a>
           ))}
         </div>

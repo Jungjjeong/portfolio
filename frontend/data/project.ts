@@ -74,7 +74,7 @@ export const sideProjectData: IProject[] = [
     youtubeList: ['fNj2mF7uA9Y'],
     linkList: [
       {
-        title: 'Linkbook 서비스 링크',
+        title: 'Linkbook 서비스 링크 (서버가 문을 닫았어요 😇)',
         link: 'https://linkbook.tk/',
       },
       {
@@ -239,7 +239,7 @@ export const sideProjectData: IProject[] = [
     ],
     linkList: [
       {
-        title: '가봤슈 서비스 링크',
+        title: '가봤슈 서비스 링크 (서버가 문을 닫았어요 😇)',
         link: 'https://www.gabatshu.xyz/',
       },
       {
