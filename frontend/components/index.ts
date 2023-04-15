@@ -6,3 +6,4 @@ export { default as Summary } from './Summary';
 export { default as Tag } from './Tag';
 export { default as Title } from './Title';
 export { default as HeaderSection } from './HeaderSection';
+export { default as EnlargedImage } from './EnlargedImage';

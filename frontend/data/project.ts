@@ -71,6 +71,7 @@ export const sideProjectData: IProject[] = [
       linkbook_10,
       linkbook_11,
     ],
+    youtubeList: ['fNj2mF7uA9Y'],
     linkList: [
       {
         title: 'Linkbook 서비스 링크',

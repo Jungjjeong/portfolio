@@ -7,9 +7,8 @@ import {
   sideProjectData,
 } from '../../../data/project';
 import { IProject } from '../../../types/project';
-import { Tag } from '../../../components';
+import { EnlargedImage, Tag } from '../../../components';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
 import YouTube from 'react-youtube';
 
 interface IPageProps {
@@ -17,8 +16,8 @@ interface IPageProps {
 }
 
 const ProjectDetailPage = (pagePrams: any) => {
-  const searchParams = useSearchParams();
   const [project, setProject] = useState<IProject>();
+  const [selectedImageIdx, setSelectedImageIdx] = useState<number>(-1);
   const getProjectData = (id: number) => {
     if (id < 7) {
       const findProject = sideProjectData.find(
@@ -44,6 +43,15 @@ const ProjectDetailPage = (pagePrams: any) => {
     if (!pagePrams) return;
     getProjectData(pagePrams.params.id);
   }, [pagePrams]);
+
+  const handleClickImage = (idx: number) => {
+    if (selectedImageIdx !== -1) {
+      setSelectedImageIdx(-1);
+      return;
+    }
+
+    setSelectedImageIdx(idx);
+  };
 
   if (!project) return <></>;
   const {
@@ -115,25 +123,37 @@ const ProjectDetailPage = (pagePrams: any) => {
 
       {/* NOTE: Service ==Image */}
       {imageList && (
-        <section>
-          <h1 className="text-2xl font-bold mb-[30px]">
-            서비스 사진
-            <hr />
-          </h1>
-          <div className="w-full overflow-x-scroll scroll_none">
-            <div className="flex items-center gap-[20px]">
-              {imageList.map((image, idx) => (
-                <div className="w-[525px] h-auto shrink-0" key={idx}>
-                  <Image
-                    src={image}
-                    alt="service photo"
-                    style={{ borderRadius: 10 }}
-                  />
-                </div>
-              ))}
+        <>
+          <section>
+            <h1 className="text-2xl font-bold mb-[30px]">
+              서비스 사진
+              <hr />
+            </h1>
+            <div className="w-full overflow-x-scroll scroll_none">
+              <div className="flex items-center gap-[20px]">
+                {imageList.map((image, idx) => (
+                  <div
+                    className="w-[525px] h-auto shrink-0 cursor-pointer"
+                    onClick={handleClickImage.bind(this, idx)}
+                    key={idx}
+                  >
+                    <Image
+                      src={image}
+                      alt="service photo"
+                      style={{ borderRadius: 10 }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+          {selectedImageIdx !== -1 && (
+            <EnlargedImage
+              imageData={imageList[selectedImageIdx]}
+              onClickDim={handleClickImage}
+            />
+          )}
+        </>
       )}
 
       {/* NOTE: Content */}

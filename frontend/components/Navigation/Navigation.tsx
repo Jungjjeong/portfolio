@@ -32,13 +32,13 @@ const Navigation = () => {
         <div
           className={`${
             isOpenMenu ? 'opacity-40' : 'opacity-0 invisible'
-          } absolute inset-y-0 w-full h-full bg-black z-40 transition-all duration-200`}
+          } fixed inset-y-0 w-full h-full bg-black z-40 transition-all duration-200`}
           onClick={handleClickMenu}
         />
         <div
           className={`${
             isOpenMenu ? 'inset-x-0 top-0' : 'top-[-100vh]'
-          } absolute  w-full h-fit z-50 bg-gray rounded-b-lg p-[20px] border-box transition-all duration-200`}
+          } fixed w-full h-fit z-50 bg-gray rounded-b-lg p-[20px] border-box transition-all duration-200`}
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
