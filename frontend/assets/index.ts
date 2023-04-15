@@ -1,6 +1,9 @@
-// sideProject
+// default
 export { default as cover } from './images/cover.png';
+export { default as cover_m } from './images/cover_m.png';
 export { default as profile } from './images/profile.jpeg';
+
+// sideProject
 export { default as linkbook } from './images/linkbook.png';
 export { default as gabatshu } from './images/gabatshu.png';
 export { default as jungstion } from './images/jungstion.png';

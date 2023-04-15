@@ -49,7 +49,7 @@ module.exports = {
         '4xl': '2.441rem',
         '5xl': '3.052rem',
         '6xl': '3.452rem',
-        extra: '3.952rem',
+        extra: '3.832rem',
       },
       gridTemplateColumns: {
         project: 'repeat(auto-fill, minmax(320px, 1fr))',
