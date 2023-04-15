@@ -619,7 +619,7 @@ export const awardProjectData: IProject[] = [
       'Express',
       'CORS',
     ],
-    imageList: [chung, chung, chung, chung],
+    // imageList: [chung, chung, chung, chung],
     linkList: [
       {
         title: 'Github',
