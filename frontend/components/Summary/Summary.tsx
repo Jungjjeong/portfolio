@@ -24,7 +24,9 @@ const Summary = ({ title, date, description, award }: Props) => {
           )}
         </div>
         <hr className="grow h-[1px] border-1 border-dashed border-gray-3" />
-        <p className="text-gray-3 w-fit">{date}</p>
+        <p className="text-gray-3 w-fit text-sm md:text-base whitespace-nowrap">
+          {date}
+        </p>
       </div>
     </>
   );

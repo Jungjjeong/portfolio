@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { MouseEventHandler, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
@@ -56,13 +58,13 @@ const Navigation = () => {
       </div>
 
       {/* NAVIGATION */}
-      <nav className="sticky top-0 z-30 box-border w-full h-[70px] px-[30px] bg-gray border-b border-gray-6">
+      <nav className="sticky top-0 z-30 box-border w-full h-[50px] px-[15px] bg-gray border-b border-gray-6">
         <div className="flex items-center justify-end lg:hidden h-full">
           <button
             className="font-bold tracking-[3px] rounded-[5px] hover:bg-gray-6 px-[4px] py-[2px]"
             onClick={handleClickMenu}
           >
-            MENU
+            <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px]">

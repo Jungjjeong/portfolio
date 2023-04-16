@@ -1,5 +1,12 @@
 import '../styles/globals.css';
-import { Footer, Navigation } from '../components';
+import { Metadata } from 'next';
+import { Navigation } from '../components';
+
+export const metaData: Metadata = {
+  title: 'viewport',
+  description:
+    'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover',
+};
 
 export default function RootLayout({
   children,
@@ -11,7 +18,6 @@ export default function RootLayout({
       <body>
         <Navigation />
         {children}
-        <Footer />
       </body>
     </html>
   );
