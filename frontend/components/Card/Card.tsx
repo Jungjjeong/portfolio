@@ -23,7 +23,7 @@ const Card = ({
 }: ICardProps) => {
   return (
     <div className="block drop-shadow-md rounded-[15px] bg-white overflow-hidden transition duration-[300] static h-full hover:translate-y-[-3px]">
-      <Link href={`/projects/${id}`} passHref>
+      <Link href={`/projects/${id}`}>
         <div className="cursor-pointer w-full flex flex-col h-full">
           <Image
             src={imageSrc}

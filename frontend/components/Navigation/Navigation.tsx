@@ -67,16 +67,16 @@ const Navigation = () => {
         </div>
         <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px]">
           <div className="grow">
-            <Link href="/" passHref>
+            <Link href="/" prefetch={false}>
               <span className="font-bold tracking-[3px]">
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
           </div>
-          <Link href="/about" passHref>
+          <Link href="/about" prefetch={false}>
             <span className="font-bold tracking-[3px]">ABOUTME</span>
           </Link>
-          <Link href="/projects" passHref>
+          <Link href="/projects" prefetch={false}>
             <span className="font-bold tracking-[3px]">PROJECT</span>
           </Link>
         </div>
