@@ -11,8 +11,11 @@ const HeaderSection = () => {
       {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-bold">
         JungJiYoung
       </h1> */}
-      <p className="w-fit my-[20px] mx-auto text-2xl font-bold">
-        안녕하세요. 주니어 프론트엔드 개발자 정지영입니다.
+      <p className="w-fit my-[20px] mx-auto text-xl md:text-2xl font-bold text-center">
+        <span>안녕하세요.</span>{' '}
+        <span className="whitespace-nowrap">
+          주니어 프론트엔드 개발자 정지영입니다.
+        </span>
       </p>
       <div className="w-fit mx-auto text-center text-sm">
         꾸준함의 가치를 알기에 학습한 지식을 Github에 남기고 기술 블로그를
@@ -24,7 +27,7 @@ const HeaderSection = () => {
         사용하기 좋은 인터페이스를 구현하는 것을 좋아하며, 이를 보여주기 위한 웹
         디자인에도 관심이 많습니다.
       </div>
-      <div className="flex gap-[10px] w-fit my-[50px] mx-auto">
+      <div className="flex gap-[10px] md:gap-[20px] w-fit my-[50px] mx-auto">
         <a
           target="_blank"
           href="https://github.com/Jungjjeong"

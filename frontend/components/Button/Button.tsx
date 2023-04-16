@@ -8,9 +8,9 @@ interface Props {
 
 const Button = ({ type, text, onClick }: Props) => {
   const commonStyle =
-    'text-white font-bold text-sm px-5 py-2.5 mr-2 mb-2 tracking-[2px] cursor-pointer';
-  const mainButtonStyle = 'bg-main-3 hover:bg-main-5 rounded-lg';
-  const darkButtonStyle = 'bg-gray-1 hover:bg-gray-2 rounded-lg';
+    'text-white font-medium text-sm md:text-base px-5 py-2.5 tracking-[2px] cursor-pointer transition-all duration-150';
+  const mainButtonStyle = 'bg-main-3/75 hover:bg-main-5/75 rounded-lg';
+  const darkButtonStyle = 'bg-black/75 hover:bg-gray-1/75 rounded-lg';
 
   return (
     <button

@@ -29,29 +29,16 @@ const Navigation = () => {
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
-            <Link href="/" prefetch={false}>
-              <span
-                className="font-bold tracking-[3px] text-sm"
-                onClick={handleClickMenu}
-              >
+            <Link href="/" prefetch={false} onClick={handleClickMenu}>
+              <span className="font-bold tracking-[3px] text-sm">
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
-            <Link href="/about" prefetch={false}>
-              <span
-                className="font-bold tracking-[3px] text-sm"
-                onClick={handleClickMenu}
-              >
-                ABOUTME
-              </span>
+            <Link href="/about" prefetch={false} onClick={handleClickMenu}>
+              <span className="font-bold tracking-[3px] text-sm">ABOUTME</span>
             </Link>
-            <Link href="/projects" prefetch={false}>
-              <span
-                className="font-bold tracking-[3px] text-sm"
-                onClick={handleClickMenu}
-              >
-                PROJECT
-              </span>
+            <Link href="/projects" prefetch={false} onClick={handleClickMenu}>
+              <span className="font-bold tracking-[3px] text-sm">PROJECT</span>
             </Link>
           </div>
         </div>

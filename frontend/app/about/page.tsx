@@ -12,8 +12,8 @@ import {
 const AboutMePage = () => {
   return (
     <>
-      <div className="flex flex-col w-full max-w-[720px] mx-auto pb-12 gap-[50px] py-[50px] px-[15px]">
-        <div className="w-full h-auto py-[50px]">
+      <div className="flex flex-col w-full pb-12 gap-[50px] py-[50px] max-w-[710px] px-[20px] mx-auto">
+        <div className="w-full h-auto py-[20px] md:py-[50px]">
           <HeaderSection />
         </div>
         {/* 기술 스택 */}

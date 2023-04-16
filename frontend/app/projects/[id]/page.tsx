@@ -11,10 +11,6 @@ import { EnlargedImage, Tag } from '../../../components';
 import Image from 'next/image';
 import YouTube from 'react-youtube';
 
-interface IPageProps {
-  params: { id: number };
-}
-
 const ProjectDetailPage = (pagePrams: any) => {
   const [project, setProject] = useState<IProject>();
   const [selectedImageIdx, setSelectedImageIdx] = useState<number>(-1);
@@ -69,7 +65,7 @@ const ProjectDetailPage = (pagePrams: any) => {
   } = project;
 
   return (
-    <div className="max-w-[720px] mx-auto my-[50px] flex flex-col gap-[70px] px-[15px]">
+    <div className="my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto">
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px] pt-[50px]">
         <p className="text-gray-3 text-sm">
