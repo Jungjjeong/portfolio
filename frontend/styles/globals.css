@@ -14,6 +14,8 @@ body {
     'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: #fdfdfd;
   font-size: 15px;
+  /* Navigation 높이 제외 */
+  height: calc(100vh - 50px);
 }
 
 a {

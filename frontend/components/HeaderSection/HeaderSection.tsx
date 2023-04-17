@@ -27,7 +27,7 @@ const HeaderSection = () => {
         사용하기 좋은 인터페이스를 구현하는 것을 좋아하며, 이를 보여주기 위한 웹
         디자인에도 관심이 많습니다.
       </div>
-      <div className="flex gap-[10px] md:gap-[20px] w-fit my-[50px] mx-auto">
+      <div className="flex gap-[10px] w-fit my-[50px] mx-auto">
         <a
           target="_blank"
           href="https://github.com/Jungjjeong"
