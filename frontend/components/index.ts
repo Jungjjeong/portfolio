@@ -7,3 +7,4 @@ export { default as Title } from './Title';
 export { default as HeaderSection } from './HeaderSection';
 export { default as EnlargedImage } from './EnlargedImage';
 export { default as DynamicLink } from './DynamicLink';
+export { default as TechStackSection } from './TechStackSection';

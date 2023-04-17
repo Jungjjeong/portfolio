@@ -1,23 +1,94 @@
 export const techStackData = [
   {
     type: 'languages',
-    data: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Python'],
+    data: [
+      {
+        title: 'JavaScript',
+        photo: 'JavaScript',
+      },
+      {
+        title: 'TypeScript',
+        photo: 'TypeScript',
+      },
+      {
+        title: 'HTML',
+        photo: 'HTML',
+      },
+      {
+        title: 'CSS',
+        photo: 'CSS',
+      },
+      {
+        title: 'SCSS',
+        photo: 'SCSS',
+      },
+      {
+        title: 'Python',
+        photo: 'Python',
+      },
+    ],
   },
   {
     type: 'Frameworks / Libraries',
     data: [
-      'React.js',
-      'Next.js',
-      'Vue.js',
-      'Styled-components',
-      'Emotion',
-      'TailwindCSS',
-      'Storybook',
+      {
+        title: 'React.js',
+        photo: 'React.js',
+      },
+      {
+        title: 'Next.js',
+        photo: 'Next.js',
+      },
+      {
+        title: 'Vue.js',
+        photo: 'Vue.js',
+      },
+      {
+        title: 'Recoil',
+        photo: 'Recoil',
+      },
+      {
+        title: 'Styled-components',
+        photo: 'Styled-components',
+      },
+      {
+        title: 'Emotion',
+        photo: 'Emotion',
+      },
+      {
+        title: 'TailwindCSS',
+        photo: 'TailwindCSS',
+      },
+      {
+        title: 'Storybook',
+        photo: 'Storybook',
+      },
     ],
   },
   {
     type: 'Tools',
-    data: ['Git', 'Github', 'Bitbucket', 'Jira', 'VSC', 'Figma'],
+    data: [
+      {
+        title: 'Git',
+        photo: 'Git',
+      },
+      {
+        title: 'Github',
+        photo: 'Github',
+      },
+      {
+        title: 'Bitbucket',
+        photo: 'Bitbucket',
+      },
+      {
+        title: 'Jira',
+        photo: 'Jira',
+      },
+      {
+        title: 'Figma',
+        photo: 'Figma',
+      },
+    ],
   },
 ];
 

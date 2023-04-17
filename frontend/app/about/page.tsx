@@ -1,11 +1,15 @@
-import { HeaderSection, Summary, Tag, Title } from '../../components';
+import {
+  HeaderSection,
+  Summary,
+  TechStackSection,
+  Title,
+} from '../../components';
 import {
   awardData,
   certificateData,
   educationData,
   experienceData,
   publishingData,
-  techStackData,
   workExperienceData,
 } from '../../data/about';
 
@@ -16,25 +20,11 @@ const AboutMePage = () => {
         <div className="w-full h-auto pt-[20px] pb-[40px] md:pt-[50px] md:pb-[80px]">
           <HeaderSection />
         </div>
+
         {/* 기술 스택 */}
         <section className="mx-auto w-full">
           <Title text="TECH STACK" />
-          <div className="my-[16px] flex flex-col gap-[10px]">
-            {techStackData.map((tech, idx) => {
-              const { type, data } = tech;
-
-              return (
-                <div key={`${idx}-${tech}`} className="w-full">
-                  <h3 className="font-medium mb-[7px]">✏️ {type}</h3>
-                  <div className="flex gap-[6px] w-full flex-wrap">
-                    {data.map((name, idx) => (
-                      <Tag key={idx} tagName={name} />
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <TechStackSection />
         </section>
 
         {/* 업무 경력 */}
