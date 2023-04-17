@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const HeaderSection = () => {
   return (
-    <>
+    <div className="animate-fadeIn">
       <div className="w-fit mx-auto rounded-full overflow-hidden mb-[30px]">
         <Image src={profile} alt="header Image" width={250} height={250} />
       </div>
@@ -43,7 +43,7 @@ const HeaderSection = () => {
           <Button text="BLOG" type="dark" />
         </a>
       </div>
-    </>
+    </div>
   );
 };
 

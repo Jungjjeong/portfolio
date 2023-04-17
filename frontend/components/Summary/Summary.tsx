@@ -13,7 +13,9 @@ const Summary = ({ title, date, description, award }: Props) => {
           <p className="md:mb-[5px] font-bold">{title}</p>
           {description && (
             <>
-              <p className="md:my-[5px] text-gray-3 text-sm">{description}</p>
+              <p className="mt-[3px] md:my-[5px] text-gray-3 text-sm">
+                {description}
+              </p>
               <p className="md:my-[5px] text-gray-3 text-sm">{award}</p>
             </>
           )}

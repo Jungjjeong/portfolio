@@ -73,7 +73,7 @@ module.exports = {
       },
       animation: {
         button: 'gradation 1500ms infinite linear',
-        fadeIn: 'fadeIn 1000ms ease-in-out forwards',
+        fadeIn: 'fadeIn 800ms ease-in-out forwards',
       },
       fontFamily: {
         pen: ['Nanum Pen Script'],

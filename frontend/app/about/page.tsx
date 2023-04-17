@@ -13,7 +13,7 @@ const AboutMePage = () => {
   return (
     <>
       <div className="flex flex-col w-full pb-12 gap-[50px] py-[50px] max-w-[710px] px-[20px] mx-auto">
-        <div className="w-full h-auto py-[20px] md:py-[50px]">
+        <div className="w-full h-auto pt-[20px] pb-[40px] md:pt-[50px] md:pb-[80px]">
           <HeaderSection />
         </div>
         {/* 기술 스택 */}
