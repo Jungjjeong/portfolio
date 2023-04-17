@@ -64,7 +64,7 @@ const ProjectDetailPage = (pagePrams: any) => {
   } = project;
 
   return (
-    <div className="my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
+    <div className="mb-[50px] md:my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px] pt-[50px]">
         <p className="text-gray-3 text-sm">

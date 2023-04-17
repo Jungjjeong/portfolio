@@ -28,7 +28,7 @@ const ProjectListPage = () => {
   // }, []);
 
   return (
-    <div className="flex flex-col w-full py-[50px] max-w-[710px] px-[20px] mx-auto">
+    <div className="flex flex-col w-full mb-[50px] md:my-[50px] max-w-[710px] px-[20px] mx-auto">
       {/* NOTE : Side Project Section */}
       <section className="mx-auto w-full px=[16px] py-[50px]">
         <Title text="SIDE PROJECT" />
