@@ -60,12 +60,11 @@ const ProjectDetailPage = (pagePrams: any) => {
     imageList,
     youtubeList,
     linkList,
-    preview,
     contentList,
   } = project;
 
   return (
-    <div className="my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto">
+    <div className="my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
       {/* NOTE: Header */}
       <section className="flex flex-col gap-[5px] pt-[50px]">
         <p className="text-gray-3 text-sm">
@@ -200,13 +199,6 @@ const ProjectDetailPage = (pagePrams: any) => {
               </div>
             ))}
           </>
-        )}
-        {!!preview && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: preview,
-            }}
-          />
         )}
       </section>
     </div>

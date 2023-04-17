@@ -17,7 +17,6 @@ export interface IProject {
     link: string;
   }[];
   contentList?: IContent[];
-  preview?: string;
 }
 
 export interface IContent {
