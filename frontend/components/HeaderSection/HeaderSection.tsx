@@ -17,7 +17,7 @@ const HeaderSection = () => {
           주니어 프론트엔드 개발자 정지영입니다.
         </span>
       </p>
-      <div className="w-fit mx-auto text-center text-sm">
+      <div className="w-fit mx-auto md:text-center text-sm">
         꾸준함의 가치를 알기에 학습한 지식을 Github에 남기고 기술 블로그를
         운영하고 있습니다.
         <br />
