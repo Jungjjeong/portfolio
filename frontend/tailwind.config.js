@@ -49,7 +49,7 @@ module.exports = {
         '4xl': '2.441rem',
         '5xl': '3.052rem',
         '6xl': '3.452rem',
-        extra: '3.832rem',
+        extra: '3.732rem',
       },
       gridTemplateColumns: {
         project: 'repeat(auto-fill, minmax(320px, 1fr))',
@@ -66,9 +66,14 @@ module.exports = {
             'background-position-x': '-100%',
           },
         },
+        fadeIn: {
+          from: { transform: 'translateY(30px)', opacity: 0 },
+          to: { transform: 'translateY(0px)', opacity: 1 },
+        },
       },
       animation: {
         button: 'gradation 1500ms infinite linear',
+        fadeIn: 'fadeIn 1000ms ease-in-out forwards',
       },
       fontFamily: {
         pen: ['Nanum Pen Script'],
