@@ -5,33 +5,26 @@ interface Props {
   award?: string;
 }
 
-const defaultProps = {
-  title: 'Title',
-  date: '2022.07.15',
-};
-
 const Summary = ({ title, date, description, award }: Props) => {
   return (
     <>
-      <div className="flex gap-[20px] items-center w-full h-auto py-[5px]">
+      <div className="flex flex-col md:flex-row md:gap-[20px] md:items-center w-full h-auto py-[7px]">
         <div className="my-[3px]">
-          <p className="mb-[5px] font-bold">{title}</p>
+          <p className="md:mb-[5px] font-bold">{title}</p>
           {description && (
             <>
-              <p className="my-[5px] text-gray-3 text-sm">{description}</p>
-              <p className="my-[5px] text-gray-3 text-sm">{award}</p>
+              <p className="md:my-[5px] text-gray-3 text-sm">{description}</p>
+              <p className="md:my-[5px] text-gray-3 text-sm">{award}</p>
             </>
           )}
         </div>
-        <hr className="grow h-[1px] border-1 border-dashed border-gray-3" />
-        <p className="text-gray-3 w-fit text-sm md:text-base whitespace-nowrap">
+        <hr className="hidden md:block grow h-[1px] border-1 border-dashed border-gray-3 min-w-[10px]" />
+        <p className="w-fit text-gray-3 text-sxm md:text-sm md:text-base whitespace-nowrap">
           {date}
         </p>
       </div>
     </>
   );
 };
-
-Summary.defaultProps = defaultProps;
 
 export default Summary;
