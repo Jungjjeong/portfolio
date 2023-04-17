@@ -30,15 +30,19 @@ const Navigation = () => {
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] text-gray-2">
             <Link href="/" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-bold tracking-[3px] text-sm">
+              <span className="font-medium tracking-[3px] text-sm">
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
             <Link href="/about" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-bold tracking-[3px] text-sm">ABOUTME</span>
+              <span className="font-medium tracking-[3px] text-sm">
+                ABOUTME
+              </span>
             </Link>
             <Link href="/projects" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-bold tracking-[3px] text-sm">PROJECT</span>
+              <span className="font-medium tracking-[3px] text-sm">
+                PROJECT
+              </span>
             </Link>
           </div>
         </div>
@@ -47,6 +51,11 @@ const Navigation = () => {
       {/* NAVIGATION */}
       <nav className="sticky top-0 z-30 box-border w-full h-[50px] px-[15px] bg-gray border-b border-gray-6">
         <div className="flex items-center justify-end lg:hidden h-full">
+          <div className="grow">
+            <Link href="/" prefetch={false}>
+              <span className="font-bold tracking-[3px]">HY</span>
+            </Link>
+          </div>
           <button
             className="font-bold tracking-[3px] rounded-[5px] hover:bg-gray-6 px-[4px] py-[2px]"
             onClick={handleClickMenu}
