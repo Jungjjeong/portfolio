@@ -1,30 +1,52 @@
+import {
+  CSS,
+  React,
+  Bitbucket,
+  Emotion,
+  Figma,
+  Git,
+  Github,
+  HTML,
+  JavaScript,
+  Jira,
+  Next,
+  Python,
+  Recoil,
+  SCSS,
+  Storybook,
+  StyledComponents,
+  Tailwindcss,
+  TypeScript,
+  Vue,
+} from '../assets';
+
 export const techStackData = [
   {
     type: 'languages',
     data: [
       {
         title: 'JavaScript',
-        photo: 'JavaScript',
+        photo: JavaScript,
       },
       {
         title: 'TypeScript',
-        photo: 'TypeScript',
+        photo: TypeScript,
       },
       {
         title: 'HTML',
-        photo: 'HTML',
+        photo: HTML,
       },
       {
         title: 'CSS',
-        photo: 'CSS',
+        photo: CSS,
       },
       {
         title: 'SCSS',
-        photo: 'SCSS',
+        photo: SCSS,
       },
       {
         title: 'Python',
-        photo: 'Python',
+        photo: Python,
       },
     ],
   },
@@ -33,35 +55,35 @@ export const techStackData = [
     data: [
       {
         title: 'React.js',
-        photo: 'React.js',
+        photo: React,
       },
       {
         title: 'Next.js',
-        photo: 'Next.js',
+        photo: Next,
       },
       {
         title: 'Vue.js',
-        photo: 'Vue.js',
+        photo: Vue,
       },
       {
         title: 'Recoil',
-        photo: 'Recoil',
+        photo: Recoil,
       },
       {
         title: 'Styled-components',
-        photo: 'Styled-components',
+        photo: StyledComponents,
       },
       {
         title: 'Emotion',
-        photo: 'Emotion',
+        photo: Emotion,
       },
       {
         title: 'TailwindCSS',
-        photo: 'TailwindCSS',
+        photo: Tailwindcss,
       },
       {
         title: 'Storybook',
-        photo: 'Storybook',
+        photo: Storybook,
       },
     ],
   },
@@ -70,23 +92,23 @@ export const techStackData = [
     data: [
       {
         title: 'Git',
-        photo: 'Git',
+        photo: Git,
       },
       {
         title: 'Github',
-        photo: 'Github',
+        photo: Github,
       },
       {
         title: 'Bitbucket',
-        photo: 'Bitbucket',
+        photo: Bitbucket,
       },
       {
         title: 'Jira',
-        photo: 'Jira',
+        photo: Jira,
       },
       {
         title: 'Figma',
-        photo: 'Figma',
+        photo: Figma,
       },
     ],
   },

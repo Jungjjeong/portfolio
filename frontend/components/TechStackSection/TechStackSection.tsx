@@ -1,4 +1,5 @@
 import { techStackData } from '../../data/about';
+import Image from 'next/image';
 
 const TechStackSection = () => {
   return (
@@ -14,10 +15,13 @@ const TechStackSection = () => {
                 return (
                   <div
                     key={techIdx}
-                    className="bg-black/5 rounded-full max-w-[60px] max-h-[60px]"
+                    className="relative bg-black/5 rounded-full w-[60px] h-[60px] p-[50x] border-box overflow-hidden"
                   >
-                    <div>Image Area</div>
-                    <div>{photo}</div>
+                    <Image
+                      src={photo}
+                      alt={title}
+                      className="max-h-full object-contain"
+                    />
                   </div>
                 );
               })}
