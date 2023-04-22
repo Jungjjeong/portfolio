@@ -8,6 +8,14 @@ export const metaData: Metadata = {
     'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover',
 };
 
+export const metadata: Metadata = {
+  title: "Jiyoung's Portfolio",
+  openGraph: {
+    title: "Jiyoung's Portfolio",
+    description: '👉🏻 Check my Portfolio',
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
