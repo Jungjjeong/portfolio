@@ -78,7 +78,7 @@ export const techStackData = [
         photo: Emotion,
       },
       {
-        title: 'TailwindCSS',
+        title: 'Tailwind<br/>CSS',
         photo: Tailwindcss,
       },
       {

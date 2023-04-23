@@ -15,10 +15,10 @@ const TechStackSection = () => {
                 return (
                   <div
                     key={techIdx}
-                    className="my-[10px] relative rounded-full border border-gray-5 w-14 md:w-16 h-14 md:h-16 p-[50x] border-box overflow-hidden hover:scale-110 transition-all duration-75"
+                    className="my-[10px] relative w-14 md:w-16 h-14 md:h-16 p-[50x] border-box hover:scale-110 hover:z-10 transition-all duration-75 bg-white cursor-pointer"
                   >
                     <div
-                      className="opacity-0 hover:opacity-100 absolute top-0 left-0 bg-black/50 z-10 w-full h-full flex items-center justify-center text-sxm text-gray text-center"
+                      className="opacity-0 hover:opacity-100 absolute top-0 left-0 bg-gray/75 z-10 w-full h-full flex items-center justify-center text-sxm text-center font-bold"
                       dangerouslySetInnerHTML={{
                         __html: title,
                       }}
@@ -26,7 +26,7 @@ const TechStackSection = () => {
                     <Image
                       src={photo}
                       alt={title}
-                      className="max-h-full object-contain"
+                      className="max-h-full object-contain rounded-full border border-gray-5"
                     />
                   </div>
                 );
