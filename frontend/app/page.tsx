@@ -3,6 +3,24 @@ import { cover, cover_m } from '../assets';
 import Image from 'next/image';
 
 const Home = () => {
+  // NOTE: 전체 fade In 효과 구현
+  // const options = { root: null, threshold: 0.1, rootMargin: '-0px' };
+  // const observer = new IntersectionObserver(function (entries, observer) {
+  //   entries.forEach((entry) => {
+  //     const container = entry.target;
+  //     if (entry.isIntersecting) {
+  //       container.classList.add('animate-fadeIn');
+  //     }
+  //   });
+  // }, options);
+
+  // useEffect(() => {
+  //   const targets = document.querySelectorAll('.fade-class');
+
+  //   targets.forEach((target) => {
+  //     observer.observe(target);
+  //   });
+  // }, []);
   return (
     <div className="h-full">
       {/* NOTE: Main Image section */}
@@ -60,9 +78,19 @@ const Home = () => {
           />
         </div>
       </section>
+
       {/* NOTE: Description section */}
-      <section>
-        <div>second section</div>
+      <section className="h-1/2 bg-gray-7">
+        <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center text-2xl font-bold text-white">
+          <p>깊이 있는 고민을 바탕으로 적극적인 자세를 가집니다.</p>
+          <p>배우고 기록하고 제 것으로 녹여내는 과정을 좋아합니다.</p>
+        </div>
+      </section>
+
+      <section className="h-screen bg-main-7">
+        <div className="w-full pb-[50px] md:py-[50px] max-w-[710px] px-[20px] mx-auto">
+          contact section
+        </div>
       </section>
     </div>
   );

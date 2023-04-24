@@ -18,6 +18,7 @@ module.exports = {
           4: '#6CD5EC',
           5: '#C1E3F5',
           6: '#BAECF6',
+          7: '#EEF8FD',
         },
         gray: {
           DEFAULT: '#FFFFFF',
@@ -27,6 +28,7 @@ module.exports = {
           4: '#BDBDBD',
           5: '#E0E0E0',
           6: '#F2F2F2',
+          7: '#050C14',
         },
         black: '#000000',
         text: {

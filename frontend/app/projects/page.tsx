@@ -8,25 +8,6 @@ import {
 } from '../../data/project';
 
 const ProjectListPage = () => {
-  // NOTE: 전체 fade In 효과 구현
-  // const options = { root: null, threshold: 0.1, rootMargin: '-0px' };
-  // const observer = new IntersectionObserver(function (entries, observer) {
-  //   entries.forEach((entry) => {
-  //     const container = entry.target;
-  //     if (entry.isIntersecting) {
-  //       container.classList.add('animate-fadeIn');
-  //     }
-  //   });
-  // }, options);
-
-  // useEffect(() => {
-  //   const targets = document.querySelectorAll('.fade-class');
-
-  //   targets.forEach((target) => {
-  //     observer.observe(target);
-  //   });
-  // }, []);
-
   return (
     <div className="flex flex-col w-full mb-[50px] md:my-[50px] max-w-[710px] px-[20px] mx-auto">
       {/* NOTE : Side Project Section */}
