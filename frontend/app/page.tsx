@@ -5,7 +5,8 @@ import Image from 'next/image';
 const Home = () => {
   return (
     <div className="h-full">
-      <div className="relative h-full">
+      {/* NOTE: Main Image section */}
+      <section className="relative h-full">
         <div className="absolute top-[40%] md:top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-fit mx-auto z-20">
           <div className="animate-fadeIn text-gray font-bold flex flex-col gap-[30px] lg:gap-[20px]">
             <div className="flex flex-col items-center text-2xl md:text-3xl lg:text-extra">
@@ -15,6 +16,7 @@ const Home = () => {
               </p>
             </div>
 
+            {/* buttons */}
             <div className="flex gap-[10px] w-fit z-20 mx-auto">
               <a
                 target="_blank"
@@ -40,12 +42,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* NOTE: Contact Button */}
 
+        {/* NOTE: 배경 이미지 -> 중간 사이즈 UI (md)부터 분기처리 */}
         <div className="w-full overflow-hidden h-full relative">
           <div className="absolute top-0 left-0 h-full w-full bg-black/50 z-10" />
-
-          {/* NOTE: 배경 이미지 -> 중간 사이즈 UI (md)부터 분기처리 */}
           <Image
             src={cover}
             alt="Cover Image"
@@ -59,7 +59,11 @@ const Home = () => {
             className="md:hidden block"
           />
         </div>
-      </div>
+      </section>
+      {/* NOTE: Description section */}
+      <section>
+        <div>second section</div>
+      </section>
     </div>
   );
 };
