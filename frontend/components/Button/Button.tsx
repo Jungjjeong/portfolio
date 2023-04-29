@@ -1,12 +1,13 @@
 import { MouseEventHandler } from 'react';
 
 interface Props {
-  type: 'main' | 'dark';
+  styleType: 'main' | 'dark';
+  type?: 'button' | 'submit' | 'reset';
   text?: string;
   onClick?: MouseEventHandler;
 }
 
-const Button = ({ type, text, onClick }: Props) => {
+const Button = ({ styleType, type, text, onClick }: Props) => {
   const commonStyle =
     'text-white font-medium text-sm md:text-base px-5 py-2.5 tracking-[2px] cursor-pointer transition-all duration-150';
   const mainButtonStyle = 'bg-main-3/75 hover:bg-main-5/75 rounded-lg';
@@ -15,9 +16,10 @@ const Button = ({ type, text, onClick }: Props) => {
   return (
     <button
       className={`${commonStyle} ${
-        type === 'main' ? mainButtonStyle : darkButtonStyle
+        styleType === 'main' ? mainButtonStyle : darkButtonStyle
       }`}
       onClick={onClick && onClick}
+      type={type ? type : 'button'}
     >
       {text}
     </button>

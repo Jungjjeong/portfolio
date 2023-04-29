@@ -6,7 +6,7 @@ export default {
 };
 
 export const Default = () => {
-  return <Button text="GITHUB" type="dark" />;
+  return <Button text="GITHUB" styleType="dark" />;
 };
 
 const handleClick = () => {
@@ -14,5 +14,5 @@ const handleClick = () => {
 };
 
 export const ClickEventTest = () => {
-  return <Button onClick={handleClick} type="dark" />;
+  return <Button onClick={handleClick} styleType="dark" />;
 };
