@@ -5,9 +5,10 @@ interface Props {
   type?: 'button' | 'submit' | 'reset';
   text?: string;
   onClick?: MouseEventHandler;
+  form?: string;
 }
 
-const Button = ({ styleType, type, text, onClick }: Props) => {
+const Button = ({ styleType, type, text, onClick, form }: Props) => {
   const commonStyle =
     'text-white font-medium text-sm md:text-base px-5 py-2.5 tracking-[2px] cursor-pointer transition-all duration-150';
   const mainButtonStyle = 'bg-main-3/75 hover:bg-main-5/75 rounded-lg';
@@ -20,6 +21,7 @@ const Button = ({ styleType, type, text, onClick }: Props) => {
       }`}
       onClick={onClick && onClick}
       type={type ? type : 'button'}
+      form={form}
     >
       {text}
     </button>

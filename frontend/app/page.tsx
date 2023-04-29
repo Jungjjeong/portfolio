@@ -103,25 +103,46 @@ const Home = () => {
         <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade-class">
           <Title text="CONTACT WITH ME" />
           <h3 className="w-fit mx-auto text-sm font-bold">
-            📮 메일은 매일 확인하고 있어요!
+            📮 매일 확인하고 있어요!
           </h3>
-          <form className="flex flex-col gap-5 my-[40px]">
+          <form
+            className="flex flex-col gap-5 my-[40px]"
+            method="POST"
+            data-email="sky990106@naver.com"
+            action="https://script.google.com/macros/s/AKfycbxT2ToXg_Qimhx1WNeF_j8NkIvSgI8IQqpncd2WIYoe9HQRTl2HmfE2H0XIVZVMXM8tvA/exec"
+            target="frAttachFiles"
+            id="contactForm"
+          >
             <input
               placeholder="Name"
+              type="text"
+              name="name"
+              id="uname"
               className="rounded-md border p-[10px] focus:outline-gray-5"
             />
             <input
               placeholder="Email"
+              type="email"
+              name="email"
+              id="uemail"
               className="rounded-md border p-[10px] focus:outline-gray-5"
             />
             <textarea
-              placeholder="Contents"
+              placeholder="Message"
+              name="message"
+              id="umessage"
               className="rounded-md border p-[10px] min-h-[250px] focus:outline-gray-5 align-text-top resize-none"
             />
           </form>
-          <Button styleType="dark" text="SEND" type="submit" />
+          <Button
+            styleType="dark"
+            text="SEND"
+            type="submit"
+            form="contactForm"
+          />
         </div>
       </section>
+      <iframe name="frAttachFiles" className="hidden" />
     </div>
   );
 };
