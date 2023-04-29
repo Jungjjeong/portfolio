@@ -3,25 +3,26 @@
 import { Button, Title } from '../components';
 import { cover, cover_m } from '../assets';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Home = () => {
-  // NOTE: 전체 fade In 효과 구현
-  const options = { root: null, threshold: 0.1, rootMargin: '-0px' };
-  const observer = new IntersectionObserver(function (entries, observer) {
-    entries.forEach((entry) => {
-      const container = entry.target;
-      if (entry.isIntersecting) {
-        container.classList.add('animate-fadeIn');
-      }
-    });
-  }, options);
+  const observer = useRef<IntersectionObserver>();
 
   useEffect(() => {
+    const options = { root: null, threshold: 0.1 };
+    observer.current = new IntersectionObserver(function (entries, observer) {
+      entries.forEach((entry) => {
+        const container = entry.target;
+        if (entry.isIntersecting) {
+          container.classList.add('animate-fadeIn');
+        }
+      });
+    }, options);
+
     const targets = document.querySelectorAll('.fade-class');
 
     targets.forEach((target) => {
-      observer.observe(target);
+      observer.current && observer.current.observe(target);
     });
   }, []);
 
