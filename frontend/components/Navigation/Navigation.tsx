@@ -1,15 +1,26 @@
 'use client';
 
 import Link from 'next/link';
-import { MouseEventHandler, useState } from 'react';
+import { MouseEventHandler, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { usePathname } from 'next/navigation';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const pathName = usePathname();
 
   const handleClickMenu: MouseEventHandler = (e) => {
     setIsOpenMenu(!isOpenMenu);
+  };
+
+  useEffect(() => {
+    console.log(pathName);
+  }, [pathName]);
+
+  const renderHighlight = (navName: string) => {
+    if (navName === pathName) return 'text-gray-1 font-bold';
+    return 'text-gray-2';
   };
 
   return (
@@ -28,21 +39,17 @@ const Navigation = () => {
           } fixed w-full h-fit z-50 bg-gray rounded-b-lg p-[20px] border-box transition-all duration-200`}
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
-          <div className="flex flex-col gap-[10px] text-gray-2">
+          <div className="flex flex-col gap-[10px] font-medium tracking-[3px] text-sm">
             <Link href="/" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-medium tracking-[3px] text-sm">
+              <span className={renderHighlight('/')}>
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
             <Link href="/about" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-medium tracking-[3px] text-sm">
-                ABOUTME
-              </span>
+              <span className={renderHighlight('/about')}>ABOUTME</span>
             </Link>
             <Link href="/projects" prefetch={false} onClick={handleClickMenu}>
-              <span className="font-medium tracking-[3px] text-sm">
-                PROJECT
-              </span>
+              <span className={renderHighlight('/projects')}>PROJECT</span>
             </Link>
           </div>
         </div>
