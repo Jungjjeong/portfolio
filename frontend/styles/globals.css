@@ -46,3 +46,7 @@ p {
 .scroll_none::-webkit-scrollbar {
   display: none;
 }
+
+.fade_class {
+  opacity: 0;
+}

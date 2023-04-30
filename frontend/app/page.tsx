@@ -9,7 +9,7 @@ const Home = () => {
   const observer = useRef<IntersectionObserver>();
 
   useEffect(() => {
-    const options = { root: null, threshold: 0.1 };
+    const options = { root: null, threshold: 0.5 };
     observer.current = new IntersectionObserver(function (entries, observer) {
       entries.forEach((entry) => {
         const container = entry.target;
@@ -19,7 +19,7 @@ const Home = () => {
       });
     }, options);
 
-    const targets = document.querySelectorAll('.fade-class');
+    const targets = document.querySelectorAll('.fade_class');
 
     targets.forEach((target) => {
       observer.current && observer.current.observe(target);
@@ -86,7 +86,7 @@ const Home = () => {
 
       {/* NOTE: Description section */}
       <section className="h-2/3 bg-gray-7 px-[20px]">
-        <div className="w-fit h-full mx-auto flex flex-col gap-3 justify-center items-center font-bold text-white text-center text-2xl md:text-3xl fade-class">
+        <div className="w-fit h-full mx-auto flex flex-col gap-3 justify-center items-center font-bold text-white text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
             <span className="whitespace-nowrap">적극적인 자세를 가집니다.</span>
@@ -101,7 +101,7 @@ const Home = () => {
       </section>
 
       <section className="h-screen flex justify-center px-[20px]">
-        <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade-class">
+        <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade_class">
           <Title text="CONTACT WITH ME" />
           <h3 className="w-fit mx-auto text-sm font-bold">
             📮 매일 확인하고 있어요!
