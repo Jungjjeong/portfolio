@@ -833,12 +833,12 @@ export const awardProjectData: IProject[] = [
       'Firebase',
     ],
     youtubeList: ['J4_1RKydsSU'],
-    imageList: [
-      baechihaebang_1,
-      baechihaebang_2,
-      baechihaebang_3,
-      baechihaebang_4,
-    ],
+    // imageList: [
+    //   baechihaebang_1,
+    //   baechihaebang_2,
+    //   baechihaebang_3,
+    //   baechihaebang_4,
+    // ],
     linkList: [
       {
         title: 'Github',
