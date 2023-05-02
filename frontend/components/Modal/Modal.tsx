@@ -16,7 +16,7 @@ const Modal = ({ modalHandler }: IModal) => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full animate-opacityIn">
       <div
         className={`opacity-40 fixed inset-y-0 right-0 w-full h-full bg-black z-40 cursor-pointer`}
         onClick={modalHandler}

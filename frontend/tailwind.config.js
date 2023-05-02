@@ -72,10 +72,15 @@ module.exports = {
           from: { transform: 'translateY(30px)', opacity: 0 },
           to: { transform: 'translateY(0px)', opacity: 1 },
         },
+        opacityIn: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
       },
       animation: {
         button: 'gradation 1500ms infinite linear',
         fadeIn: 'fadeIn 800ms ease-in-out forwards',
+        opacityIn: 'opacityIn 200ms ease-in-out forwards',
       },
       fontFamily: {
         pen: ['Nanum Pen Script'],
