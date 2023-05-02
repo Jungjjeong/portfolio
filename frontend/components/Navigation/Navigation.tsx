@@ -19,8 +19,8 @@ const Navigation = () => {
   }, [pathName]);
 
   const renderHighlight = (navName: string) => {
-    if (navName === pathName) return 'text-gray-1 font-bold';
-    return 'text-gray-2';
+    if (navName === pathName) return 'hidden';
+    return 'block text-gray-2';
   };
 
   return (

@@ -85,8 +85,8 @@ const Home = () => {
       </section>
 
       {/* NOTE: Description section */}
-      <section className="h-2/3 bg-gray-7 px-[20px]">
-        <div className="w-fit h-full mx-auto flex flex-col gap-3 justify-center items-center font-bold text-white text-center text-2xl md:text-3xl fade_class">
+      <section className="h-2/3 bg-[#CBDBE5] px-[20px]">
+        <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-bold text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
             <span className="whitespace-nowrap">적극적인 자세를 가집니다.</span>
