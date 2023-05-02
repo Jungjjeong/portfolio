@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
         <Navigation />
         {children}
-        <div id="portal"></div>
+        <div id="portal" />
       </body>
     </html>
   );

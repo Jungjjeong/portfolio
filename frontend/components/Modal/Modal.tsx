@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect } from 'react';
+import { useLockBodyScroll } from '../../hooks';
 import Button from '../Button';
 
 interface IModal {
@@ -5,6 +9,12 @@ interface IModal {
 }
 
 const Modal = ({ modalHandler }: IModal) => {
+  const [, setLocked] = useLockBodyScroll();
+
+  useEffect(() => {
+    setLocked(true);
+  }, []);
+
   return (
     <div className="w-full">
       <div

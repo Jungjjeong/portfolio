@@ -40,8 +40,8 @@ const ProjectDetailPage = (pagePrams: any) => {
     getProjectData(pagePrams.params.id);
   }, [pagePrams]);
 
-  const handleClickImage = (idx: number) => {
-    if (selectedImageIdx !== -1) {
+  const handleClickImage = (idx?: number) => {
+    if (selectedImageIdx !== -1 || (idx !== 0 && !idx)) {
       setSelectedImageIdx(-1);
       return;
     }
@@ -151,7 +151,7 @@ const ProjectDetailPage = (pagePrams: any) => {
           {selectedImageIdx !== -1 && (
             <EnlargedImage
               imageData={imageList[selectedImageIdx]}
-              onClickDim={handleClickImage}
+              dimHandler={handleClickImage}
             />
           )}
         </>
