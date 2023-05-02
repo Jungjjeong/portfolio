@@ -1,11 +1,15 @@
 'use client';
 
-import { Button, Title } from '../components';
+import { Button, Modal, Title } from '../components';
 import { cover, cover_m } from '../assets';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useModal } from '../hooks';
+import { createPortal } from 'react-dom';
 
 const Home = () => {
+  const [isSend, setIsSend] = useState<boolean>(false);
+  const { isOpen, modalHandler, portalElement } = useModal();
   const observer = useRef<IntersectionObserver>();
 
   useEffect(() => {
@@ -25,6 +29,16 @@ const Home = () => {
       observer.current && observer.current.observe(target);
     });
   }, []);
+
+  useEffect(() => {
+    if (!isSend) return;
+    modalHandler();
+  }, [isSend, modalHandler]);
+
+  useEffect(() => {
+    if (isOpen) return;
+    setIsSend(false);
+  }, [isOpen]);
 
   return (
     <div className="h-full">
@@ -85,7 +99,7 @@ const Home = () => {
       </section>
 
       {/* NOTE: Description section */}
-      <section className="h-2/3 bg-[#CBDBE5] px-[20px]">
+      <section className="h-2/3 bg-[#E7EEF2] px-[20px]">
         <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-bold text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
@@ -113,6 +127,7 @@ const Home = () => {
             action="https://script.google.com/macros/s/AKfycbxT2ToXg_Qimhx1WNeF_j8NkIvSgI8IQqpncd2WIYoe9HQRTl2HmfE2H0XIVZVMXM8tvA/exec"
             target="frAttachFiles"
             id="contactForm"
+            onSubmit={() => setIsSend(true)}
           >
             <input
               placeholder="Name"
@@ -144,6 +159,9 @@ const Home = () => {
         </div>
       </section>
       <iframe name="frAttachFiles" className="hidden" />
+      {isOpen && portalElement
+        ? createPortal(<Modal modalHandler={modalHandler} />, portalElement)
+        : null}
     </div>
   );
 };

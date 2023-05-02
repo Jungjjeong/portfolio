@@ -14,10 +14,6 @@ const Navigation = () => {
     setIsOpenMenu(!isOpenMenu);
   };
 
-  useEffect(() => {
-    console.log(pathName);
-  }, [pathName]);
-
   const renderHighlight = (navName: string) => {
     if (navName === pathName) return 'hidden';
     return 'block text-gray-2';
