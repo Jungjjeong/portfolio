@@ -10,10 +10,13 @@ import { IProject } from '../../../types/project';
 import { EnlargedImage, Tag } from '../../../components';
 import Image from 'next/image';
 import YouTube from 'react-youtube';
+import { useModal } from '../../../hooks';
+import { createPortal } from 'react-dom';
 
 const ProjectDetailPage = (pagePrams: any) => {
   const [project, setProject] = useState<IProject>();
   const [selectedImageIdx, setSelectedImageIdx] = useState<number>(-1);
+  const { isOpen, modalHandler, portalElement } = useModal();
   const getProjectData = (id: number) => {
     if (id < 7) {
       const findProject = sideProjectData.find(
@@ -40,13 +43,14 @@ const ProjectDetailPage = (pagePrams: any) => {
     getProjectData(pagePrams.params.id);
   }, [pagePrams]);
 
-  const handleClickImage = (idx?: number) => {
-    if (selectedImageIdx !== -1 || (idx !== 0 && !idx)) {
-      setSelectedImageIdx(-1);
-      return;
-    }
+  useEffect(() => {
+    if (isOpen) return;
+    setSelectedImageIdx(-1);
+  }, [isOpen]);
 
+  const handleClickImage = (idx: number) => {
     setSelectedImageIdx(idx);
+    modalHandler();
   };
 
   if (!project) return <></>;
@@ -148,12 +152,15 @@ const ProjectDetailPage = (pagePrams: any) => {
               </div>
             </div>
           </section>
-          {selectedImageIdx !== -1 && (
-            <EnlargedImage
-              imageData={imageList[selectedImageIdx]}
-              dimHandler={handleClickImage}
-            />
-          )}
+          {selectedImageIdx !== -1 && isOpen && portalElement
+            ? createPortal(
+                <EnlargedImage
+                  imageData={imageList[selectedImageIdx]}
+                  dimHandler={modalHandler}
+                />,
+                portalElement
+              )
+            : null}
         </>
       )}
 
