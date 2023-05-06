@@ -155,7 +155,9 @@ const ProjectDetailPage = (pagePrams: any) => {
           {selectedImageIdx !== -1 && isOpen && portalElement
             ? createPortal(
                 <EnlargedImage
-                  imageData={imageList[selectedImageIdx]}
+                  imageListData={imageList}
+                  selectedIdx={selectedImageIdx}
+                  idxHandler={(idx: number) => setSelectedImageIdx(idx)}
                   dimHandler={modalHandler}
                 />,
                 portalElement

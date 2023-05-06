@@ -25,6 +25,7 @@
     "react-youtube": "^10.1.0",
     "reaviz": "^13.1.4",
     "styled-components": "^6.0.5",
+    "swiper": "^10.2.0",
     "typewriter-effect": "^2.20.1"
   },
   "devDependencies": {
