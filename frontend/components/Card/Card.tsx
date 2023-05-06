@@ -22,7 +22,7 @@ const Card = ({
   devStackList,
 }: ICardProps) => {
   return (
-    <div className="block drop-shadow-md rounded-[15px] bg-white overflow-hidden transition duration-[300] static h-full hover:translate-y-[-3px]">
+    <div className="block border border-gray-6 rounded-[15px] bg-white overflow-hidden transition duration-[300] static h-full hover:translate-y-[-3px]">
       <Link href={`/projects/${id}`}>
         <div className="cursor-pointer w-full flex flex-col h-full">
           <Image
