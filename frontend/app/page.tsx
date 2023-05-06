@@ -32,8 +32,25 @@ const Home = () => {
 
   useEffect(() => {
     if (!isSend) return;
+
+    const inputList =
+      document.body.querySelector('#contactForm')?.querySelectorAll('input') ||
+      [];
+    const textArea = document.body.querySelector(
+      '#umessage'
+    ) as HTMLTextAreaElement;
+    const emptyInputList = [...inputList].filter(
+      (input) => !input.value.length
+    );
+
+    if (!!emptyInputList.length || !textArea.value.length) {
+      alert('모든 정보를 입력해주세요');
+      setIsSend(false);
+      return;
+    }
+
     modalHandler();
-  }, [isSend, modalHandler]);
+  }, [isSend]);
 
   useEffect(() => {
     if (isOpen) return;
