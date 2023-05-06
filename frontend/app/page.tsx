@@ -54,6 +54,16 @@ const Home = () => {
 
   useEffect(() => {
     if (isOpen) return;
+
+    const inputList =
+      document.body.querySelector('#contactForm')?.querySelectorAll('input') ||
+      [];
+    const textArea = document.body.querySelector(
+      '#umessage'
+    ) as HTMLTextAreaElement;
+
+    inputList.forEach((input) => (input.value = ''));
+    textArea.value = '';
     setIsSend(false);
   }, [isOpen]);
 
