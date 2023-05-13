@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '../';
+import Button from '../Button';
 import { ReactNode } from 'react';
 
 const ScrollButton = () => {
