@@ -28,8 +28,8 @@ const Card = ({
           <Image
             src={imageSrc}
             alt="project thumbnail"
-            width={700}
-            height={700}
+            width={650}
+            height={372}
           />
           <div className="flex flex-col gap-[5px] w-full h-full box-border p-[14px]">
             <h1 className="font-bold text-[0.9em]">{title}</h1>
