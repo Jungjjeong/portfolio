@@ -6,6 +6,7 @@ import { useLockBodyScroll } from '../../hooks';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import 'swiper/css';
+import Button from '../Button';
 
 interface IEnlargedImage {
   imageListData: StaticImageData[];
@@ -75,22 +76,20 @@ const EnlargedImage = ({
         <div className="max-w-[1150px] w-full h-auto p-[15px] fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
           <Image src={selectedImage} alt="detail Image" />
           <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full flex justify-between p-[25px]">
-            <button
+            <Button
+              text="◀️"
               onClick={handleClickPrevButton}
-              className={`${
-                selectedIdx > 0 ? 'visible' : 'invisible'
-              } rounded-full bg-gray-3/50 hover:bg-gray-4/50 w-[35px] h-[35px] text-white text-center`}
-            >
-              ◀️
-            </button>
-            <button
+              styleType="round"
+              className={selectedIdx > 0 ? 'visible' : 'invisible'}
+            />
+            <Button
+              text="▶️"
               onClick={handleClickNextButton}
-              className={`${
+              styleType="round"
+              className={
                 selectedIdx < imageListData.length - 1 ? 'visible' : 'invisible'
-              } rounded-full bg-gray-3/50 hover:bg-gray-4/50 w-[35px] h-[35px] text-white text-center`}
-            >
-              ▶️
-            </button>
+              }
+            />
           </div>
         </div>
       </div>
