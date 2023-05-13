@@ -5,10 +5,16 @@ import { MouseEventHandler, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { usePathname } from 'next/navigation';
+import { useLockBodyScroll } from '../../hooks';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+  const [, setIsLocked] = useLockBodyScroll();
   const pathName = usePathname();
+
+  useEffect(() => {
+    setIsLocked(isOpenMenu);
+  }, [isOpenMenu]);
 
   const handleClickMenu: MouseEventHandler = (e) => {
     setIsOpenMenu(!isOpenMenu);
@@ -31,8 +37,10 @@ const Navigation = () => {
         />
         <div
           className={`${
-            isOpenMenu ? 'inset-x-0 top-0' : 'top-[-100vh]'
-          } fixed w-full h-fit z-50 bg-gray rounded-b-lg p-[20px] border-box transition-all duration-200`}
+            isOpenMenu
+              ? 'inset-x-0 top-0 opacity-100'
+              : 'top-[-100vh] opacity-0'
+          } fixed w-full h-fit z-50 bg-gray rounded-b-lg p-[20px] border-box transition-all duration-300`}
         >
           <h1 className="mb-[20px] font-bold tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] font-medium tracking-[3px] text-sm">
