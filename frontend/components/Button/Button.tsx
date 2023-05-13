@@ -1,9 +1,9 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 interface Props {
   styleType: 'main' | 'dark' | 'round';
   type?: 'button' | 'submit' | 'reset';
-  text?: string;
+  text?: string | ReactNode;
   onClick?: MouseEventHandler;
   form?: string;
   className?: string;

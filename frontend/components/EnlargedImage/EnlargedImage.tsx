@@ -3,10 +3,10 @@
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { useLockBodyScroll } from '../../hooks';
+import { Button } from '../';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import 'swiper/css';
-import Button from '../Button';
 
 interface IEnlargedImage {
   imageListData: StaticImageData[];

@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import { Metadata } from 'next';
-import { Navigation } from '../components';
+import { Button, Navigation } from '../components';
 
 export const metaData: Metadata = {
   title: 'viewport',
