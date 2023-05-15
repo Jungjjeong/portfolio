@@ -74,7 +74,7 @@ const EnlargedImage = ({
       {/* PC */}
       <div className="hidden lg:block">
         <div className="max-w-[1150px] w-full h-auto p-[15px] fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
-          <Image src={selectedImage} alt="detail Image" />
+          <Image src={selectedImage} alt="detail Image" loading="eager" />
           <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full flex justify-between p-[25px]">
             <Button
               text="◀️"
