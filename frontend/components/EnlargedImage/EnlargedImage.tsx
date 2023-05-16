@@ -28,6 +28,9 @@ const EnlargedImage = ({
   const [swiperOptions, setSwiperOptions] = useState<unknown>(null);
   const [, setLocked] = useLockBodyScroll();
 
+  const SwiperEle = Swiper;
+  const SwiperSlideEle = SwiperSlide;
+
   useEffect(() => {
     setLocked(true);
 
@@ -97,13 +100,13 @@ const EnlargedImage = ({
       {/* MO */}
       <div className="block lg:invisible z-50 fixed top-0 w-full fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%]">
         {swiperOptions && !!imageListData.length ? (
-          <Swiper onSwiper={setSwiper} {...swiperOptions}>
+          <SwiperEle onSwiper={setSwiper} {...swiperOptions}>
             {imageListData.map((image, idx) => (
-              <SwiperSlide key={idx}>
+              <SwiperSlideEle key={idx}>
                 <Image src={image} alt="detail Image" />
-              </SwiperSlide>
+              </SwiperSlideEle>
             ))}
-          </Swiper>
+          </SwiperEle>
         ) : (
           <></>
         )}
