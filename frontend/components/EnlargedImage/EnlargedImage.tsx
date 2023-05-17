@@ -3,7 +3,7 @@
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
 import { useLockBodyScroll } from '../../hooks';
-import { Button } from '../';
+import Button from '../Button';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import 'swiper/css';
@@ -21,6 +21,7 @@ const EnlargedImage = ({
   idxHandler,
   dimHandler,
 }: IEnlargedImage) => {
+  const [isShow, setIsShow] = useState<boolean>();
   const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
     null
   );
@@ -30,6 +31,12 @@ const EnlargedImage = ({
 
   const SwiperEle = Swiper;
   const SwiperSlideEle = SwiperSlide;
+
+  useEffect(() => {
+    if (isShow === undefined) {
+      setIsShow(true);
+    }
+  }, [isShow]);
 
   useEffect(() => {
     setLocked(true);
@@ -69,49 +76,55 @@ const EnlargedImage = ({
   // pc: 버튼 핸들링
   // mo: 스와이프 형식
   return (
-    <div className="animate-opacityIn">
-      <div
-        className={`opacity-40 fixed inset-y-0 right-0 w-full h-full bg-black z-40 cursor-pointer`}
-        onClick={dimHandler}
-      />
-      {/* PC */}
-      <div className="hidden lg:block">
-        <div className="max-w-[1150px] w-full h-auto p-[15px] fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
-          <Image src={selectedImage} alt="detail Image" loading="eager" />
-          <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full flex justify-between p-[25px]">
-            <Button
-              text="◀️"
-              onClick={handleClickPrevButton}
-              styleType="round"
-              className={selectedIdx > 0 ? 'visible' : 'invisible'}
-            />
-            <Button
-              text="▶️"
-              onClick={handleClickNextButton}
-              styleType="round"
-              className={
-                selectedIdx < imageListData.length - 1 ? 'visible' : 'invisible'
-              }
-            />
+    <>
+      {!!isShow && (
+        <div className="animate-opacityIn">
+          <div
+            className={`opacity-40 fixed inset-y-0 right-0 w-full h-full bg-black z-40 cursor-pointer`}
+            onClick={dimHandler}
+          />
+          {/* PC */}
+          <div className="hidden lg:block">
+            <div className="max-w-[1150px] w-full h-auto p-[15px] fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
+              <Image src={selectedImage} alt="detail Image" loading="eager" />
+              <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full flex justify-between p-[25px]">
+                <Button
+                  text="◀️"
+                  onClick={handleClickPrevButton}
+                  styleType="round"
+                  className={selectedIdx > 0 ? 'visible' : 'invisible'}
+                />
+                <Button
+                  text="▶️"
+                  onClick={handleClickNextButton}
+                  styleType="round"
+                  className={
+                    selectedIdx < imageListData.length - 1
+                      ? 'visible'
+                      : 'invisible'
+                  }
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* MO */}
+          <div className="block lg:invisible z-50 fixed top-0 w-full fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            {swiperOptions && !!imageListData.length ? (
+              <SwiperEle onSwiper={setSwiper} {...swiperOptions}>
+                {imageListData.map((image, idx) => (
+                  <SwiperSlideEle key={idx}>
+                    <Image src={image} alt="detail Image" />
+                  </SwiperSlideEle>
+                ))}
+              </SwiperEle>
+            ) : (
+              <></>
+            )}
           </div>
         </div>
-      </div>
-
-      {/* MO */}
-      <div className="block lg:invisible z-50 fixed top-0 w-full fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        {swiperOptions && !!imageListData.length ? (
-          <SwiperEle onSwiper={setSwiper} {...swiperOptions}>
-            {imageListData.map((image, idx) => (
-              <SwiperSlideEle key={idx}>
-                <Image src={image} alt="detail Image" />
-              </SwiperSlideEle>
-            ))}
-          </SwiperEle>
-        ) : (
-          <></>
-        )}
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
