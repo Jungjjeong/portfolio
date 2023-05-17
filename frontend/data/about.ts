@@ -226,6 +226,13 @@ export const publishingData = [
     date: '2021.04',
   },
   {
+    title: '소고기보다 알고리즘',
+    description:
+      '동국대학교 정보통신공학과 컴퓨터 알고리즘 및 실습 강의 교안 제작',
+    award: '고유번호 ― 979-11-91057-85-0',
+    date: '2021.01',
+  },
+  {
     title: 'Mobile Software(HTML, JavaScript, React)',
     description: '동국대학교 정보통신공학과 모바일 소프트웨어 강의 교안 제작',
     award: '고유번호 ― 979-11-91057-00-3',
