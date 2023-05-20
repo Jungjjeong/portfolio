@@ -11,8 +11,8 @@ export const metaData: Metadata = {
 export const metadata: Metadata = {
   title: "Jiyoung's Portfolio",
   openGraph: {
-    title: "Jiyoung's Portfolio",
-    description: '👉🏻 Check my Portfolio',
+    title: 'Jung Jiyoung',
+    description: 'Frontend Developer Portfolio',
   },
 };
 
