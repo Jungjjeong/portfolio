@@ -1,6 +1,6 @@
 'use client';
 
-import { Button, Modal, Title } from '../components';
+import { Button, Modal, ThemeButton, Title } from '../components';
 import { cover, cover_m } from '../assets';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
@@ -71,6 +71,10 @@ const Home = () => {
     <div className="h-full">
       {/* NOTE: Main Image section */}
       <section className="relative h-full">
+        <div className="absolute top-[15px] md:top-[20px] right-[15px] md:right-[20px]">
+          <ThemeButton />
+        </div>
+
         <div className="absolute top-[40%] md:top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-fit mx-auto z-20">
           <div className="animate-fadeIn text-gray font-bold flex flex-col gap-[30px] lg:gap-[20px]">
             <div className="flex flex-col items-center text-2xl md:text-3xl lg:text-extra">

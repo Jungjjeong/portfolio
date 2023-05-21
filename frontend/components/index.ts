@@ -10,3 +10,4 @@ export { default as DynamicLink } from './DynamicLink';
 export { default as TechStackSection } from './TechStackSection';
 export { default as Modal } from './Modal';
 export { default as ScrollButton } from './ScrollButton';
+export { default as ThemeButton } from './ThemeButton';

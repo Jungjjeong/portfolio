@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { usePathname } from 'next/navigation';
 import { useLockBodyScroll } from '../../hooks';
+import ThemeButton from '../ThemeButton';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
@@ -74,7 +75,7 @@ const Navigation = () => {
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px]">
+        <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px] max-w-[1240px] m-auto">
           <div className="grow">
             <Link href="/" prefetch={false}>
               <span className="font-bold tracking-[3px]">
