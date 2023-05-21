@@ -8,6 +8,14 @@ const ThemeButton = () => {
   useEffect(() => {
     const htmlDom = document.querySelector('html');
 
+    if (htmlDom?.classList.contains('dark')) {
+      setIsDark(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    const htmlDom = document.querySelector('html');
+
     if (isDark) {
       htmlDom?.classList.add('dark');
       return;

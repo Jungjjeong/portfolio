@@ -130,7 +130,7 @@ const Home = () => {
       </section>
 
       {/* NOTE: Description section */}
-      <section className="h-2/3 bg-[#f9fafb] px-[20px]">
+      <section className="h-[60vh] bg-[#f9fafb] px-[20px]">
         <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-bold text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
