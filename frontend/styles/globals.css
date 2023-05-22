@@ -18,8 +18,8 @@ body {
 }
 
 .dark body {
-  background-color: #1e1e1e;
-  color: #ffffff;
+  background-color: #17171b;
+  color: #e4e4e5;
 }
 
 @media screen and (max-width: 767px) {

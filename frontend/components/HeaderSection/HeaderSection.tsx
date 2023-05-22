@@ -8,10 +8,10 @@ const HeaderSection = () => {
       <div className="w-fit mx-auto rounded-full overflow-hidden mb-[30px]">
         <Image src={profile} alt="header Image" width={250} height={250} />
       </div>
-      {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-bold">
+      {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-semibold">
         JungJiYoung
       </h1> */}
-      <p className="w-fit my-[20px] mx-auto text-xl md:text-2xl font-bold text-center">
+      <p className="w-fit my-[20px] mx-auto text-xl md:text-2xl font-semibold text-center">
         <span>안녕하세요.</span>{' '}
         <span className="whitespace-nowrap">
           주니어 프론트엔드 개발자 정지영입니다.

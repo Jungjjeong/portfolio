@@ -10,7 +10,7 @@ const Summary = ({ title, date, description, award }: Props) => {
     <>
       <div className="flex flex-col md:flex-row md:gap-[20px] md:items-center w-full h-auto py-[7px]">
         <div className="my-[3px]">
-          <p className="md:mb-[5px] font-bold">{title}</p>
+          <p className="md:mb-[5px] font-semibold">{title}</p>
           {description && (
             <>
               <p className="mt-[3px] md:my-[5px] text-gray-3 text-sm">

@@ -76,7 +76,7 @@ const Home = () => {
         </div>
 
         <div className="absolute top-[40%] md:top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-fit mx-auto z-20">
-          <div className="animate-fadeIn text-gray font-bold flex flex-col gap-[30px] lg:gap-[20px]">
+          <div className="animate-fadeIn text-gray font-semibold flex flex-col gap-[30px] lg:gap-[20px]">
             <div className="flex flex-col items-center text-2xl md:text-3xl lg:text-extra">
               <p className="whitespace-nowrap">안녕하세요 해윰입니다.</p>
               <p className="whitespace-nowrap">
@@ -130,8 +130,8 @@ const Home = () => {
       </section>
 
       {/* NOTE: Description section */}
-      <section className="h-[60vh] bg-[#f9fafb] px-[20px]">
-        <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-bold text-center text-2xl md:text-3xl fade_class">
+      <section className="h-[60vh] bg-[#f9fafb] dark:bg-dark-1 dark:text-gray px-[20px]">
+        <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-semibold text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
             <span className="whitespace-nowrap">적극적인 자세를 가집니다.</span>
@@ -148,7 +148,7 @@ const Home = () => {
       <section className="h-screen flex justify-center px-[20px]">
         <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade_class">
           <Title text="CONTACT WITH ME" />
-          <h3 className="w-fit mx-auto text-sm font-bold">
+          <h3 className="w-fit mx-auto text-sm font-medium">
             📮 매일 확인하고 있어요!
           </h3>
           <form

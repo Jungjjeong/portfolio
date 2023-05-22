@@ -37,6 +37,7 @@ const ProjectDetailPage = (pagePrams: any) => {
     );
     setProject(findPresentationData);
   };
+  const hrDom = <hr className="dark:border-dark-2" />;
 
   useEffect(() => {
     if (!pagePrams) return;
@@ -73,14 +74,14 @@ const ProjectDetailPage = (pagePrams: any) => {
       <div className="mb-[50px] md:my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
         {/* NOTE: Header */}
         <section className="flex flex-col gap-[5px] pt-[50px] animate-fadeIn">
-          <p className="text-gray-3 text-sm">
+          <p className="text-gray-3 dark:text-gray-4 text-sm">
             {period.start}
             {!!period.end && ` ~ ${period.end}`}
           </p>
-          <h1 className="text-4xl font-bold">{title}</h1>
+          <h1 className="text-4xl font-semibold">{title}</h1>
           <p>{description}</p>
           {!!devStackList && (
-            <div className="w-full flex gap-[6px] flex-wrap">
+            <div className="w-full flex gap-[6px] flex-wrap mb-[5px]">
               {devStackList.map((stack, idx) => (
                 <Tag tagName={stack} key={idx} />
               ))}
@@ -99,7 +100,7 @@ const ProjectDetailPage = (pagePrams: any) => {
                 target="_blank"
                 href={link}
                 rel="noopener noreferrer"
-                className="text-base font-bold underline w-fit"
+                className="text-base font-medium underline w-fit dark:text-gray-4"
               >
                 👉🏻 {title}
               </a>
@@ -110,9 +111,9 @@ const ProjectDetailPage = (pagePrams: any) => {
         {/* NOTE: Youtube section */}
         {youtubeList && (
           <section>
-            <h1 className="text-2xl font-bold mb-[30px]">
+            <h1 className="text-2xl font-semibold mb-[30px]">
               프로젝트 영상
-              <hr />
+              {hrDom}
             </h1>
             <div className="w-full flex flex-col gap-[10px]">
               {youtubeList.map((youtube, idx) => (
@@ -132,9 +133,9 @@ const ProjectDetailPage = (pagePrams: any) => {
         {imageList && (
           <>
             <section>
-              <h1 className="text-2xl font-bold mb-[30px]">
+              <h1 className="text-2xl font-semibold mb-[30px]">
                 서비스 사진
-                <hr />
+                {hrDom}
               </h1>
               <div className="w-full overflow-x-scroll scroll_none">
                 <div className="flex items-center gap-[20px]">
@@ -175,15 +176,17 @@ const ProjectDetailPage = (pagePrams: any) => {
             <>
               {contentList.map(({ title, content }, idx) => (
                 <div key={idx}>
-                  <h1 className="text-2xl font-bold mb-[30px]">
+                  <h1 className="text-2xl font-semibold mb-[30px]">
                     {title}
-                    <hr />
+                    {hrDom}
                   </h1>
                   <div className="flex flex-col gap-[25px]">
                     {content.map(
                       ({ contentTitle, contentDescription }, contentIdx) => (
                         <div className="mb-[10px]" key={contentIdx}>
-                          <h2 className="text-xl font-bold">{contentTitle}</h2>
+                          <h2 className="text-xl font-semibold">
+                            {contentTitle}
+                          </h2>
                           {typeof contentDescription === 'string' ? (
                             <div
                               className="mb-[5px]"

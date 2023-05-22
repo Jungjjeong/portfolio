@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,6 +32,12 @@ module.exports = {
           7: '#050C14',
         },
         black: '#000000',
+        dark: {
+          DEFAULT: '#17171B',
+          1: '#202027',
+          2: '#2C2C34',
+          3: '#62626C',
+        },
         text: {
           DEFAULT: '#353C49',
           1: '#707885',
