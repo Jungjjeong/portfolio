@@ -165,20 +165,20 @@ const Home = () => {
               type="text"
               name="name"
               id="uname"
-              className="rounded-md border p-[10px] focus:outline-gray-5"
+              className="rounded-md border p-[10px] focus:outline-gray-5 dark:border-dark-1 dark:bg-dark-1 dark:focus:outline-dark-1"
             />
             <input
               placeholder="Email"
               type="email"
               name="email"
               id="uemail"
-              className="rounded-md border p-[10px] focus:outline-gray-5"
+              className="rounded-md border p-[10px] focus:outline-gray-5 dark:border-dark-1 dark:bg-dark-1 dark:focus:outline-dark-1"
             />
             <textarea
               placeholder="Message"
               name="message"
               id="umessage"
-              className="rounded-md border p-[10px] min-h-[250px] focus:outline-gray-5 align-text-top resize-none"
+              className="rounded-md border p-[10px] min-h-[250px] focus:outline-gray-5 align-text-top resize-none dark:border-dark-1 dark:bg-dark-1 dark:focus:outline-dark-1"
             />
           </form>
           <Button

@@ -17,6 +17,10 @@ body {
   color: #202632;
 }
 
+.dark {
+  background-color: #17171b;
+}
+
 .dark body {
   background-color: #17171b;
   color: #e4e4e5;
