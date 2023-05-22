@@ -112,7 +112,7 @@ const Home = () => {
         </div>
 
         {/* NOTE: 배경 이미지 -> 중간 사이즈 UI (md)부터 분기처리 */}
-        <div className="w-full overflow-hidden h-[100vh] relative">
+        <div className="w-full overflow-hidden h-[calc(100vh-50px)] relative">
           <div className="absolute top-0 left-0 h-full w-full bg-black/50 z-10" />
           <Image
             src={cover}
