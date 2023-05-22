@@ -22,7 +22,7 @@ import {
 
 export const techStackData = [
   {
-    type: 'languages',
+    type: 'Languages',
     data: [
       {
         title: 'JavaScript',
