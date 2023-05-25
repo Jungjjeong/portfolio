@@ -4,7 +4,7 @@ interface ITitle {
 
 const Title = ({ text }: ITitle) => {
   return (
-    <h1 className="mx-auto w-fit tracking-[3px] text-main font-bold text-2xl my-2">
+    <h1 className="mx-auto w-fit tracking-[3px] text-main font-semibold text-2xl my-2">
       {text}
     </h1>
   );

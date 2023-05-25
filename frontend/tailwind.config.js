@@ -12,8 +12,8 @@ module.exports = {
     extend: {
       colors: {
         main: {
-          DEFAULT: '#0080C8',
-          1: '#0080C8',
+          DEFAULT: '#2A7BF4',
+          1: '#2A7BF4',
           2: '#00A7CC',
           3: '#6CC2F2',
           4: '#6CD5EC',
