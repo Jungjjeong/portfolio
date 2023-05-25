@@ -23,7 +23,7 @@ const Navigation = () => {
 
   const renderHighlight = (navName: string) => {
     if (navName === pathName) return 'hidden';
-    return 'block text-gray-2';
+    return 'block text-gray-2 dark:text-gray-4';
   };
 
   return (
@@ -45,16 +45,29 @@ const Navigation = () => {
         >
           <h1 className="mb-[20px] font-medium tracking-[3px] ">MENU</h1>
           <div className="flex flex-col gap-[10px] font-medium tracking-[3px] text-sm">
-            <Link href="/" prefetch={false} onClick={handleClickMenu}>
-              <span className={renderHighlight('/')}>
-                JIYOUNG&apos;S PORTFOLIO
-              </span>
+            <Link
+              href="/"
+              prefetch={false}
+              onClick={handleClickMenu}
+              className={renderHighlight('/')}
+            >
+              <span>JIYOUNG&apos;S PORTFOLIO</span>
             </Link>
-            <Link href="/about" prefetch={false} onClick={handleClickMenu}>
-              <span className={renderHighlight('/about')}>ABOUTME</span>
+            <Link
+              href="/about"
+              prefetch={false}
+              onClick={handleClickMenu}
+              className={renderHighlight('/about')}
+            >
+              <span>ABOUTME</span>
             </Link>
-            <Link href="/projects" prefetch={false} onClick={handleClickMenu}>
-              <span className={renderHighlight('/projects')}>PROJECT</span>
+            <Link
+              href="/projects"
+              prefetch={false}
+              onClick={handleClickMenu}
+              className={renderHighlight('/projects')}
+            >
+              <span>PROJECT</span>
             </Link>
           </div>
         </div>
