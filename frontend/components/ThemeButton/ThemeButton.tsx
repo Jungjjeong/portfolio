@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 const ThemeButton = () => {
   const [isDark, setIsDark] = useState<boolean>();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const htmlDom = document.querySelector('html');
 
     if (htmlDom?.classList.contains('dark')) {
@@ -18,6 +18,7 @@ const ThemeButton = () => {
 
   useEffect(() => {
     const htmlDom = document.querySelector('html');
+    if (isDark === undefined) return;
 
     if (isDark) {
       htmlDom?.classList.add('dark');
