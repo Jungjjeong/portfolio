@@ -46,7 +46,6 @@ const Navigation = () => {
           <div className="flex flex-col gap-[10px] font-medium tracking-[3px] text-sm">
             <Link
               href="/"
-              prefetch={false}
               onClick={handleClickMenu}
               className={renderHighlight('/')}
             >
@@ -54,7 +53,6 @@ const Navigation = () => {
             </Link>
             <Link
               href="/about"
-              prefetch={false}
               onClick={handleClickMenu}
               className={renderHighlight('/about')}
             >
@@ -62,7 +60,6 @@ const Navigation = () => {
             </Link>
             <Link
               href="/projects"
-              prefetch={false}
               onClick={handleClickMenu}
               className={renderHighlight('/projects')}
             >
@@ -76,7 +73,7 @@ const Navigation = () => {
       <nav className="sticky top-0 z-30 box-border w-full h-[50px] px-[15px] bg-gray dark:bg-dark border-b border-gray-6 dark:border-dark">
         <div className="flex items-center justify-end lg:hidden h-full">
           <div className="grow">
-            <Link href="/" prefetch={false}>
+            <Link href="/">
               <span className="font-medium tracking-[3px]">HY</span>
             </Link>
           </div>
@@ -89,16 +86,16 @@ const Navigation = () => {
         </div>
         <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px] max-w-[1240px] m-auto">
           <div className="grow">
-            <Link href="/" prefetch={false}>
+            <Link href="/">
               <span className="font-semibold tracking-[3px]">
                 JIYOUNG&apos;S PORTFOLIO
               </span>
             </Link>
           </div>
-          <Link href="/about" prefetch={false}>
+          <Link href="/about">
             <span className="font-medium tracking-[3px]">ABOUTME</span>
           </Link>
-          <Link href="/projects" prefetch={false}>
+          <Link href="/projects">
             <span className="font-medium tracking-[3px]">PROJECT</span>
           </Link>
         </div>

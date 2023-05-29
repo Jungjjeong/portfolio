@@ -12,6 +12,11 @@ const Home = () => {
   const { isOpen, modalHandler, portalElement } = useModal();
   const observer = useRef<IntersectionObserver>();
 
+  // Scroll Event
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const options = { root: null, threshold: 0.3 };
     observer.current = new IntersectionObserver(function (entries, observer) {
