@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { usePathname } from 'next/navigation';
 import { useLockBodyScroll } from '../../hooks';
-import ThemeButton from '../ThemeButton';
 
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
