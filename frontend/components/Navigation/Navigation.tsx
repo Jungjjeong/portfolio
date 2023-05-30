@@ -10,11 +10,42 @@ import { useLockBodyScroll } from '../../hooks';
 const Navigation = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const [, setIsLocked] = useLockBodyScroll();
+  const [prevPathName, setPrevPathName] = useState<string>('');
   const pathName = usePathname();
 
   useEffect(() => {
     setIsLocked(isOpenMenu);
   }, [isOpenMenu]);
+
+  useEffect(() => {
+    if (pathName !== '/projects') {
+      return;
+    }
+
+    document.addEventListener('scroll', setScrollValue);
+    return () => document.removeEventListener('scroll', setScrollValue);
+  }, [pathName]);
+
+  const setScrollValue = () => {
+    const y = window.scrollY;
+    sessionStorage.setItem('SCROLL', y.toString());
+  };
+
+  useEffect(() => {
+    const isPathProjectList = (path: string) => {
+      const splitPath = path.split('/');
+      return splitPath[1] === 'projects' && splitPath.length > 2;
+    };
+
+    if (isPathProjectList(prevPathName) && pathName === '/projects') {
+      const scrollY = sessionStorage.getItem('SCROLL');
+      window.scrollTo(0, Number(scrollY));
+    } else {
+      window.scrollTo(0, 0);
+    }
+
+    setPrevPathName(pathName);
+  }, [pathName]);
 
   const handleClickMenu: MouseEventHandler = (e) => {
     setIsOpenMenu(!isOpenMenu);

@@ -40,10 +40,6 @@ const ProjectDetailPage = (pagePrams: any) => {
   const hrDom = <hr className="dark:border-dark-2" />;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
     if (!pagePrams) return;
     getProjectData(pagePrams.params.id);
   }, [pagePrams]);
