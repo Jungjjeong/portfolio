@@ -83,11 +83,16 @@ module.exports = {
           from: { opacity: 0 },
           to: { opacity: 1 },
         },
+        scaleUp: {
+          from: { transform: 'scale(1)' },
+          to: { transform: 'scale(1.2)' },
+        },
       },
       animation: {
         button: 'gradation 1500ms infinite linear',
         fadeIn: 'fadeIn 800ms ease-in-out forwards',
         opacityIn: 'opacityIn 200ms ease-in-out forwards',
+        scaleUp: 'scaleUp 2300ms ease-in-out forwards',
       },
       fontFamily: {
         pen: ['Nanum Pen Script'],

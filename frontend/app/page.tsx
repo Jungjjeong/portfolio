@@ -118,13 +118,13 @@ const Home = () => {
             src={cover}
             alt="Cover Image"
             style={{ objectFit: 'cover', height: '100%' }}
-            className="md:block hidden"
+            className="md:block hidden animate-scaleUp"
           />
           <Image
             src={cover_m}
             alt="Cover Image"
             style={{ objectFit: 'cover', height: '100%' }}
-            className="md:hidden block"
+            className="md:hidden block animate-scaleUp"
           />
         </div>
       </section>
