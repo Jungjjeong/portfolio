@@ -44,7 +44,7 @@ const Navigation = () => {
       window.scrollTo(0, 0);
     }
 
-    setPrevPathName(pathName);
+    setPrevPathName(pathName || '');
   }, [pathName]);
 
   const handleClickMenu: MouseEventHandler = (e) => {
