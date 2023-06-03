@@ -21,7 +21,7 @@ export default function NotFound() {
   };
   const linkButtonStyle: CSSProperties = {
     borderRadius: '5px',
-    background: 'rgba(0, 0, 0, 0.73)',
+    background: 'hsla(0,0%,51%,.75)',
     color: '#fff',
     fontWeight: 600,
     margin: '10px auto 0px auto',
