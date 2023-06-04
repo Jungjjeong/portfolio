@@ -1,7 +1,10 @@
 // default
 export { default as cover } from './images/cover.png';
 export { default as cover_m } from './images/cover_m.png';
-export { default as profile } from './images/profile.jpeg';
+export { default as profile } from './images/profile.png';
+
+// intro
+export { default as projects_lg } from './images/projects_lg.png';
 
 // NOTE: Project Page
 // sideProject

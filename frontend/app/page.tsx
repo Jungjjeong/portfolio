@@ -1,11 +1,12 @@
 'use client';
 
 import { Button, Modal, ThemeButton, Title } from '../components';
-import { cover, cover_m } from '../assets';
+import { cover, cover_m, profile, projects_lg } from '../assets';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useModal } from '../hooks';
 import { createPortal } from 'react-dom';
+import Link from 'next/link';
 
 const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
@@ -142,6 +143,53 @@ const Home = () => {
               제 것으로 녹여내는 과정을 좋아합니다.
             </span>
           </p>
+        </div>
+      </section>
+
+      {/* 소개 1 : About me */}
+      <section className="h-screen flex justify-center px-[20px]">
+        <div className="w-full max-w-[730px] mx-auto flex justify-between items-center fade_class">
+          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5">
+            <div>
+              <p>안녕하세요.</p>
+              <p>주니어 프론트엔드 개발자</p>
+              <p>정지영 입니다.</p>
+            </div>
+            <Link href="/about">
+              <Button text="ABOUTME" styleType="dark" />
+            </Link>
+          </div>
+          <div>
+            <Image
+              src={profile}
+              alt="about me introduce Image"
+              width={330}
+              height={250}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* 소개 2: Projects */}
+      <section className="h-screen flex justify-center px-[20px] bg-[#f9fafb]">
+        <div className="w-full max-w-[730px] mx-auto flex justify-between items-center overflow-hidden fade_class">
+          <Image
+            src={projects_lg}
+            alt="projects introduce Image"
+            width={450}
+            height={250}
+            className="rounded-md pt-96"
+          />
+          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 text-end">
+            <div>
+              <p>저는 지금까지</p>
+              <p>이러한 프로젝트들을</p>
+              <p>함께 해왔어요.</p>
+            </div>
+            <Link href="/projects">
+              <Button text="PROJECTS" styleType="dark" />
+            </Link>
+          </div>
         </div>
       </section>
 
