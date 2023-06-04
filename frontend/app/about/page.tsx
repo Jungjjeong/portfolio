@@ -1,6 +1,5 @@
 import {
   HeaderSection,
-  ScrollButton,
   Summary,
   TechStackSection,
   Title,
@@ -17,7 +16,6 @@ import {
 const AboutMePage = () => {
   return (
     <>
-      <ScrollButton />
       <div className="flex flex-col w-full pb-12 gap-20 py-[50px] max-w-[710px] px-[20px] mx-auto">
         <div className="w-full h-auto pt-[10px] pb-[20px] md:pt-[50px] md:pb-[40px]">
           <HeaderSection />

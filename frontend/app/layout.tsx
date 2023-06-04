@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import { Metadata } from 'next';
-import { Navigation } from '../components';
+import { Navigation, ScrollButton } from '../components';
 
 export const metaData: Metadata = {
   title: 'viewport',
@@ -25,6 +25,7 @@ export default function RootLayout({
     <html>
       <body>
         <Navigation />
+        <ScrollButton />
         {children}
         <div id="portal" />
       </body>

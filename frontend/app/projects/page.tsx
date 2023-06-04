@@ -1,5 +1,5 @@
 // 'use client';
-import { ScrollButton, Title } from '../../components';
+import { Title } from '../../components';
 import Card from '../../components/Card/Card';
 import {
   awardProjectData,
@@ -10,7 +10,6 @@ import {
 const ProjectListPage = () => {
   return (
     <>
-      <ScrollButton />
       <div className="flex flex-col w-full mb-[50px] md:my-[50px] max-w-[710px] px-[20px] mx-auto">
         {/* NOTE : Side Project Section */}
         <section className="mx-auto w-full px=[16px] py-[50px] animate-fadeIn">
