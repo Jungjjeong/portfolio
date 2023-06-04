@@ -5,6 +5,7 @@ export { default as profile } from './images/profile.png';
 
 // intro
 export { default as projects_lg } from './images/projects_lg.png';
+export { default as projects_mb } from './images/projects_mb.png';
 
 // NOTE: Project Page
 // sideProject

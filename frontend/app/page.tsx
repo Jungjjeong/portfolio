@@ -1,7 +1,7 @@
 'use client';
 
 import { Button, Modal, ThemeButton, Title } from '../components';
-import { cover, cover_m, profile, projects_lg } from '../assets';
+import { cover, cover_m, profile, projects_lg, projects_mb } from '../assets';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useModal } from '../hooks';
@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
+  const [calcScrollVal, setCalcScrollVal] = useState<number>(1);
   const { isOpen, modalHandler, portalElement } = useModal();
   const observer = useRef<IntersectionObserver>();
 
@@ -67,6 +68,24 @@ const Home = () => {
     textArea.value = '';
     setIsSend(false);
   }, [isOpen]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', calcScrollStyle);
+
+    return () => window.removeEventListener('scroll', calcScrollStyle);
+  }, []);
+
+  const calcScrollStyle = () => {
+    console.log(innerHeight * 2 + innerHeight * 0.6 - 50, scrollY);
+    // screen size section * 2, 0.6 screen size section * 1, header height 제외
+    const sectionStartY = innerHeight * 2 + innerHeight * 0.6 - 50;
+    const startY = sectionStartY - 200;
+    const endY = sectionStartY + 200;
+    if (scrollY < startY || scrollY >= endY) return;
+
+    const curCalcScrollVal = (endY - scrollY) / (endY - startY);
+    setCalcScrollVal(curCalcScrollVal);
+  };
 
   return (
     <div className="h-full">
@@ -148,14 +167,14 @@ const Home = () => {
 
       {/* 소개 1 : About me */}
       <section className="h-screen flex justify-center px-[20px]">
-        <div className="w-full max-w-[730px] mx-auto flex justify-between items-center fade_class">
-          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5">
+        <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center fade_class gap-5 md:gap-0">
+          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 text-center md:text-start whitespace-nowrap">
             <div>
               <p>안녕하세요.</p>
               <p>주니어 프론트엔드 개발자</p>
               <p>정지영 입니다.</p>
             </div>
-            <Link href="/about">
+            <Link href="/about" className="w-fit m-auto md:m-0">
               <Button text="ABOUTME" styleType="dark" />
             </Link>
           </div>
@@ -171,22 +190,33 @@ const Home = () => {
       </section>
 
       {/* 소개 2: Projects */}
-      <section className="h-screen flex justify-center px-[20px] bg-[#f9fafb]">
-        <div className="w-full max-w-[730px] mx-auto flex justify-between items-center overflow-hidden fade_class">
+      <section className="min-h-screen md:h-screen flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0">
+        <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center overflow-hidden fade_class gap-10 md:gap-0">
           <Image
             src={projects_lg}
             alt="projects introduce Image"
-            width={450}
+            width={470}
             height={250}
-            className="rounded-md pt-96"
+            className="pt-96 hidden md:block"
           />
-          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 text-end">
+          <div className="w-[700px]">
+            <Image
+              src={projects_mb}
+              alt="projects introduce Image"
+              className="block md:hidden z-10"
+              style={{
+                transform: `translate3d(calc(((700px - 100vw) * ${calcScrollVal}) - (700px - 100vw) * 0.5), 0px, 0px)`,
+              }}
+            />
+          </div>
+
+          <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 items-end text-center md:text-end whitespace-nowrap">
             <div>
               <p>저는 지금까지</p>
               <p>이러한 프로젝트들을</p>
               <p>함께 해왔어요.</p>
             </div>
-            <Link href="/projects">
+            <Link href="/projects" className="w-fit m-auto md:m-0">
               <Button text="PROJECTS" styleType="dark" />
             </Link>
           </div>
