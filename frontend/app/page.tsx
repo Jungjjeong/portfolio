@@ -139,7 +139,10 @@ const Home = () => {
         </div>
 
         {/* NOTE: 배경 이미지 -> 중간 사이즈 UI (md)부터 분기처리 */}
-        <div className="w-full overflow-hidden h-[calc(100vh-50px)] relative">
+        <div
+          className="w-full overflow-hidden relative"
+          style={{ height: initialHeight - 50 }}
+        >
           <div className="absolute top-0 left-0 h-full w-full bg-black/50 z-10" />
           <Image
             src={cover}
@@ -157,7 +160,10 @@ const Home = () => {
       </section>
 
       {/* NOTE: Description section */}
-      <section className="h-[60vh] bg-[#f9fafb] dark:bg-dark-1 dark:text-gray px-[20px]">
+      <section
+        className="bg-[#f9fafb] dark:bg-dark-1 dark:text-gray px-[20px]"
+        style={{ height: initialHeight * 0.6 }}
+      >
         <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-semibold text-center text-2xl md:text-3xl fade_class">
           <p>
             <span className="whitespace-nowrap">깊이 있는 고민을 바탕으로</span>{' '}
@@ -173,7 +179,10 @@ const Home = () => {
       </section>
 
       {/* 소개 1 : About me */}
-      <section className="h-screen flex justify-center px-[20px]">
+      <section
+        className="flex justify-center px-[20px]"
+        style={{ height: initialHeight }}
+      >
         <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center fade_class gap-5 md:gap-0">
           <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 text-center md:text-start whitespace-nowrap">
             <div>
@@ -197,7 +206,10 @@ const Home = () => {
       </section>
 
       {/* 소개 2: Projects */}
-      <section className="min-h-screen md:h-screen flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0">
+      <section
+        className="flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0"
+        style={{ minHeight: initialHeight }}
+      >
         <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center overflow-hidden fade_class gap-10 md:gap-0">
           <Image
             src={projects_lg}
@@ -230,7 +242,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="h-screen flex justify-center px-[20px]">
+      <section
+        className="flex justify-center px-[20px]"
+        style={{ height: initialHeight }}
+      >
         <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade_class">
           <Title text="CONTACT WITH ME" />
           <h3 className="w-fit mx-auto text-sm font-medium">
