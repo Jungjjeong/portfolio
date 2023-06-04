@@ -76,7 +76,8 @@ const Home = () => {
   }, []);
 
   const calcScrollStyle = () => {
-    console.log(innerHeight * 2 + innerHeight * 0.6 - 50, scrollY);
+    if (innerWidth > 700) return;
+
     // screen size section * 2, 0.6 screen size section * 1, header height 제외
     const sectionStartY = innerHeight * 2 + innerHeight * 0.6 - 50;
     const startY = sectionStartY - 200;
