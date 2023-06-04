@@ -3,13 +3,14 @@
 import { Button, Modal, ThemeButton, Title } from '../components';
 import { cover, cover_m, profile, projects_lg, projects_mb } from '../assets';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useModal } from '../hooks';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 
 const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
+  const [initialHeight, setInitialHeight] = useState<number>(0);
   const [calcScrollVal, setCalcScrollVal] = useState<number>(1);
   const { isOpen, modalHandler, portalElement } = useModal();
   const observer = useRef<IntersectionObserver>();
@@ -70,23 +71,28 @@ const Home = () => {
   }, [isOpen]);
 
   useEffect(() => {
-    window.addEventListener('scroll', calcScrollStyle);
-
-    return () => window.removeEventListener('scroll', calcScrollStyle);
+    if (!window.innerHeight) return;
+    setInitialHeight(window.innerHeight);
   }, []);
 
-  const calcScrollStyle = () => {
-    if (innerWidth > 700) return;
+  const calcScrollStyle = useCallback(() => {
+    if (innerWidth > 700 || !initialHeight) return;
 
     // screen size section * 2, 0.6 screen size section * 1, header height 제외
-    const sectionStartY = innerHeight * 2 + innerHeight * 0.6 - 50;
+    const sectionStartY = initialHeight * 2 + initialHeight * 0.6 - 50;
     const startY = sectionStartY - 200;
     const endY = sectionStartY + 200;
     if (scrollY < startY || scrollY >= endY) return;
 
     const curCalcScrollVal = (endY - scrollY) / (endY - startY);
     setCalcScrollVal(curCalcScrollVal);
-  };
+  }, [initialHeight]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', calcScrollStyle);
+
+    return () => window.removeEventListener('scroll', calcScrollStyle);
+  }, [calcScrollStyle, initialHeight]);
 
   return (
     <div className="h-full">
