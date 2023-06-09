@@ -6,7 +6,7 @@ const HeaderSection = () => {
   return (
     <div className="animate-fadeIn">
       <div className="w-fit mx-auto rounded-md overflow-hidden mb-[30px]">
-        <Image src={profile} alt="header Image" width={250} height={250} />
+        <Image src={profile} alt="header Image" width={250} height={261} />
       </div>
       {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-semibold">
         JungJiYoung

@@ -199,7 +199,7 @@ const Home = () => {
               src={profile}
               alt="about me introduce Image"
               width={330}
-              height={250}
+              height={345}
             />
           </div>
         </div>
@@ -207,15 +207,17 @@ const Home = () => {
 
       {/* 소개 2: Projects */}
       <section
-        className="flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0"
-        style={{ minHeight: initialHeight }}
+        className="md:h-screen flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0"
+        style={{
+          minHeight: initialHeight,
+        }}
       >
         <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center overflow-hidden fade_class gap-10 md:gap-0">
           <Image
             src={projects_lg}
             alt="projects introduce Image"
             width={470}
-            height={250}
+            height={1266}
             className="pt-96 hidden md:block"
           />
           <div className="w-[700px]">
