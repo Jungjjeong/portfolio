@@ -128,7 +128,7 @@ const Home = () => {
                   </a>
                   <a
                     target="_blank"
-                    href="https://jungjjeong.github.io/"
+                    href="https://blog.haeyum.me/"
                     rel="noopener noreferrer"
                   >
                     <Button text="BLOG" styleType="dark" />

@@ -79,7 +79,7 @@ export const sideProjectData: IProject[] = [
       },
       {
         title: 'Linkbook 프로젝트 회고록(개인 블로그)',
-        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/LinkBook/',
+        link: 'https://blog.haeyum.me/devcourse/project/retrospective/LinkBook/',
       },
       {
         title: 'Github',
@@ -352,7 +352,7 @@ export const sideProjectData: IProject[] = [
       },
       {
         title: '지영화검색 프로젝트 회고록 (개인 블로그 링크)',
-        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/movieSearch/',
+        link: 'https://blog.haeyum.me/devcourse/project/retrospective/movieSearch/',
       },
       {
         title: 'Github',
@@ -412,7 +412,7 @@ export const sideProjectData: IProject[] = [
       },
       {
         title: '노션 클로닝 프로젝트 회고록 (개인 블로그 링크)',
-        link: 'https://jungjjeong.github.io/devcourse/project/retrospective/notionCloning/',
+        link: 'https://blog.haeyum.me/devcourse/project/retrospective/notionCloning/',
       },
       {
         title: 'Github',
