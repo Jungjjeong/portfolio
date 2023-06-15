@@ -12,6 +12,11 @@ const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
   const [initialHeight, setInitialHeight] = useState<number>(0);
   const [calcScrollVal, setCalcScrollVal] = useState<number>(1);
+
+  const isScrolling = useRef(false);
+  const timerIdRef = useRef<number | null>(null);
+  const prevTimestampRef = useRef<number | null>(null);
+
   const { isOpen, modalHandler, portalElement } = useModal();
   const observer = useRef<IntersectionObserver>();
 
@@ -79,24 +84,44 @@ const Home = () => {
     setInitialHeight(window.innerHeight);
   }, []);
 
-  const calcScrollStyle = useCallback(() => {
-    if (innerWidth > 700 || !initialHeight) return;
+  const scrollHandler = useCallback(
+    (timestamp: number) => {
+      if (innerWidth > 700 || !initialHeight) return;
+      if (prevTimestampRef.current === timestamp) return;
 
-    // screen size section * 2, 0.6 screen size section * 1, header height 제외
-    const sectionStartY = initialHeight * 2 + initialHeight * 0.6 - 50;
-    const startY = sectionStartY - 200;
-    const endY = sectionStartY + 200;
-    if (scrollY < startY || scrollY >= endY) return;
+      // screen size section * 2, 0.6 screen size section * 1, header height 제외
+      const sectionStartY = initialHeight * 2 + initialHeight * 0.6 - 50;
+      const startY = sectionStartY - 200;
+      const endY = sectionStartY + 200;
+      if (scrollY < startY || scrollY >= endY) return;
 
-    const curCalcScrollVal = (endY - scrollY) / (endY - startY);
-    setCalcScrollVal(curCalcScrollVal);
-  }, [initialHeight]);
+      const curCalcScrollVal = (endY - scrollY) / (endY - startY);
+      setCalcScrollVal(curCalcScrollVal);
+
+      if (isScrolling.current) {
+        prevTimestampRef.current = timestamp;
+        requestAnimationFrame(scrollHandler);
+      }
+    },
+    [initialHeight]
+  );
 
   useEffect(() => {
-    window.addEventListener('scroll', calcScrollStyle);
+    const onScroll = () => {
+      isScrolling.current = true;
+      requestAnimationFrame(scrollHandler);
 
-    return () => window.removeEventListener('scroll', calcScrollStyle);
-  }, [calcScrollStyle, initialHeight]);
+      if (timerIdRef.current) window.clearTimeout(timerIdRef.current);
+
+      timerIdRef.current = window.setTimeout(() => {
+        isScrolling.current = false;
+      }, 100);
+    };
+
+    window.addEventListener('scroll', onScroll);
+
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [scrollHandler, initialHeight]);
 
   return (
     <>
