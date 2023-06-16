@@ -1,6 +1,6 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { ButtonHTMLAttributes, MouseEventHandler, ReactNode } from 'react';
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   styleType: 'main' | 'dark' | 'round';
   type?: 'button' | 'submit' | 'reset';
   text?: string | ReactNode;
@@ -16,6 +16,7 @@ const Button = ({
   onClick,
   form,
   className = '',
+  ...props
 }: Props) => {
   const commonStyle =
     'text-gray font-medium text-sm md:text-base tracking-[2px] cursor-pointer transition-all duration-150';
@@ -43,6 +44,7 @@ const Button = ({
       onClick={onClick && onClick}
       type={type ? type : 'button'}
       form={form}
+      {...props}
     >
       {text}
     </button>
