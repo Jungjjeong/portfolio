@@ -111,6 +111,7 @@ const Navigation = () => {
           <button
             className="font-medium tracking-[3px] rounded-[5px] px-[4px] py-[2px]"
             onClick={handleClickMenu}
+            aria-label="menu button"
           >
             <FontAwesomeIcon icon={faBars} />
           </button>

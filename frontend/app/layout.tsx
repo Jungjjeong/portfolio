@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="kr">
       <body>
         <Navigation />
         <ScrollButton />
