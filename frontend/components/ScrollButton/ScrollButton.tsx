@@ -24,7 +24,7 @@ const ScrollButton = () => {
           styleType="round"
           onClick={handleClickScrollButton}
           className="fixed bottom-5 right-5 z-50"
-          area-label="scroll to top button"
+          aria-label="scroll to top button"
         />
       )}
     </>
