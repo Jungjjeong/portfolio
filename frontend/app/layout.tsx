@@ -3,13 +3,13 @@ import { Metadata } from 'next';
 import { Navigation, ScrollButton } from '../components';
 import Head from 'next/head';
 
-export const viewPortMetadata: Metadata = {
-  title: 'viewport',
-  description:
-    'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover',
-};
+// export const metadata: Metadata = {
+//   title: 'viewport',
+//   description:
+//     'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover',
+// };
 
-export const openGraphMetadata: Metadata = {
+export const metadata: Metadata = {
   title: "Jiyoung's Portfolio",
   openGraph: {
     title: 'Jung Jiyoung',
@@ -17,10 +17,10 @@ export const openGraphMetadata: Metadata = {
   },
 };
 
-export const adsMetaData: Metadata = {
-  title: 'google-adsense-account',
-  description: 'ca-pub-3027056364974047',
-};
+// export const metadata: Metadata = {
+//   title: 'google-adsense-account',
+//   description: 'ca-pub-3027056364974047',
+// };
 
 export default function RootLayout({
   children,
