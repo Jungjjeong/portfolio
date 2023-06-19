@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Metadata } from 'next';
 import { Navigation, ScrollButton } from '../components';
+import Head from 'next/head';
 
 export const viewPortMetadata: Metadata = {
   title: 'viewport',
@@ -28,6 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="kr">
+      <Head>
+        <meta name="google-adsense-account" content="ca-pub-3027056364974047" />
+      </Head>
       <body>
         <Navigation />
         <ScrollButton />
