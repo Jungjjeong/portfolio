@@ -72,7 +72,7 @@ const ProjectDetailPage = (pagePrams: any) => {
       <ScrollButton />
       <div className="mb-[50px] md:my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
         {/* NOTE: Header */}
-        <section className="flex flex-col gap-[5px] pt-[50px]">
+        <section className="flex flex-col gap-[5px] pt-[50px] animate-fadeIn">
           <p className="text-gray-3 text-sm">
             {period.start}
             {!!period.end && ` ~ ${period.end}`}

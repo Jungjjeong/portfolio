@@ -13,7 +13,7 @@ const Home = () => {
   const observer = useRef<IntersectionObserver>();
 
   useEffect(() => {
-    const options = { root: null, threshold: 0.2 };
+    const options = { root: null, threshold: 0.3 };
     observer.current = new IntersectionObserver(function (entries, observer) {
       entries.forEach((entry) => {
         const container = entry.target;

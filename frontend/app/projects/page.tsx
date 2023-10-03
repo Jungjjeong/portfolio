@@ -13,7 +13,7 @@ const ProjectListPage = () => {
       <ScrollButton />
       <div className="flex flex-col w-full mb-[50px] md:my-[50px] max-w-[710px] px-[20px] mx-auto">
         {/* NOTE : Side Project Section */}
-        <section className="mx-auto w-full px=[16px] py-[50px]">
+        <section className="mx-auto w-full px=[16px] py-[50px] animate-fadeIn">
           <Title text="SIDE PROJECT" />
           <div className="grid grid-cols-project relative pt-4 pb-1 gap-[16px]">
             {sideProjectData.map((project) => {
