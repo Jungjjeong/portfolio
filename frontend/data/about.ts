@@ -18,6 +18,7 @@ import {
   Tailwindcss,
   TypeScript,
   Vue,
+  Zustand,
 } from '../assets';
 
 export const techStackData = [
@@ -70,6 +71,10 @@ export const techStackData = [
         photo: Recoil,
       },
       {
+        title: 'Zustand',
+        photo: Zustand,
+      },
+      {
         title: 'Styled<br>Components',
         photo: StyledComponents,
       },
@@ -117,7 +122,7 @@ export const techStackData = [
 export const workExperienceData = [
   {
     title: '무신사 (MUSINSA)',
-    description: '글로벌프로덕트실 글로벌개발팀 프론트엔드 개발자',
+    description: '테크부문 프론트엔드개발그룹',
     date: '2022.11 ~ (재직중)',
   },
   {
@@ -192,6 +197,10 @@ export const educationData = [
 ];
 
 export const experienceData = [
+  {
+    title: 'IT 연합 동아리 디프만 14기',
+    date: '2023.11 ~ 2024.02',
+  },
   {
     title: '동국대학교 소프트웨어 연구실 학부연구생',
     date: '2020.06 ~ 2022.02',

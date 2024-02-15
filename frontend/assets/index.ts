@@ -83,6 +83,7 @@ export { default as React } from './images/about/React.png';
 export { default as Next } from './images/about/Next.png';
 export { default as Vue } from './images/about/Vue.png';
 export { default as Recoil } from './images/about/Recoil.png';
+export { default as Zustand } from './images/about/Zustand.png';
 export { default as StyledComponents } from './images/about/styledComponents.png';
 export { default as Emotion } from './images/about/Emotion.png';
 export { default as Tailwindcss } from './images/about/Tailwindcss.png';
