@@ -1,3 +1,11 @@
+// praise-up
+export { default as praise_up_0 } from './praise-up/praise-up-0.png';
+export { default as praise_up_1 } from './praise-up/praise-up-1.png';
+export { default as praise_up_2 } from './praise-up/praise-up-2.png';
+export { default as praise_up_3 } from './praise-up/praise-up-3.png';
+export { default as praise_up_4 } from './praise-up/praise-up-4.png';
+export { default as praise_up_5 } from './praise-up/praise-up-5.png';
+
 // linkbook
 export { default as linkbook_1 } from './linkbook/linkbook_1.png';
 export { default as linkbook_2 } from './linkbook/linkbook_2.png';

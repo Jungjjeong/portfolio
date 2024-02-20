@@ -1,4 +1,11 @@
 import {
+  praise_up,
+  praise_up_0,
+  praise_up_1,
+  praise_up_2,
+  praise_up_3,
+  praise_up_4,
+  praise_up_5,
   linkbook,
   linkbook_1,
   linkbook_10,
@@ -48,6 +55,119 @@ import {
 import { IProject } from '../types/project';
 
 export const sideProjectData: IProject[] = [
+  {
+    id: 0,
+    imageSrc: praise_up,
+    title: 'Praise Up',
+    description: '이미지로 소통하는 칭찬 SNS 🔮',
+    period: {
+      start: '2023-11',
+      end: '2024-02',
+    },
+    devStackList: [
+      'TypeScript',
+      'React.js',
+      'Zustand',
+      'Tanstack Query',
+      'Axios',
+      'Tailwind',
+      'SCSS',
+      'Framer',
+      'Matter.js',
+      'Swiper.js',
+    ],
+    imageList: [
+      praise_up_0,
+      praise_up_1,
+      praise_up_2,
+      praise_up_3,
+      praise_up_4,
+      praise_up_5,
+    ],
+    linkList: [
+      {
+        title: '🔮 Praise Up service',
+        link: 'https://www.praise-up.app/',
+      },
+      {
+        title: 'Disquiet',
+        link: 'https://disquiet.io/product/praise-up',
+      },
+      {
+        title: 'Github',
+        link: 'https://github.com/depromeet/praise-up-client',
+      },
+    ],
+    contentList: [
+      {
+        title: '🔮 프로젝트 소개',
+        content: [
+          {
+            contentTitle: '1️⃣ 키워드 선택 후 칭찬받을 일상 업로드하기',
+            contentDescription: '오늘의 키워드를 선택하고 일상을 공유해보세요!',
+          },
+          {
+            contentTitle: '2️⃣ 링크 복사 후 작성한 게시물 공유하기',
+            contentDescription:
+              '작성된 게시물을 공유하고 칭찬 구슬을 받아보세요!',
+          },
+          {
+            contentTitle: '3️⃣ 다른 사람이 업로드한 게시물에 칭찬 메세지 남기기',
+            contentDescription: '친구의 일상에 소중한 칭찬 구슬을 남겨보세요!',
+          },
+          {
+            contentTitle: '4️⃣ 4시간 뒤에 쌓인 칭찬 메세지 확인하기',
+            contentDescription:
+              '친구들이 보내준 소중한 칭찬 구슬들을 4시간 뒤에 확인할 수 있어요!',
+          },
+          {
+            contentTitle: '5️⃣ 마이페이지에서 나의 칭찬 활동 내역 모아보기',
+            contentDescription:
+              '마이페이지에서 나의 일상과 칭찬 구슬들을 한눈에 확인할 수 있어요!',
+          },
+        ],
+      },
+      {
+        title: '🔮 사용 기술',
+        content: [
+          {
+            contentTitle: '💻 Web',
+            contentDescription: [
+              '<div>▪️ TypeScript, React.js</div>',
+              '<div>▪️ Tanstack Query, Zustand</div>',
+              '<div>▪️ Tailwind, Sass</div>',
+              '<div>▪️ Framer, Matter.js, Swiper.js</div>',
+              '<div>▪️ Vite, Pnpm</div>',
+            ],
+          },
+        ],
+      },
+      {
+        title: '🤼‍♀️ 이각세 팀 소개',
+        content: [
+          {
+            contentTitle: '🖥️ Frontend',
+            contentDescription:
+              '<ul><li>▪️ 김현우</li><li>▪️ 이채민</li><li>▪️ 이현재</li><li>▪️ 정지영</li></ul>',
+          },
+          {
+            contentTitle: '🦾 Backend',
+            contentDescription: [
+              '<a href="https://github.com/depromeet/praise-up-server"><strong>👉🏻 Praise-up backend repository</strong></a>',
+              '<ul><li>▪️ 김정인</li><li>▪️ 김훈섭</li><li>▪️ 윤영</li></ul>',
+            ],
+          },
+          {
+            contentTitle: '🎨 Design',
+            contentDescription: [
+              '<a href="https://www.behance.net/gallery/191497631/praise-up-SNS"><strong>👉🏻 Praise-up behance</strong></a>',
+              '<ul><li>▪️ 나태현</li><li>▪️ 신혜원</li><li>▪️ 홍지영</li></ul>',
+            ],
+          },
+        ],
+      },
+    ],
+  },
   {
     id: 1,
     imageSrc: linkbook,

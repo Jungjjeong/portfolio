@@ -9,6 +9,7 @@ export { default as projects_mb } from './images/projects_mb.png';
 
 // NOTE: Project Page
 // sideProject
+export { default as praise_up } from './images/praise-up.jpg';
 export { default as linkbook } from './images/linkbook.png';
 export { default as gabatshu } from './images/gabatshu.png';
 export { default as jungstion } from './images/jungstion.png';
@@ -23,6 +24,14 @@ export { default as panopticon } from './images/panopticon.png';
 
 // presentData
 export { default as present_browser } from './images/present_browser.png';
+
+// praise up
+export { praise_up_0 } from './images/project';
+export { praise_up_1 } from './images/project';
+export { praise_up_2 } from './images/project';
+export { praise_up_3 } from './images/project';
+export { praise_up_4 } from './images/project';
+export { praise_up_5 } from './images/project';
 
 // linkbook
 export { linkbook_1 } from './images/project';
