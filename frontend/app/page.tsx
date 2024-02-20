@@ -171,21 +171,21 @@ const Home = () => {
 
             {/* NOTE: 배경 이미지 -> 중간 사이즈 UI (md)부터 분기처리 */}
             <div
-              className="w-full overflow-hidden relative"
+              className="relative w-full overflow-hidden"
               style={{ height: initialHeight - 50 }}
             >
-              <div className="absolute top-0 left-0 h-full w-full bg-black/50 z-10" />
+              <div className="absolute top-0 left-0 z-10 w-full h-full bg-black/50" />
               <Image
                 src={cover}
                 alt="Cover Image"
                 style={{ objectFit: 'cover', height: '100%' }}
-                className="md:block hidden animate-scaleUp"
+                className="hidden md:block animate-scaleUp"
               />
               <Image
                 src={cover_m}
                 alt="Cover Image"
                 style={{ objectFit: 'cover', height: '100%' }}
-                className="md:hidden block animate-scaleUp"
+                className="block md:hidden animate-scaleUp"
               />
             </div>
           </section>
@@ -195,7 +195,7 @@ const Home = () => {
             className="bg-[#f9fafb] dark:bg-dark-1 dark:text-gray px-[20px]"
             style={{ height: initialHeight * 0.6 }}
           >
-            <div className="w-fit h-full mx-auto flex flex-col gap-2 justify-center items-center font-semibold text-center text-2xl md:text-3xl fade_class">
+            <div className="flex flex-col items-center justify-center h-full gap-2 mx-auto text-2xl font-semibold text-center w-fit md:text-3xl fade_class">
               <p>
                 <span className="whitespace-nowrap">
                   깊이 있는 고민을 바탕으로
@@ -219,13 +219,13 @@ const Home = () => {
             style={{ height: initialHeight }}
           >
             <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center fade_class gap-5 md:gap-0">
-              <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 text-center md:text-start whitespace-nowrap">
+              <div className="flex flex-col gap-5 text-2xl font-semibold text-center md:text-3xl md:text-start whitespace-nowrap">
                 <div>
                   <p>안녕하세요.</p>
                   <p>주니어 프론트엔드 개발자</p>
                   <p>정지영 입니다.</p>
                 </div>
-                <Link href="/about" className="w-fit m-auto md:m-0">
+                <Link href="/about" className="m-auto w-fit md:m-0">
                   <Button text="ABOUTME" styleType="dark" />
                 </Link>
               </div>
@@ -235,6 +235,7 @@ const Home = () => {
                   alt="about me introduce Image"
                   width={330}
                   height={345}
+                  className="rounded-full"
                 />
               </div>
             </div>
@@ -253,26 +254,26 @@ const Home = () => {
                 alt="projects introduce Image"
                 width={470}
                 height={1266}
-                className="pt-96 hidden md:block"
+                className="hidden pt-96 md:block"
               />
               <div className="w-[700px]">
                 <Image
                   src={projects_mb}
                   alt="projects introduce Image"
-                  className="block md:hidden z-10"
+                  className="z-10 block md:hidden"
                   style={{
                     transform: `translate3d(calc(((700px - 100vw) * ${calcScrollVal}) - (700px - 100vw) * 0.5), 0px, 0px)`,
                   }}
                 />
               </div>
 
-              <div className="text-2xl md:text-3xl font-semibold flex flex-col gap-5 items-end text-center md:text-end whitespace-nowrap">
+              <div className="flex flex-col items-end gap-5 text-2xl font-semibold text-center md:text-3xl md:text-end whitespace-nowrap">
                 <div>
                   <p>저는 지금까지</p>
                   <p>이러한 프로젝트들을</p>
                   <p>함께 해왔어요.</p>
                 </div>
-                <Link href="/projects" className="w-fit m-auto md:m-0">
+                <Link href="/projects" className="m-auto w-fit md:m-0">
                   <Button text="PROJECTS" styleType="dark" />
                 </Link>
               </div>
@@ -285,7 +286,7 @@ const Home = () => {
           >
             <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade_class">
               <Title text="CONTACT WITH ME" />
-              <h3 className="w-fit mx-auto text-sm font-medium">
+              <h3 className="mx-auto text-sm font-medium w-fit">
                 📮 매일 확인하고 있어요!
               </h3>
               <form
