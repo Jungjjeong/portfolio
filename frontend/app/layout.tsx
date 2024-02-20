@@ -1,7 +1,8 @@
 import '../styles/globals.css';
 import { Metadata } from 'next';
-import { Navigation, ScrollButton } from '../components';
 import Head from 'next/head';
+
+import { Navigation, ScrollButton } from '../components';
 
 // export const metadata: Metadata = {
 //   title: 'viewport',

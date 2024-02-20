@@ -1,23 +1,24 @@
-import { profile } from '../../assets';
-import { Button } from '..';
 import Image from 'next/image';
+
+import { Button } from '..';
+import { profile } from '../../assets';
 
 const HeaderSection = () => {
   return (
     <div className="animate-fadeIn">
-      <div className="w-fit mx-auto rounded-full overflow-hidden mb-[30px]">
+      <div className="mx-auto mb-[30px] w-fit overflow-hidden rounded-full">
         <Image src={profile} alt="header Image" width={250} height={261} />
       </div>
       {/* <h1 className="w-fit mx-auto mt-[20px] tracking-[5px] text-2xl font-semibold">
         JungJiYoung
       </h1> */}
-      <p className="w-fit my-[20px] mx-auto text-xl md:text-2xl font-semibold text-center">
+      <p className="mx-auto my-[20px] w-fit text-center text-xl font-semibold md:text-2xl">
         <span>안녕하세요.</span>{' '}
         <span className="whitespace-nowrap">
           주니어 프론트엔드 개발자 정지영입니다.
         </span>
       </p>
-      <div className="mx-auto text-sm w-fit md:text-center">
+      <div className="mx-auto w-fit text-sm md:text-center">
         꾸준함의 가치를 알기에 학습한 지식을 Github에 남기고 기술 블로그를
         운영하고 있습니다.
         <br />
@@ -27,7 +28,7 @@ const HeaderSection = () => {
         사용하기 좋은 인터페이스를 구현하는 것을 좋아하며, 이를 보여주기 위한 웹
         디자인에도 관심이 많습니다.
       </div>
-      <div className="flex gap-[10px] w-fit my-[50px] mx-auto">
+      <div className="mx-auto my-[50px] flex w-fit gap-[10px]">
         <a
           target="_blank"
           href="https://github.com/Jungjjeong"

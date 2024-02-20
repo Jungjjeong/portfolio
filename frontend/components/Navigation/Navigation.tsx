@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
-import { MouseEventHandler, useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { MouseEventHandler, useEffect, useState } from 'react';
+
 import { useLockBodyScroll } from '../../hooks';
 
 const Navigation = () => {
@@ -62,8 +63,8 @@ const Navigation = () => {
       <div>
         <div
           className={`${
-            isOpenMenu ? 'opacity-40' : 'opacity-0 invisible'
-          } fixed inset-y-0 w-full h-full bg-black z-40 transition-all duration-200`}
+            isOpenMenu ? 'opacity-40' : 'invisible opacity-0'
+          } fixed inset-y-0 z-40 size-full bg-black transition-all duration-200`}
           onClick={handleClickMenu}
         />
         <div
@@ -71,10 +72,10 @@ const Navigation = () => {
             isOpenMenu
               ? 'inset-x-0 top-0 opacity-100'
               : 'top-[-100vh] opacity-0'
-          } fixed w-full h-fit z-50 bg-gray dark:bg-dark rounded-b-lg p-[20px] border-box transition-all duration-300`}
+          } border-box fixed z-50 h-fit w-full rounded-b-lg bg-gray p-[20px] transition-all duration-300 dark:bg-dark`}
         >
           <h1 className="mb-[20px] font-medium tracking-[3px] ">MENU</h1>
-          <div className="flex flex-col gap-[10px] font-medium tracking-[3px] text-sm">
+          <div className="flex flex-col gap-[10px] text-sm font-medium tracking-[3px]">
             <Link
               href="/"
               onClick={handleClickMenu}
@@ -101,22 +102,22 @@ const Navigation = () => {
       </div>
 
       {/* NAVIGATION */}
-      <nav className="sticky top-0 z-30 box-border w-full h-[50px] px-[15px] bg-gray dark:bg-dark border-b border-gray-6 dark:border-dark">
-        <div className="flex items-center justify-end lg:hidden h-full">
+      <nav className="sticky top-0 z-30 box-border h-[50px] w-full border-b border-gray-6 bg-gray px-[15px] dark:border-dark dark:bg-dark">
+        <div className="flex h-full items-center justify-end lg:hidden">
           <div className="grow">
             <Link href="/">
               <span className="font-medium tracking-[3px]">HY</span>
             </Link>
           </div>
           <button
-            className="font-medium tracking-[3px] rounded-[5px] px-[4px] py-[2px]"
+            className="rounded-[5px] px-[4px] py-[2px] font-medium tracking-[3px]"
             onClick={handleClickMenu}
             aria-label="menu button"
           >
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-[50px] lg:items-center lg:justify-center h-full px-[20px] max-w-[1240px] m-auto">
+        <div className="m-auto hidden h-full max-w-[1240px] px-[20px] lg:flex lg:items-center lg:justify-center lg:gap-[50px]">
           <div className="grow">
             <Link href="/">
               <span className="font-semibold tracking-[3px]">

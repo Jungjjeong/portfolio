@@ -49,7 +49,7 @@ const ThemeButton = () => {
               }`}
             />
             <div
-              className={`absolute left-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white transition text-4xl ${
+              className={`absolute left-1 top-1 flex size-6 items-center justify-center rounded-full bg-white text-4xl transition ${
                 isDark ? 'translate-x-full' : ''
               }`}
             >

@@ -2,10 +2,12 @@
 
 import Image, { StaticImageData } from 'next/image';
 import { useEffect, useState } from 'react';
+import SwiperCore from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { useLockBodyScroll } from '../../hooks';
 import Button from '../Button';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
+
 import 'swiper/css';
 
 interface IEnlargedImage {
@@ -80,14 +82,14 @@ const EnlargedImage = ({
       {!!isShow && (
         <div className="animate-opacityIn">
           <div
-            className={`opacity-40 fixed inset-y-0 right-0 w-full h-full bg-black z-40 cursor-pointer`}
+            className={`fixed inset-y-0 right-0 z-40 size-full cursor-pointer bg-black opacity-40`}
             onClick={dimHandler}
           />
           {/* PC */}
           <div className="hidden lg:block">
-            <div className="max-w-[1150px] w-full h-auto p-[15px] fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%] z-50">
+            <div className="fixed left-[50%] top-[50vh] z-50 h-auto w-full max-w-[1150px] translate-x-[-50%] translate-y-[-50%] p-[15px]">
               <Image src={selectedImage} alt="detail Image" loading="eager" />
-              <div className="fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full flex justify-between p-[25px]">
+              <div className="fixed left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-between p-[25px]">
                 <Button
                   text="◀️"
                   onClick={handleClickPrevButton}
@@ -109,7 +111,7 @@ const EnlargedImage = ({
           </div>
 
           {/* MO */}
-          <div className="block lg:invisible z-50 fixed top-0 w-full fixed top-[50vh] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+          <div className="fixed left-[50%] top-0 top-[50vh] z-50 block w-full translate-x-[-50%] translate-y-[-50%] lg:invisible">
             {swiperOptions && !!imageListData.length ? (
               <SwiperEle onSwiper={setSwiper} {...swiperOptions}>
                 {imageListData.map((image, idx) => (

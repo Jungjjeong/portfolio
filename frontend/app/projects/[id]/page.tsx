@@ -1,17 +1,20 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+import YouTube from 'react-youtube';
+
+import { EnlargedImage, Tag } from '../../../components';
 import {
   awardProjectData,
   presentationData,
   sideProjectData,
 } from '../../../data/project';
-import { IProject } from '../../../types/project';
-import { EnlargedImage, Tag } from '../../../components';
-import Image from 'next/image';
-import YouTube from 'react-youtube';
 import { useModal } from '../../../hooks';
-import { createPortal } from 'react-dom';
+import { IProject } from '../../../types/project';
+
+
 
 const ProjectDetailPage = (pagePrams: any) => {
   const [project, setProject] = useState<IProject>();
@@ -69,17 +72,17 @@ const ProjectDetailPage = (pagePrams: any) => {
   } = project;
 
   return (
-    <div className="mb-[50px] md:my-[50px] flex flex-col gap-[70px] max-w-[710px] px-[20px] mx-auto pb-[50px]">
+    <div className="mx-auto mb-[50px] flex max-w-[710px] flex-col gap-[70px] px-[20px] pb-[50px] md:my-[50px]">
       {/* NOTE: Header */}
-      <section className="flex flex-col gap-[5px] pt-[50px] animate-fadeIn">
-        <p className="text-gray-3 dark:text-gray-4 text-sm">
+      <section className="flex animate-fadeIn flex-col gap-[5px] pt-[50px]">
+        <p className="text-sm text-gray-3 dark:text-gray-4">
           {period.start}
           {!!period.end && ` ~ ${period.end}`}
         </p>
         <h1 className="text-4xl font-semibold">{title}</h1>
         <p>{description}</p>
         {!!devStackList && (
-          <div className="w-full flex gap-[6px] flex-wrap mb-[5px]">
+          <div className="mb-[5px] flex w-full flex-wrap gap-[6px]">
             {devStackList.map((stack, idx) => (
               <Tag tagName={stack} key={idx} />
             ))}
@@ -91,14 +94,14 @@ const ProjectDetailPage = (pagePrams: any) => {
           height={500}
           alt="project Thumbnail"
         />
-        <div className="flex flex-col gap-[5px] mt-[10px]">
+        <div className="mt-[10px] flex flex-col gap-[5px]">
           {linkList.map(({ link, title }, idx) => (
             <a
               key={idx}
               target="_blank"
               href={link}
               rel="noopener noreferrer"
-              className="text-base font-medium underline w-fit dark:text-gray-4"
+              className="w-fit text-base font-medium underline dark:text-gray-4"
             >
               👉🏻 {title}
             </a>
@@ -109,11 +112,11 @@ const ProjectDetailPage = (pagePrams: any) => {
       {/* NOTE: Youtube section */}
       {youtubeList && (
         <section>
-          <h1 className="text-2xl font-semibold mb-[30px]">
+          <h1 className="mb-[30px] text-2xl font-semibold">
             프로젝트 영상
             {hrDom}
           </h1>
-          <div className="w-full flex flex-col gap-[10px]">
+          <div className="flex w-full flex-col gap-[10px]">
             {youtubeList.map((youtube, idx) => (
               <YouTube
                 key={idx}
@@ -131,15 +134,15 @@ const ProjectDetailPage = (pagePrams: any) => {
       {imageList && (
         <>
           <section>
-            <h1 className="text-2xl font-semibold mb-[30px]">
+            <h1 className="mb-[30px] text-2xl font-semibold">
               서비스 사진
               {hrDom}
             </h1>
-            <div className="w-full overflow-x-scroll scroll_none">
+            <div className="scroll_none w-full overflow-x-scroll">
               <div className="flex items-center gap-[20px]">
                 {imageList.map((image, idx) => (
                   <div
-                    className="w-[525px] h-auto shrink-0 cursor-pointer"
+                    className="h-auto w-[525px] shrink-0 cursor-pointer"
                     onClick={handleClickImage.bind(this, idx)}
                     key={idx}
                   >
@@ -174,7 +177,7 @@ const ProjectDetailPage = (pagePrams: any) => {
           <>
             {contentList.map(({ title, content }, idx) => (
               <div key={idx}>
-                <h1 className="text-2xl font-semibold mb-[30px]">
+                <h1 className="mb-[30px] text-2xl font-semibold">
                   {title}
                   {hrDom}
                 </h1>

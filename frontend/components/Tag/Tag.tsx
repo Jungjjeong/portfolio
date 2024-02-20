@@ -4,7 +4,7 @@ interface ITag {
 
 const Tag = ({ tagName }: ITag) => {
   return (
-    <div className="w-fit h-fit py-[4px] px-[8px] rounded-[5px] bg-gray-6 dark:bg-dark-2 text-sm whitespace-nowrap">
+    <div className="size-fit whitespace-nowrap rounded-[5px] bg-gray-6 px-[8px] py-[4px] text-sm dark:bg-dark-2">
       {tagName}
     </div>
   );

@@ -1,9 +1,11 @@
 'use client';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import Button from '../Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ReactNode, useEffect, useState } from 'react';
+
+import Button from '../Button';
+
 
 const ScrollButton = () => {
   const [isShow, setIsShow] = useState<boolean>(false);

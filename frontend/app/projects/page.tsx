@@ -10,11 +10,11 @@ import {
 const ProjectListPage = () => {
   return (
     <>
-      <div className="flex flex-col w-full mb-[50px] md:my-[50px] max-w-[710px] px-[20px] mx-auto">
+      <div className="mx-auto mb-[50px] flex w-full max-w-[710px] flex-col px-[20px] md:my-[50px]">
         {/* NOTE : Side Project Section */}
-        <section className="mx-auto w-full px=[16px] py-[50px] animate-fadeIn">
+        <section className="px=[16px] mx-auto w-full animate-fadeIn py-[50px]">
           <Title text="SIDE PROJECT" />
-          <div className="grid grid-cols-project relative pt-4 pb-1 gap-[16px]">
+          <div className="relative grid grid-cols-project gap-[16px] pb-1 pt-4">
             {sideProjectData.map((project) => {
               const { id, imageSrc, title, description, period, devStackList } =
                 project;
@@ -35,9 +35,9 @@ const ProjectListPage = () => {
         </section>
 
         {/* NOTE : Awards Project Section */}
-        <section className="mx-auto w-full px=[16px] py-[50px] fade-class">
+        <section className="px=[16px] fade-class mx-auto w-full py-[50px]">
           <Title text="AWARDS PROJECT" />
-          <div className="grid grid-cols-project relative pt-4 pb-1 gap-[16px]">
+          <div className="relative grid grid-cols-project gap-[16px] pb-1 pt-4">
             {awardProjectData.map((project) => {
               const { id, imageSrc, title, description, period, devStackList } =
                 project;
@@ -58,9 +58,9 @@ const ProjectListPage = () => {
         </section>
 
         {/* NOTE : Presentation Project Section */}
-        <section className="mx-auto w-full px=[16px] py-[50px] fade-class">
+        <section className="px=[16px] fade-class mx-auto w-full py-[50px]">
           <Title text="PRESENTATION" />
-          <div className="grid grid-cols-project relative pt-4 pb-1 gap-[16px]">
+          <div className="relative grid grid-cols-project gap-[16px] pb-1 pt-4">
             {presentationData.map((project) => {
               const { id, imageSrc, title, description, period, devStackList } =
                 project;

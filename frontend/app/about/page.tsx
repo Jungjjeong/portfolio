@@ -16,8 +16,8 @@ import {
 const AboutMePage = () => {
   return (
     <>
-      <div className="flex flex-col w-full pb-12 gap-20 py-[50px] max-w-[710px] px-[20px] mx-auto">
-        <div className="w-full h-auto pt-[10px] pb-[20px] md:pt-[50px] md:pb-[40px]">
+      <div className="mx-auto flex w-full max-w-[710px] flex-col gap-20 px-[20px] py-[50px] pb-12">
+        <div className="h-auto w-full pb-[20px] pt-[10px] md:pb-[40px] md:pt-[50px]">
           <HeaderSection />
         </div>
 

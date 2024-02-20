@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 
 interface ICardProps {
   id: number;
@@ -22,17 +22,17 @@ const Card = ({
   devStackList,
 }: ICardProps) => {
   return (
-    <div className="block border border-gray-6 dark:border-dark-2 rounded-[15px] bg-white dark:bg-dark overflow-hidden transition duration-[300] static h-full hover:translate-y-[-3px]">
+    <div className="static block h-full overflow-hidden rounded-[15px] border border-gray-6 bg-white transition duration-[300] hover:translate-y-[-3px] dark:border-dark-2 dark:bg-dark">
       <Link href={`/projects/${id}`}>
-        <div className="cursor-pointer w-full flex flex-col h-full">
+        <div className="flex size-full cursor-pointer flex-col">
           <Image
             src={imageSrc}
             alt="project thumbnail"
             width={650}
             height={372}
           />
-          <div className="flex flex-col gap-[5px] w-full h-full box-border p-[14px]">
-            <h1 className="font-semibold text-[0.9em] dark:text-gray">
+          <div className="box-border flex size-full flex-col gap-[5px] p-[14px]">
+            <h1 className="text-[0.9em] font-semibold dark:text-gray">
               {title}
             </h1>
             {description && <p className="text-sm">{description}</p>}
@@ -41,11 +41,11 @@ const Card = ({
               {!!period.end && ` ~ ${period.end}`}
             </p>
             {!!devStackList?.length && (
-              <div className="flex min-w-0 flex-wrap gap-[4px] my-[3px]">
+              <div className="my-[3px] flex min-w-0 flex-wrap gap-[4px]">
                 {devStackList.map((stack, index) => (
                   <div
                     key={index}
-                    className={`flex items-center h-[15px] rounded-[3px] px-[6px] text-sxm bg-gray-6 dark:bg-dark-2 m-0`}
+                    className={`m-0 flex h-[15px] items-center rounded-[3px] bg-gray-6 px-[6px] text-sxm dark:bg-dark-2`}
                   >
                     {stack}
                   </div>

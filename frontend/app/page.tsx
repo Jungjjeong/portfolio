@@ -1,12 +1,14 @@
 'use client';
 
-import { Button, Modal, ThemeButton, Title } from '../components';
-import { cover, cover_m, profile, projects_lg, projects_mb } from '../assets';
 import Image from 'next/image';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { useModal } from '../hooks';
-import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
+
+import { cover, cover_m, profile, projects_lg, projects_mb } from '../assets';
+import { Button, Modal, ThemeButton, Title } from '../components';
+import { useModal } from '../hooks';
+
 
 const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
@@ -129,12 +131,12 @@ const Home = () => {
         <div className="h-full">
           {/* NOTE: Main Image section */}
           <section className="relative h-full">
-            <div className="absolute top-[15px] md:top-[20px] right-[15px] md:right-[20px]">
+            <div className="absolute right-[15px] top-[15px] md:right-[20px] md:top-[20px]">
               <ThemeButton />
             </div>
 
-            <div className="absolute top-[40%] md:top-[30%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-fit mx-auto z-20">
-              <div className="animate-fadeIn text-gray font-semibold flex flex-col gap-[30px] lg:gap-[20px]">
+            <div className="absolute left-[50%] top-[40%] z-20 mx-auto w-fit translate-x-[-50%] translate-y-[-50%] md:top-[30%]">
+              <div className="flex animate-fadeIn flex-col gap-[30px] font-semibold text-gray lg:gap-[20px]">
                 <div className="flex flex-col items-center text-2xl md:text-3xl lg:text-extra">
                   <p className="whitespace-nowrap">안녕하세요 해윰입니다.</p>
                   <p className="whitespace-nowrap">
@@ -143,7 +145,7 @@ const Home = () => {
                 </div>
 
                 {/* buttons */}
-                <div className="flex gap-[10px] w-fit z-20 mx-auto">
+                <div className="z-20 mx-auto flex w-fit gap-[10px]">
                   <a
                     target="_blank"
                     href="https://github.com/Jungjjeong"
@@ -174,28 +176,28 @@ const Home = () => {
               className="relative w-full overflow-hidden"
               style={{ height: initialHeight - 50 }}
             >
-              <div className="absolute top-0 left-0 z-10 w-full h-full bg-black/50" />
+              <div className="absolute left-0 top-0 z-10 size-full bg-black/50" />
               <Image
                 src={cover}
                 alt="Cover Image"
                 style={{ objectFit: 'cover', height: '100%' }}
-                className="hidden md:block animate-scaleUp"
+                className="hidden animate-scaleUp md:block"
               />
               <Image
                 src={cover_m}
                 alt="Cover Image"
                 style={{ objectFit: 'cover', height: '100%' }}
-                className="block md:hidden animate-scaleUp"
+                className="block animate-scaleUp md:hidden"
               />
             </div>
           </section>
 
           {/* NOTE: Description section */}
           <section
-            className="bg-[#f9fafb] dark:bg-dark-1 dark:text-gray px-[20px]"
+            className="bg-[#f9fafb] px-[20px] dark:bg-dark-1 dark:text-gray"
             style={{ height: initialHeight * 0.6 }}
           >
-            <div className="flex flex-col items-center justify-center h-full gap-2 mx-auto text-2xl font-semibold text-center w-fit md:text-3xl fade_class">
+            <div className="fade_class mx-auto flex h-full w-fit flex-col items-center justify-center gap-2 text-center text-2xl font-semibold md:text-3xl">
               <p>
                 <span className="whitespace-nowrap">
                   깊이 있는 고민을 바탕으로
@@ -218,8 +220,8 @@ const Home = () => {
             className="flex justify-center px-[20px]"
             style={{ height: initialHeight }}
           >
-            <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center fade_class gap-5 md:gap-0">
-              <div className="flex flex-col gap-5 text-2xl font-semibold text-center md:text-3xl md:text-start whitespace-nowrap">
+            <div className="fade_class mx-auto flex w-full max-w-[730px] flex-col-reverse items-center justify-center gap-5 md:flex-row md:justify-between md:gap-0">
+              <div className="flex flex-col gap-5 whitespace-nowrap text-center text-2xl font-semibold md:text-start md:text-3xl">
                 <div>
                   <p>안녕하세요.</p>
                   <p>주니어 프론트엔드 개발자</p>
@@ -243,12 +245,12 @@ const Home = () => {
 
           {/* 소개 2: Projects */}
           <section
-            className="md:h-screen flex justify-center md:px-[20px] bg-[#f9fafb] dark:bg-dark-1 py-10 md:py-0"
+            className="flex justify-center bg-[#f9fafb] py-10 dark:bg-dark-1 md:h-screen md:px-[20px] md:py-0"
             style={{
               minHeight: initialHeight,
             }}
           >
-            <div className="w-full max-w-[730px] mx-auto flex flex-col-reverse md:flex-row justify-center md:justify-between items-center overflow-hidden fade_class gap-10 md:gap-0">
+            <div className="fade_class mx-auto flex w-full max-w-[730px] flex-col-reverse items-center justify-center gap-10 overflow-hidden md:flex-row md:justify-between md:gap-0">
               <Image
                 src={projects_lg}
                 alt="projects introduce Image"
@@ -267,7 +269,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="flex flex-col items-end gap-5 text-2xl font-semibold text-center md:text-3xl md:text-end whitespace-nowrap">
+              <div className="flex flex-col items-end gap-5 whitespace-nowrap text-center text-2xl font-semibold md:text-end md:text-3xl">
                 <div>
                   <p>저는 지금까지</p>
                   <p>이러한 프로젝트들을</p>
@@ -284,13 +286,13 @@ const Home = () => {
             className="flex justify-center px-[20px]"
             style={{ height: initialHeight }}
           >
-            <div className="w-full max-w-[710px] mx-auto flex flex-col justify-center fade_class">
+            <div className="fade_class mx-auto flex w-full max-w-[710px] flex-col justify-center">
               <Title text="CONTACT WITH ME" />
-              <h3 className="mx-auto text-sm font-medium w-fit">
+              <h3 className="mx-auto w-fit text-sm font-medium">
                 📮 매일 확인하고 있어요!
               </h3>
               <form
-                className="flex flex-col gap-5 my-[40px]"
+                className="my-[40px] flex flex-col gap-5"
                 method="POST"
                 data-email="sky990106@naver.com"
                 action="https://script.google.com/macros/s/AKfycbxT2ToXg_Qimhx1WNeF_j8NkIvSgI8IQqpncd2WIYoe9HQRTl2HmfE2H0XIVZVMXM8tvA/exec"
@@ -316,7 +318,7 @@ const Home = () => {
                   placeholder="Message"
                   name="message"
                   id="umessage"
-                  className="rounded-md border p-[10px] min-h-[250px] focus:outline-gray-5 align-text-top resize-none dark:border-dark-1 dark:bg-dark-1 dark:focus:outline-dark-1"
+                  className="min-h-[250px] resize-none rounded-md border p-[10px] align-text-top focus:outline-gray-5 dark:border-dark-1 dark:bg-dark-1 dark:focus:outline-dark-1"
                 />
               </form>
               <Button
