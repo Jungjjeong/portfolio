@@ -198,8 +198,8 @@ export const educationData = [
 
 export const experienceData = [
   {
-    title: 'IT 연합 동아리 디프만 14기',
-    date: '2023.11 ~ 2024.02',
+    title: 'IT 연합 동아리 디프만(14, 15, 16기)',
+    date: '2023.11 ~ ',
   },
   {
     title: '동국대학교 소프트웨어 연구실 학부연구생',
