@@ -18,15 +18,13 @@ const HeaderSection = () => {
           주니어 프론트엔드 개발자 정지영입니다.
         </span>
       </p>
-      <div className="mx-auto w-fit text-sm md:text-center">
-        꾸준함의 가치를 알기에 학습한 지식을 Github에 남기고 기술 블로그를
-        운영하고 있습니다.
+      <div className="mx-auto text-sm w-fit md:text-center">
+        부드러운 탐색 경험과 같은 유려한 UX 경험을 지향합니다. <br />
+        팀원들과의 원활한 소통을 통해, 신뢰를 기반으로 한 단단하고 유연한 협업을
+        이끌어냅니다.
         <br />
-        함께 성장하는 경험에 관심이 많아 CS 스터디, 프로그래머스 데브코스 등
-        다양한 개발 커뮤니티에 참여했습니다.
-        <br />
-        사용하기 좋은 인터페이스를 구현하는 것을 좋아하며, 이를 보여주기 위한 웹
-        디자인에도 관심이 많습니다.
+        비즈니스 성과를 창출하는 것에 집중하기 위해 프로덕트 레벨에서의 투명한
+        소통을 중요하게 생각합니다.
       </div>
       <div className="mx-auto my-[50px] flex w-fit gap-[10px]">
         <a

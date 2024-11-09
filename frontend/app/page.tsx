@@ -9,7 +9,6 @@ import { cover, cover_m, profile, projects_lg, projects_mb } from '../assets';
 import { Button, Modal, ThemeButton, Title } from '../components';
 import { useModal } from '../hooks';
 
-
 const Home = () => {
   const [isSend, setIsSend] = useState<boolean>(false);
   const [initialHeight, setInitialHeight] = useState<number>(0);
@@ -138,7 +137,7 @@ const Home = () => {
             <div className="absolute left-[50%] top-[40%] z-20 mx-auto w-fit translate-x-[-50%] translate-y-[-50%] md:top-[30%]">
               <div className="flex animate-fadeIn flex-col gap-[30px] font-semibold text-gray lg:gap-[20px]">
                 <div className="flex flex-col items-center text-2xl md:text-3xl lg:text-extra">
-                  <p className="whitespace-nowrap">안녕하세요 해윰입니다.</p>
+                  <p className="whitespace-nowrap">안녕하세요 정지영입니다.</p>
                   <p className="whitespace-nowrap">
                     프론트엔드 개발을 하고 있어요.
                   </p>
@@ -151,21 +150,21 @@ const Home = () => {
                     href="https://github.com/Jungjjeong"
                     rel="noopener noreferrer"
                   >
-                    <Button text="GITHUB" styleType="dark" />
+                    <Button text="Github" styleType="dark" />
                   </a>
                   <a
                     target="_blank"
-                    href="https://blog.haeyum.me/"
+                    href="https://www.linkedin.com/in/jiyoung-jung-829b7124a/"
                     rel="noopener noreferrer"
                   >
-                    <Button text="BLOG" styleType="dark" />
+                    <Button text="LinkedIn" styleType="dark" />
                   </a>
                   <a
                     target="_blank"
                     href="mailto:sky990106@naver.com"
                     rel="noopener noreferrer"
                   >
-                    <Button text="EMAIL" styleType="dark" />
+                    <Button text="Email" styleType="dark" />
                   </a>
                 </div>
               </div>
@@ -176,7 +175,7 @@ const Home = () => {
               className="relative w-full overflow-hidden"
               style={{ height: initialHeight - 50 }}
             >
-              <div className="absolute left-0 top-0 z-10 size-full bg-black/50" />
+              <div className="absolute top-0 left-0 z-10 size-full bg-black/50" />
               <Image
                 src={cover}
                 alt="Cover Image"
@@ -192,40 +191,17 @@ const Home = () => {
             </div>
           </section>
 
-          {/* NOTE: Description section */}
-          <section
-            className="bg-[#f9fafb] px-[20px] dark:bg-dark-1 dark:text-gray"
-            style={{ height: initialHeight * 0.6 }}
-          >
-            <div className="fade_class mx-auto flex h-full w-fit flex-col items-center justify-center gap-2 text-center text-2xl font-semibold md:text-3xl">
-              <p>
-                <span className="whitespace-nowrap">
-                  깊이 있는 고민을 바탕으로
-                </span>{' '}
-                <span className="whitespace-nowrap">
-                  적극적인 자세를 가집니다.
-                </span>
-              </p>
-              <p>
-                <span className="whitespace-nowrap">배우고 기록하고</span>{' '}
-                <span className="whitespace-nowrap">
-                  제 것으로 녹여내는 과정을 좋아합니다.
-                </span>
-              </p>
-            </div>
-          </section>
-
           {/* 소개 1 : About me */}
           <section
             className="flex justify-center px-[20px]"
             style={{ height: initialHeight }}
           >
             <div className="fade_class mx-auto flex w-full max-w-[730px] flex-col-reverse items-center justify-center gap-5 md:flex-row md:justify-between md:gap-0">
-              <div className="flex flex-col gap-5 whitespace-nowrap text-center text-2xl font-semibold md:text-start md:text-3xl">
+              <div className="flex flex-col gap-5 text-2xl font-semibold text-center whitespace-nowrap md:text-start md:text-3xl">
                 <div>
                   <p>안녕하세요.</p>
-                  <p>주니어 프론트엔드 개발자</p>
-                  <p>정지영 입니다.</p>
+                  <p>프론트엔드 개발자</p>
+                  <p>정지영입니다.</p>
                 </div>
                 <Link href="/about" className="m-auto w-fit md:m-0">
                   <Button text="ABOUTME" styleType="dark" />
@@ -269,7 +245,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="flex flex-col items-end gap-5 whitespace-nowrap text-center text-2xl font-semibold md:text-end md:text-3xl">
+              <div className="flex flex-col items-end gap-5 text-2xl font-semibold text-center whitespace-nowrap md:text-end md:text-3xl">
                 <div>
                   <p>저는 지금까지</p>
                   <p>이러한 프로젝트들을</p>
@@ -288,7 +264,7 @@ const Home = () => {
           >
             <div className="fade_class mx-auto flex w-full max-w-[710px] flex-col justify-center">
               <Title text="CONTACT WITH ME" />
-              <h3 className="mx-auto w-fit text-sm font-medium">
+              <h3 className="mx-auto text-sm font-medium w-fit">
                 📮 매일 확인하고 있어요!
               </h3>
               <form
